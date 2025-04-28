@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Bar } from 'react-chartjs-2'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
-import MapaRiesgos from './mapaRiesgos'
-import Splash from './Splash'
+import MapaRiesgos from './mapaRiesgos.jsx'
+import Splash from './Splash.jsx'
 import riesgosData from './datos_riesgos.json'
-import Estadisticas from './pages/estadisticas'
-import EventosRecientes from './components/EventosRecientes'
+import Estadisticas from './pages/estadisticas.jsx'
+import EventosRecientes from './components/EventosRecientes.jsx'
 import './App.css'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
@@ -144,11 +144,7 @@ function App() {
                     responsive: true,
                     plugins: {
                       legend: { labels: { color: '#e5e5e5' } },
-                      title: {
-                        display: true,
-                        text: 'Casos por Municipio',
-                        color: '#29f77a'
-                      }
+                      title: { display: true, text: 'Casos por Municipio', color: '#29f77a' }
                     },
                     scales: {
                       x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
@@ -168,4 +164,3 @@ function App() {
 }
 
 export default App
-
