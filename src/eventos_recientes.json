@@ -1,0 +1,47 @@
+[
+    {
+        "vereda": "El Plateado",
+        "municipio": "Argelia",
+        "lat": 2.279,
+        "lng": -76.676,
+        "fecha": "2025-04-21",
+        "descripcion": "Enfrentamiento entre GAO residual y FFMM. Afectación a comunidad y suspensión de actividades escolares.",
+        "tipo": "conflicto armado"
+    },
+    {
+        "vereda": "La Emboscada",
+        "municipio": "Suárez",
+        "lat": 3.001,
+        "lng": -76.735,
+        "fecha": "2025-04-19",
+        "descripcion": "Detonación de artefacto explosivo improvisado. Sin heridos. Zona acordonada por Ejército.",
+        "tipo": "artefacto explosivo"
+    },
+    {
+        "vereda": "Santa Rosa",
+        "municipio": "Jambaló",
+        "lat": 2.828,
+        "lng": -76.319,
+        "fecha": "2025-04-17",
+        "descripcion": "Amenazas a líderes comunales por presencia armada en territorio ancestral.",
+        "tipo": "amenaza"
+    },
+    {
+        "vereda": "San Juanito",
+        "municipio": "Balboa",
+        "lat": 2.045,
+        "lng": -76.976,
+        "fecha": "2025-04-18",
+        "descripcion": "Desplazamiento forzado de 12 familias. Presencia armada en zona rural.",
+        "tipo": "desplazamiento"
+    },
+    {
+        "vereda": "Los Mangos",
+        "municipio": "Patía",
+        "lat": 1.955,
+        "lng": -77.072,
+        "fecha": "2025-04-15",
+        "descripcion": "Patrullajes irregulares reportados por la comunidad. Presunto grupo armado ilegal.",
+        "tipo": "presencia armada"
+    }
+]

@@ -1,0 +1,344 @@
+[
+  {
+    "municipio": "POPAYAN",
+    "nivel_riesgo": "Alto",
+    "novedades": "Presencia de GAO-r estructura 6",
+    "contexto": "Zona de conflicto territorial con presencia de actores armados ilegales",
+    "estructuras_zona": "Eln GAO-r",
+    "lat": 2.459641,
+    "lng": -76.599377
+  },
+  {
+    "municipio": "SANTANDER DE QUILICHAO",
+    "nivel_riesgo": "Medio",
+    "novedades": "Bloqueos y presencia de disidencias",
+    "contexto": "Ruta estratégica en disputa por narcotráfico",
+    "estructuras_zona": "GAO-r estructura 30",
+    "lat": 3.012876,
+    "lng": -76.4845
+  },
+  {
+    "municipio": "MIRANDA",
+    "nivel_riesgo": "Alto",
+    "novedades": "Parálisis parcial del transporte",
+    "contexto": "Zona de enfrentamientos recientes entre disidencias y Ejército",
+    "estructuras_zona": "Ejército, GAO-r",
+    "lat": 3.243218,
+    "lng": -76.225
+  },
+  {
+    "municipio": "TIMBIQUI",
+    "nivel_riesgo": "Medio",
+    "novedades": "Restricción de movilidad fluvial por presencia de grupos armados",
+    "contexto": "Zona costera con baja presencia institucional",
+    "estructuras_zona": "Disidencias FARC, control social",
+    "lat": 2.76606,
+    "lng": -77.654324
+  },
+  {
+    "municipio": "ARGELIA",
+    "nivel_riesgo": "Alto",
+    "novedades": "Presencia de grupos armados organizados",
+    "contexto": "Conflictos por rutas de narcotráfico",
+    "estructuras_zona": "GAOR estructura 6",
+    "lat": 2.25583,
+    "lng": -77.2492
+  },
+  {
+    "municipio": "BALBOA",
+    "nivel_riesgo": "Medio",
+    "novedades": "Situación estable",
+    "contexto": "Zona de paso esporádico de grupos armados",
+    "estructuras_zona": "Presencia policial",
+    "lat": 2.05056,
+    "lng": -77.2164
+  },
+  {
+    "municipio": "BOLIVAR",
+    "nivel_riesgo": "Medio",
+    "novedades": "Protestas menores en zona rural",
+    "contexto": "Conflictos comunitarios no armados",
+    "estructuras_zona": "Autoridades municipales",
+    "lat": 1.833888,
+    "lng": -76.961888
+  },
+  {
+    "municipio": "BUENOS AIRES",
+    "nivel_riesgo": "Alto",
+    "novedades": "Combates recientes en veredas",
+    "contexto": "Presencia de grupos armados ilegales",
+    "estructuras_zona": "GAOR, Policía, FFMM",
+    "lat": 3.1195,
+    "lng": -76.6817
+  },
+  {
+    "municipio": "CAJIBIO",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin novedades relevantes",
+    "contexto": "Zona sin presencia reportada de GAO",
+    "estructuras_zona": "Estación de policía",
+    "lat": 2.7358,
+    "lng": -76.5699
+  },
+  {
+    "municipio": "CALDONO",
+    "nivel_riesgo": "Alto",
+    "novedades": "Desplazamientos forzados recientes",
+    "contexto": "Disputa entre estructuras armadas",
+    "estructuras_zona": "GAOR estructura 6, comunidades indígenas",
+    "lat": 2.7875,
+    "lng": -76.4119
+  },
+  {
+    "municipio": "CALOTO",
+    "nivel_riesgo": "Alto",
+    "novedades": "Enfrentamientos y ataques a la fuerza pública",
+    "contexto": "Zona de control armado",
+    "estructuras_zona": "GAO-r estructura 6",
+    "lat": 3.0343,
+    "lng": -76.4043
+  },
+  {
+    "municipio": "CORINTO",
+    "nivel_riesgo": "Alto",
+    "novedades": "Atentado con explosivos en zona urbana",
+    "contexto": "Disputas territoriales entre GAO",
+    "estructuras_zona": "GAO-r, Policía, Ejército",
+    "lat": 3.1748,
+    "lng": -76.2615
+  },
+  {
+    "municipio": "EL TAMBO",
+    "nivel_riesgo": "Medio",
+    "novedades": "Incremento de extorsiones en veredas",
+    "contexto": "Presión a comerciantes rurales",
+    "estructuras_zona": "GAOR estructura 30",
+    "lat": 2.441,
+    "lng": -77.0163
+  },
+  {
+    "municipio": "FLORENCIA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin novedades reportadas",
+    "contexto": "Presencia institucional activa",
+    "estructuras_zona": "Estación de Policía",
+    "lat": 1.6922,
+    "lng": -77.0746
+  },
+  {
+    "municipio": "GUAPI",
+    "nivel_riesgo": "Medio",
+    "novedades": "Restricción de movilidad fluvial por GAO",
+    "contexto": "Zona costera con baja presencia institucional",
+    "estructuras_zona": "GAO-r, fuerza pública naval",
+    "lat": 2.5712,
+    "lng": -77.9065
+  },
+  {
+    "municipio": "INZA",
+    "nivel_riesgo": "Medio",
+    "novedades": "Campesinos denuncian presión por parte de grupos",
+    "contexto": "Región montañosa con difícil acceso",
+    "estructuras_zona": "GAO-r esporádico",
+    "lat": 2.5554,
+    "lng": -76.0713
+  },
+  {
+    "municipio": "JAMBALO",
+    "nivel_riesgo": "Alto",
+    "novedades": "Conflictos entre comunidad y estructuras armadas",
+    "contexto": "Zona indígena en disputa territorial",
+    "estructuras_zona": "GAO-r, Guardia Indígena",
+    "lat": 2.7875,
+    "lng": -76.328
+  },
+  {
+    "municipio": "LA SIERRA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Tranquilidad en cabecera municipal",
+    "contexto": "Poca o nula presencia de grupos ilegales",
+    "estructuras_zona": "Autoridades locales",
+    "lat": 2.1756,
+    "lng": -76.7229
+  },
+  {
+    "municipio": "LA VEGA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin alertas recientes",
+    "contexto": "Zona de producción agrícola",
+    "estructuras_zona": "Estación de Policía",
+    "lat": 2.1833,
+    "lng": -76.776
+  },
+  {
+    "municipio": "LOPEZ DE MICAY",
+    "nivel_riesgo": "Alto",
+    "novedades": "Control social por GAO",
+    "contexto": "Difícil acceso por vía terrestre",
+    "estructuras_zona": "GAO-r, estructura 30",
+    "lat": 2.7442,
+    "lng": -77.6385
+  },
+  {
+    "municipio": "MERCADERES",
+    "nivel_riesgo": "Medio",
+    "novedades": "Amenazas a líderes comunales",
+    "contexto": "Presión armada en zonas rurales",
+    "estructuras_zona": "GAO-r",
+    "lat": 1.7979,
+    "lng": -77.1693
+  },
+  {
+    "municipio": "MORALES",
+    "nivel_riesgo": "Medio",
+    "novedades": "Desplazamiento de comunidades rurales",
+    "contexto": "Disputa entre estructuras armadas",
+    "estructuras_zona": "GAO-r, autoridades locales",
+    "lat": 2.7512,
+    "lng": -76.6234
+  },
+  {
+    "municipio": "PADILLA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin incidentes registrados",
+    "contexto": "Zona con presencia policial estable",
+    "estructuras_zona": "Policía Nacional",
+    "lat": 3.2183,
+    "lng": -76.3123
+  },
+  {
+    "municipio": "PAEZ",
+    "nivel_riesgo": "Alto",
+    "novedades": "Presión armada sobre comunidades indígenas",
+    "contexto": "Zona con fuerte presencia ancestral",
+    "estructuras_zona": "Guardia Indígena, GAO-r",
+    "lat": 2.6497,
+    "lng": -75.9812
+  },
+  {
+    "municipio": "PATIA",
+    "nivel_riesgo": "Alto",
+    "novedades": "Narcotráfico y corredores de movilidad",
+    "contexto": "Alta vulnerabilidad institucional",
+    "estructuras_zona": "GAOR estructura 6",
+    "lat": 2.0633,
+    "lng": -77.0456
+  },
+  {
+    "municipio": "PIAMONTE",
+    "nivel_riesgo": "Medio",
+    "novedades": "Movimientos extraños en zonas selváticas",
+    "contexto": "Área limítrofe con Putumayo",
+    "estructuras_zona": "Presencia esporádica de GAO",
+    "lat": 1.1007,
+    "lng": -76.3494
+  },
+  {
+    "municipio": "PIENDAMO",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Estabilidad institucional",
+    "contexto": "Zona de paso entre Popayán y el norte",
+    "estructuras_zona": "Policía, Ejército",
+    "lat": 2.7169,
+    "lng": -76.5353
+  },
+  {
+    "municipio": "PUERTO TEJADA",
+    "nivel_riesgo": "Medio",
+    "novedades": "Reclutamiento de jóvenes en zonas periféricas",
+    "contexto": "Municipio estratégico por cercanía al Valle",
+    "estructuras_zona": "GAO-r, Policía Nacional",
+    "lat": 3.2356,
+    "lng": -76.4191
+  },
+  {
+    "municipio": "ROSAS",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin eventos recientes reportados",
+    "contexto": "Zona afectada por derrumbes naturales más que conflicto",
+    "estructuras_zona": "Autoridades municipales",
+    "lat": 1.9611,
+    "lng": -76.7439
+  },
+  {
+    "municipio": "SAN SEBASTIAN",
+    "nivel_riesgo": "Medio",
+    "novedades": "Presión sobre líderes sociales",
+    "contexto": "Riesgos por cercanía a zonas de influencia armada",
+    "estructuras_zona": "Policía Nacional",
+    "lat": 2.0966,
+    "lng": -76.7896
+  },
+  {
+    "municipio": "SANTA ROSA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin novedades recientes",
+    "contexto": "Municipio alejado del conflicto actual",
+    "estructuras_zona": "Autoridades locales",
+    "lat": 1.8535,
+    "lng": -76.7752
+  },
+  {
+    "municipio": "SILVIA",
+    "nivel_riesgo": "Medio",
+    "novedades": "Movilizaciones indígenas",
+    "contexto": "Zona de resguardos con tensiones sociales",
+    "estructuras_zona": "Guardia Indígena, Policía",
+    "lat": 2.6201,
+    "lng": -76.3804
+  },
+  {
+    "municipio": "SOTARA",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin registros de amenazas o presencia armada",
+    "contexto": "Zona rural de bajo impacto",
+    "estructuras_zona": "Presencia municipal",
+    "lat": 2.3162,
+    "lng": -76.6921
+  },
+  {
+    "municipio": "SUAREZ",
+    "nivel_riesgo": "Alto",
+    "novedades": "Enfrentamientos y presencia de minería ilegal",
+    "contexto": "Foco de conflicto armado y social",
+    "estructuras_zona": "GAO-r, Ejército",
+    "lat": 2.9475,
+    "lng": -76.7125
+  },
+  {
+    "municipio": "TIMBIO",
+    "nivel_riesgo": "Medio",
+    "novedades": "Rumores de extorsiones rurales",
+    "contexto": "Zona intermedia entre municipios de alto riesgo",
+    "estructuras_zona": "Policía Nacional",
+    "lat": 2.3362,
+    "lng": -76.6812
+  },
+  {
+    "municipio": "TORIBIO",
+    "nivel_riesgo": "Alto",
+    "novedades": "Histórica presencia de grupos ilegales",
+    "contexto": "Conflicto con comunidades indígenas",
+    "estructuras_zona": "Guardia Indígena, GAO-r",
+    "lat": 2.9512,
+    "lng": -76.2606
+  },
+  {
+    "municipio": "TOTORO",
+    "nivel_riesgo": "Bajo",
+    "novedades": "Sin eventos recientes",
+    "contexto": "Tranquilidad y baja presión armada",
+    "estructuras_zona": "Autoridades locales",
+    "lat": 2.5338,
+    "lng": -76.4126
+  },
+  {
+    "municipio": "VILLA RICA",
+    "nivel_riesgo": "Medio",
+    "novedades": "Tensión por cercanía con Puerto Tejada",
+    "contexto": "Zona industrial con riesgos colaterales",
+    "estructuras_zona": "Policía, Ejército",
+    "lat": 3.1723,
+    "lng": -76.4813
+  }
+]
