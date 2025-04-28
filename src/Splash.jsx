@@ -1,32 +1,21 @@
 import { useEffect } from 'react'
+import './App.css'
 
-const Splash = ({ onFinish }) => {
+function Splash({ onFinish }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             onFinish()
-        }, 3000) // dura 3 segundos
+        }, 2500)
 
         return () => clearTimeout(timer)
     }, [onFinish])
 
     return (
-        <div style={{
-            height: '100vh',
-            backgroundColor: '#0f1a1a',
-            color: '#29f77a',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontFamily: 'Courier New, monospace',
-            fontSize: '1.5rem'
-        }}>
-            <div style={{ marginBottom: '20px' }}>
-                <span>▌ Cargando entorno ...</span>
-            </div>
-            <div className="terminal-loader"></div>
+        <div className="splash-screen">
+            <h1 className="splash-title">🛡️ Sistema de Monitoreo de Riesgos</h1>
         </div>
     )
 }
 
 export default Splash
+

@@ -1,5 +1,4 @@
-/* src/App.css */
-
+/* Reset básico */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +16,7 @@ h4 {
   letter-spacing: 1px;
 }
 
-/* Selects y inputs */
+/* Inputs y Selects */
 select,
 input {
   width: 100%;
@@ -42,7 +41,7 @@ input:focus {
   margin-top: 20px;
 }
 
-/* Panel de filtros */
+/* Panel lateral de filtros */
 .panel-filtros {
   width: 280px;
   background-color: #141f1f;
@@ -69,7 +68,7 @@ input:focus {
   box-shadow: 0 0 10px rgba(41, 247, 122, 0.2);
 }
 
-/* Leyenda del mapa */
+/* Leyenda de colores del mapa */
 .info.legend {
   background: rgba(13, 23, 23, 0.9);
   padding: 10px;
@@ -118,9 +117,26 @@ input:focus {
   border-bottom: none;
 }
 
-/* Mapa ajustes */
+/* Ajustes de mapa Leaflet */
 .leaflet-container {
   filter: grayscale(25%) brightness(0.95);
   border-radius: 10px;
   border: 1px solid #333;
+}
+
+/* Pantalla de carga Splash */
+.splash-screen {
+  background-color: #0f1a1a;
+  color: #29f77a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.splash-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
