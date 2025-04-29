@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Bar } from 'react-chartjs-2'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
-import MapaRiesgos from './mapaRiesgos.jsx'
-import Splash from './Splash.jsx'
+import MapaRiesgos from './MapaRiesgos'
+import Splash from './Splash'
 import riesgosData from './datos_riesgos.json'
-import Estadisticas from './pages/estadisticas.jsx'
-import EventosRecientes from './components/EventosRecientes.jsx'
+import Estadisticas from './pages/Estadisticas'
+import EventosRecientes from './components/EventosRecientes'
 import './App.css'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
@@ -67,9 +67,9 @@ function App() {
             </h2>
           </div>
 
-          {/* Layout principal */}
+          {/* Layout principal: filtros + mapa + estadísticas */}
           <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
-            {/* Filtros */}
+            {/* Panel de filtros */}
             <div style={{
               width: '300px',
               backgroundColor: '#141f1f',
@@ -109,10 +109,11 @@ function App() {
                 <option value="presencia armada">Presencia armada</option>
               </select>
 
+              {/* Últimos eventos debajo de filtros */}
               <EventosRecientes filtroEvento={filtroEvento} />
             </div>
 
-            {/* Mapa */}
+            {/* Mapa de riesgos */}
             <div style={{ flex: 2 }}>
               <MapaRiesgos riesgos={filtrarRiesgos()} filtroEvento={filtroEvento} />
             </div>
@@ -147,8 +148,8 @@ function App() {
                       title: { display: true, text: 'Casos por Municipio', color: '#29f77a' }
                     },
                     scales: {
-                      x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
-                      y: { ticks: { color: '#ccc' }, grid: { color: '#333' } }
+                      x: { ticks: { color: '#e5e5e5' }, grid: { color: '#333' } },
+                      y: { ticks: { color: '#e5e5e5' }, grid: { color: '#333' } }
                     }
                   }}
                 />

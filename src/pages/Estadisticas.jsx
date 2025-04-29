@@ -1,48 +1,23 @@
+// src/pages/Estadisticas.jsx
 import { useEffect, useState } from 'react'
 import { Bar, Pie, Line } from 'react-chartjs-2'
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    ArcElement,
-    PointElement,
-    LineElement
-} from 'chart.js'
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement } from 'chart.js'
 import axios from 'axios'
-import '../App.css'
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    ArcElement,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-)
+ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement, Title, Tooltip, Legend)
 
 const Estadisticas = () => {
     const [datos, setDatos] = useState([])
     const [filtroMunicipio, setFiltroMunicipio] = useState('todos')
 
     useEffect(() => {
-        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
-        axios.get(`${API_URL}/api/estadisticas`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/estadisticas`)
             .then(res => setDatos(res.data))
             .catch(err => console.error('❌ Error cargando estadísticas:', err))
     }, [])
 
     const municipiosUnicos = [...new Set(datos.map(d => d.municipio))]
-
-    const datosFiltrados = filtroMunicipio === 'todos'
-        ? datos
-        : datos.filter(d => d.municipio === filtroMunicipio)
+    const datosFiltrados = filtroMunicipio === 'todos' ? datos : datos.filter(d => d.municipio === filtroMunicipio)
 
     const agrupadosPorTipo = datosFiltrados.reduce((acc, curr) => {
         acc[curr.tipo] = (acc[curr.tipo] || 0) + curr.cantidad
@@ -71,7 +46,6 @@ const Estadisticas = () => {
                 🧭 Centro de Monitoreo - Estadísticas Criminales
             </h2>
 
-            {/* Filtro por municipio */}
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
                 <select
                     value={filtroMunicipio}
@@ -92,9 +66,7 @@ const Estadisticas = () => {
                 </select>
             </div>
 
-            {/* Gráficos */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', marginBottom: '40px' }}>
-                {/* Barras */}
                 <div>
                     <Bar
                         data={{
@@ -107,11 +79,7 @@ const Estadisticas = () => {
                         }}
                         options={{
                             plugins: {
-                                title: {
-                                    display: true,
-                                    text: 'Casos por tipo de delito',
-                                    color: '#29f77a'
-                                },
+                                title: { display: true, text: 'Casos por tipo de delito', color: '#29f77a' },
                                 legend: { labels: { color: '#e5e5e5' } }
                             },
                             scales: {
@@ -122,7 +90,6 @@ const Estadisticas = () => {
                     />
                 </div>
 
-                {/* Pastel */}
                 <div>
                     <Pie
                         data={{
@@ -135,11 +102,7 @@ const Estadisticas = () => {
                         }}
                         options={{
                             plugins: {
-                                title: {
-                                    display: true,
-                                    text: 'Proporción de tipos de delito',
-                                    color: '#29f77a'
-                                },
+                                title: { display: true, text: 'Proporción de tipos de delito', color: '#29f77a' },
                                 legend: { labels: { color: '#e5e5e5' } }
                             }
                         }}
@@ -147,7 +110,6 @@ const Estadisticas = () => {
                 </div>
             </div>
 
-            {/* Línea mensual */}
             <div style={{ marginBottom: '40px' }}>
                 <Line
                     data={{
@@ -163,11 +125,7 @@ const Estadisticas = () => {
                     }}
                     options={{
                         plugins: {
-                            title: {
-                                display: true,
-                                text: 'Casos reportados por mes',
-                                color: '#29f77a'
-                            },
+                            title: { display: true, text: 'Casos reportados por mes', color: '#29f77a' },
                             legend: { labels: { color: '#e5e5e5' } }
                         },
                         scales: {
@@ -178,7 +136,6 @@ const Estadisticas = () => {
                 />
             </div>
 
-            {/* Top 10 Municipios */}
             <div style={{
                 backgroundColor: '#141f1f',
                 padding: '20px',
