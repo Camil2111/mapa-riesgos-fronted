@@ -14,7 +14,7 @@ const getColor = (nivel) => {
     }
 }
 
-// Ícono personalizado para eventos
+// Ícono personalizado para eventos y mas care verga
 const iconoEvento = new L.Icon({
     iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
     iconSize: [25, 25],
