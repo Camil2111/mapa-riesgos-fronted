@@ -5,7 +5,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import MapaRiesgos from './MapaRiesgos'
 import Splash from './Splash'
 import riesgosData from './datos_riesgos.json'
-import Estadisticas from './pages/Estadisticas'
+import Estadisticas from './pages/Estadisticas.jsx'
 import EventosRecientes from './components/EventosRecientes'
 import './App.css'
 
