@@ -1,47 +1,47 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { Bar } from 'react-chartjs-2'
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
-import MapaRiesgos from './MapaRiesgos'
-import Splash from './Splash'
-import riesgosData from './datos_riesgos.json'
-import Estadisticas from './pages/Estadisticas.jsx'
-import EventosRecientes from './components/EventosRecientes'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import MapaRiesgos from './MapaRiesgos.jsx';   // Corregido
+import Splash from './Splash.jsx';              // Corregido también
+import riesgosData from './datos_riesgos.json';
+import Estadisticas from './pages/Estadisticas.jsx';  // MUY importante: 'Estadisticas' con E mayúscula
+import EventosRecientes from './components/EventosRecientes.jsx';
+import './App.css';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function App() {
-  const [filtro, setFiltro] = useState('todos')
-  const [busqueda, setBusqueda] = useState('')
-  const [filtroEvento, setFiltroEvento] = useState('todos')
-  const [mostrarMapa, setMostrarMapa] = useState(false)
-  const [datosEstadisticas, setDatosEstadisticas] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [filtro, setFiltro] = useState('todos');
+  const [busqueda, setBusqueda] = useState('');
+  const [filtroEvento, setFiltroEvento] = useState('todos');
+  const [mostrarMapa, setMostrarMapa] = useState(false);
+  const [datosEstadisticas, setDatosEstadisticas] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/estadisticas`)
+    fetch(import.meta.env.VITE_API_URL + '/api/estadisticas')
       .then(res => res.json())
       .then(data => {
-        setDatosEstadisticas(data)
-        setLoading(false)
+        setDatosEstadisticas(data);
+        setLoading(false);
       })
       .catch(err => {
-        console.error('❌ Error al obtener estadísticas:', err)
-        setLoading(false)
-      })
-  }, [])
+        console.error('❌ Error al obtener estadísticas:', err);
+        setLoading(false);
+      });
+  }, []);
 
   const filtrarRiesgos = () => {
-    let filtrados = riesgosData
+    let filtrados = riesgosData;
     if (filtro !== 'todos') {
-      filtrados = filtrados.filter(r => r.nivel_riesgo?.toLowerCase() === filtro)
+      filtrados = filtrados.filter(r => r.nivel_riesgo?.toLowerCase() === filtro);
     }
     if (busqueda.trim() !== '') {
-      filtrados = filtrados.filter(r => r.municipio?.toLowerCase().includes(busqueda.toLowerCase()))
+      filtrados = filtrados.filter(r => r.municipio?.toLowerCase().includes(busqueda.toLowerCase()));
     }
-    return filtrados
-  }
+    return filtrados;
+  };
 
   return (
     <Router>
@@ -70,20 +70,11 @@ function App() {
           {/* Layout principal: filtros + mapa + estadísticas */}
           <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
             {/* Panel de filtros */}
-            <div style={{
-              width: '300px',
-              backgroundColor: '#141f1f',
-              padding: '20px',
-              border: '1px solid #2c2c2c',
-              borderRadius: '10px',
-              boxShadow: '0 0 10px rgba(41, 247, 122, 0.2)',
-              fontSize: '15px',
-              height: 'fit-content'
-            }}>
-              <h3 style={{ color: '#29f77a', textAlign: 'center', marginBottom: '20px' }}>Filtros</h3>
+            <div className="panel-filtros">
+              <h3>Filtros</h3>
 
               <label>Filtrar por nivel:</label>
-              <select value={filtro} onChange={e => setFiltro(e.target.value)} style={{ width: '100%' }}>
+              <select value={filtro} onChange={e => setFiltro(e.target.value)}>
                 <option value="todos">Todos</option>
                 <option value="alto">Alto</option>
                 <option value="medio">Medio</option>
@@ -96,11 +87,10 @@ function App() {
                 placeholder="Ej: Argelia"
                 value={busqueda}
                 onChange={e => setBusqueda(e.target.value)}
-                style={{ width: '100%' }}
               />
 
               <label style={{ marginTop: '15px' }}>Filtrar eventos recientes:</label>
-              <select value={filtroEvento} onChange={e => setFiltroEvento(e.target.value)} style={{ width: '100%' }}>
+              <select value={filtroEvento} onChange={e => setFiltroEvento(e.target.value)}>
                 <option value="todos">Todos</option>
                 <option value="conflicto armado">Conflicto armado</option>
                 <option value="artefacto explosivo">Artefacto explosivo</option>
@@ -109,26 +99,17 @@ function App() {
                 <option value="presencia armada">Presencia armada</option>
               </select>
 
-              {/* Últimos eventos debajo de filtros */}
               <EventosRecientes filtroEvento={filtroEvento} />
             </div>
 
             {/* Mapa de riesgos */}
-            <div style={{ flex: 2 }}>
+            <div className="map-container">
               <MapaRiesgos riesgos={filtrarRiesgos()} filtroEvento={filtroEvento} />
             </div>
 
             {/* Estadísticas */}
-            <div style={{
-              flex: 1,
-              backgroundColor: '#101a1a',
-              padding: '20px',
-              border: '1px solid #2c2c2c',
-              borderRadius: '10px',
-              boxShadow: '0 0 10px rgba(41, 247, 122, 0.2)',
-              minWidth: '400px'
-            }}>
-              <h3 style={{ color: '#29f77a', marginBottom: '20px' }}>Estadísticas de Riesgo</h3>
+            <div className="chart-container">
+              <h3>Estadísticas de Riesgo</h3>
               {loading ? (
                 <p>🔄 Cargando datos...</p>
               ) : (
@@ -144,12 +125,18 @@ function App() {
                   options={{
                     responsive: true,
                     plugins: {
-                      legend: { labels: { color: '#e5e5e5' } },
-                      title: { display: true, text: 'Casos por Municipio', color: '#29f77a' }
+                      legend: {
+                        labels: { color: '#e5e5e5' }
+                      },
+                      title: {
+                        display: true,
+                        text: 'Casos por Municipio',
+                        color: '#29f77a'
+                      }
                     },
                     scales: {
-                      x: { ticks: { color: '#e5e5e5' }, grid: { color: '#333' } },
-                      y: { ticks: { color: '#e5e5e5' }, grid: { color: '#333' } }
+                      x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
+                      y: { ticks: { color: '#ccc' }, grid: { color: '#333' } }
                     }
                   }}
                 />
@@ -161,7 +148,7 @@ function App() {
         <Splash onFinish={() => setMostrarMapa(true)} />
       )}
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
