@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import MapaRiesgos from './MapaRiesgos.jsx';   // Corregido
-import Splash from './Splash.jsx';              // Corregido también
+import MapaRiesgos from './MapaRiesgos.jsx';
+import Splash from './Splash.jsx';
 import riesgosData from './datos_riesgos.json';
-import Estadisticas from './pages/Estadisticas.jsx';  // MUY importante: 'Estadisticas' con E mayúscula
+import Estadisticas from './pages/Estadisticas.jsx';
 import EventosRecientes from './components/EventosRecientes.jsx';
 import './App.css';
 
@@ -67,10 +67,10 @@ function App() {
             </h2>
           </div>
 
-          {/* Layout principal: filtros + mapa + estadísticas */}
-          <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
-            {/* Panel de filtros */}
-            <div className="panel-filtros">
+          {/* Layout principal */}
+          <div className="main-layout">
+            {/* Panel izquierdo: filtros */}
+            <div className="left-panel panel-filtros">
               <h3>Filtros</h3>
 
               <label>Filtrar por nivel:</label>
@@ -98,49 +98,52 @@ function App() {
                 <option value="desplazamiento">Desplazamiento</option>
                 <option value="presencia armada">Presencia armada</option>
               </select>
-
-              <EventosRecientes filtroEvento={filtroEvento} />
             </div>
 
-            {/* Mapa de riesgos */}
+            {/* Mapa */}
             <div className="map-container">
               <MapaRiesgos riesgos={filtrarRiesgos()} filtroEvento={filtroEvento} />
             </div>
 
-            {/* Estadísticas */}
-            <div className="chart-container">
-              <h3>Estadísticas de Riesgo</h3>
-              {loading ? (
-                <p>🔄 Cargando datos...</p>
-              ) : (
-                <Bar
-                  data={{
-                    labels: datosEstadisticas.map(item => item.municipio),
-                    datasets: [{
-                      label: 'Casos por municipio',
-                      data: datosEstadisticas.map(item => item.casos),
-                      backgroundColor: '#29f77a'
-                    }]
-                  }}
-                  options={{
-                    responsive: true,
-                    plugins: {
-                      legend: {
-                        labels: { color: '#e5e5e5' }
+            {/* Panel derecho: eventos + estadísticas */}
+            <div className="right-panel">
+              <div className="eventos-recientes">
+                <h4>Últimos eventos reportados</h4>
+                <EventosRecientes filtroEvento={filtroEvento} />
+              </div>
+
+              <div className="chart-container">
+                <h3>Estadísticas de Riesgo</h3>
+                {loading ? (
+                  <p>🔄 Cargando datos...</p>
+                ) : (
+                  <Bar
+                    data={{
+                      labels: datosEstadisticas.map(item => item.municipio),
+                      datasets: [{
+                        label: 'Casos por municipio',
+                        data: datosEstadisticas.map(item => item.casos),
+                        backgroundColor: '#29f77a'
+                      }]
+                    }}
+                    options={{
+                      responsive: true,
+                      plugins: {
+                        legend: { labels: { color: '#e5e5e5' } },
+                        title: {
+                          display: true,
+                          text: 'Casos por Municipio',
+                          color: '#29f77a'
+                        }
                       },
-                      title: {
-                        display: true,
-                        text: 'Casos por Municipio',
-                        color: '#29f77a'
+                      scales: {
+                        x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
+                        y: { ticks: { color: '#ccc' }, grid: { color: '#333' } }
                       }
-                    },
-                    scales: {
-                      x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
-                      y: { ticks: { color: '#ccc' }, grid: { color: '#333' } }
-                    }
-                  }}
-                />
-              )}
+                    }}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
