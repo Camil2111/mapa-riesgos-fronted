@@ -91,46 +91,39 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             )}
 
             {riesgos.map((r, i) => {
-                const soloUno = riesgos.length === 1
-                if (soloUno) {
-                    return (
-                        <Marker
-                            key={`r-${i}`}
-                            position={[r.lat, r.lng]}
-                            icon={L.divIcon({
-                                className: 'custom-icon',
-                                html: `<div style="background:${getColor(r.nivel_riesgo)}; width:20px; height:20px; border-radius:50%; border: 2px solid white;"></div>`
-                            })}
-                        >
-                            <Popup autoOpen={true} autoPan={true}>
-                                <strong>{r.municipio}</strong><br />
-                                <span style={{ color: getColor(r.nivel_riesgo), fontWeight: 'bold' }}>
-                                    Riesgo: {r.nivel_riesgo?.toUpperCase()}
-                                </span><br />
-                                Contexto: {r.contexto}<br />
-                                Estructuras: {r.estructuras_zona}<br />
-                                Novedades: {r.novedades}
-                            </Popup>
-                        </Marker>
-                    )
-                }
+                const soloUno = riesgos.length === 1;
+                const color = getColor(r.nivel_riesgo);
+
+                const icono = L.divIcon({
+                    className: '',
+                    html: `<div style="
+            background:${color};
+            width: ${soloUno ? '20px' : '12px'};
+            height: ${soloUno ? '20px' : '12px'};
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 2px black;
+        "></div>`,
+                    iconSize: [soloUno ? 20 : 12, soloUno ? 20 : 12],
+                    iconAnchor: [soloUno ? 10 : 6, soloUno ? 10 : 6]
+                });
+
                 return (
-                    <Circle
+                    <Marker
                         key={`r-${i}`}
-                        center={[r.lat, r.lng]}
-                        radius={10000}
-                        pathOptions={{ color: getColor(r.nivel_riesgo) }}
+                        position={[r.lat, r.lng]}
+                        icon={icono}
                     >
-                        <Popup>
+                        <Popup autoOpen={soloUno} autoPan={soloUno}>
                             <strong>{r.municipio}</strong><br />
-                            <span style={{ color: getColor(r.nivel_riesgo), fontWeight: 'bold' }}>
+                            <span style={{ color: color, fontWeight: 'bold' }}>
                                 Riesgo: {r.nivel_riesgo?.toUpperCase()}
                             </span><br />
                             Contexto: {r.contexto}<br />
                             Estructuras: {r.estructuras_zona}<br />
                             Novedades: {r.novedades}
                         </Popup>
-                    </Circle>
+                    </Marker>
                 )
             })}
 

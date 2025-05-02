@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import MapaRiesgos from './MapaRiesgos.jsx';
+import MapaRiesgos from './mapaRiesgos.jsx';
 import Splash from './Splash.jsx';
 import riesgosData from './datos_riesgos.json';
 import Estadisticas from './pages/Estadisticas.jsx';
@@ -18,7 +18,6 @@ function App() {
   const [mostrarMapa, setMostrarMapa] = useState(false);
   const [datosEstadisticas, setDatosEstadisticas] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [departamento, setDepartamento] = useState('todos');
   const [municipio, setMunicipio] = useState('todos');
 
