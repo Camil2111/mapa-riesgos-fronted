@@ -19,6 +19,9 @@ function App() {
   const [datosEstadisticas, setDatosEstadisticas] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [departamento, setDepartamento] = useState('todos');
+  const [municipio, setMunicipio] = useState('todos');
+
   useEffect(() => {
     fetch(import.meta.env.VITE_API_URL + '/api/estadisticas')
       .then(res => res.json())
@@ -32,15 +35,21 @@ function App() {
       });
   }, []);
 
+  const departamentos = [...new Set(riesgosData.map(r => r.departamento).filter(Boolean))];
+
+  const municipiosFiltrados = riesgosData
+    .filter(r => departamento === 'todos' || r.departamento === departamento)
+    .map(r => r.municipio);
+  const municipiosUnicos = [...new Set(municipiosFiltrados)];
+
   const filtrarRiesgos = () => {
-    let filtrados = riesgosData;
-    if (filtro !== 'todos') {
-      filtrados = filtrados.filter(r => r.nivel_riesgo?.toLowerCase() === filtro);
-    }
-    if (busqueda.trim() !== '') {
-      filtrados = filtrados.filter(r => r.municipio?.toLowerCase().includes(busqueda.toLowerCase()));
-    }
-    return filtrados;
+    return riesgosData.filter(r => {
+      const nivelMatch = filtro === 'todos' || r.nivel_riesgo?.toLowerCase() === filtro;
+      const deptoMatch = departamento === 'todos' || r.departamento === departamento;
+      const muniMatch = municipio === 'todos' || r.municipio === municipio;
+      const busquedaMatch = busqueda.trim() === '' || r.municipio?.toLowerCase().includes(busqueda.toLowerCase());
+      return nivelMatch && deptoMatch && muniMatch && busquedaMatch;
+    });
   };
 
   return (
@@ -81,13 +90,24 @@ function App() {
                 <option value="bajo">Bajo</option>
               </select>
 
-              <label style={{ marginTop: '15px' }}>Buscar municipio:</label>
-              <input
-                type="text"
-                placeholder="Ej: Argelia"
-                value={busqueda}
-                onChange={e => setBusqueda(e.target.value)}
-              />
+              <label style={{ marginTop: '15px' }}>Departamento:</label>
+              <select value={departamento} onChange={e => {
+                setDepartamento(e.target.value);
+                setMunicipio('todos');
+              }}>
+                <option value="todos">Todos</option>
+                {departamentos.map((d, i) => (
+                  <option key={i} value={d}>{d}</option>
+                ))}
+              </select>
+
+              <label style={{ marginTop: '15px' }}>Municipio:</label>
+              <select value={municipio} onChange={e => setMunicipio(e.target.value)}>
+                <option value="todos">Todos</option>
+                {municipiosUnicos.map((m, i) => (
+                  <option key={i} value={m}>{m}</option>
+                ))}
+              </select>
 
               <label style={{ marginTop: '15px' }}>Filtrar eventos recientes:</label>
               <select value={filtroEvento} onChange={e => setFiltroEvento(e.target.value)}>
@@ -98,20 +118,43 @@ function App() {
                 <option value="desplazamiento">Desplazamiento</option>
                 <option value="presencia armada">Presencia armada</option>
               </select>
+
+              <button
+                onClick={() => {
+                  setFiltro('todos');
+                  setDepartamento('todos');
+                  setMunicipio('todos');
+                  setBusqueda('');
+                  setFiltroEvento('todos');
+                }}
+                style={{
+                  marginTop: '15px',
+                  padding: '10px',
+                  width: '100%',
+                  backgroundColor: '#29f77a',
+                  color: '#0f1a1a',
+                  border: 'none',
+                  borderRadius: '6px'
+                }}
+              >
+                Limpiar filtros
+              </button>
+
               <EventosRecientes filtroEvento={filtroEvento} />
             </div>
 
             {/* Mapa */}
             <div className="map-container">
-              <MapaRiesgos riesgos={filtrarRiesgos()} filtroEvento={filtroEvento} />
+              <MapaRiesgos
+                riesgos={filtrarRiesgos()}
+                filtroEvento={filtroEvento}
+                municipioFiltro={municipio}
+                departamentoFiltro={departamento}
+              />
             </div>
 
-            {/* Panel derecho: eventos + estadísticas */}
+            {/* Panel derecho: estadísticas */}
             <div className="right-panel">
-              <div className="eventos-recientes">
-                <h4>Últimos eventos reportados</h4>
-              </div>
-
               <div className="chart-container">
                 <h3>Estadísticas de Riesgo</h3>
                 {loading ? (

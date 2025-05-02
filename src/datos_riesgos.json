@@ -15,7 +15,8 @@
     "contexto": "Ruta estratégica en disputa por narcotráfico",
     "estructuras_zona": "GAO-r estructura 30",
     "lat": 3.012876,
-    "lng": -76.4845
+    "lng": -76.4845,
+    "departamento": "Cauca"
   },
   {
     "municipio": "MIRANDA",
@@ -24,7 +25,8 @@
     "contexto": "Zona de enfrentamientos recientes entre disidencias y Ejército",
     "estructuras_zona": "Ejército, GAO-r",
     "lat": 3.243218,
-    "lng": -76.225
+    "lng": -76.225,
+    "departamento": "Cauca"
   },
   {
     "municipio": "TIMBIQUI",
@@ -42,7 +44,8 @@
     "contexto": "Conflictos por rutas de narcotráfico",
     "estructuras_zona": "GAOR estructura 6",
     "lat": 2.25583,
-    "lng": -77.2492
+    "lng": -77.2492,
+    "departamento": "Cauca"
   },
   {
     "municipio": "BALBOA",
@@ -51,7 +54,8 @@
     "contexto": "Zona de paso esporádico de grupos armados",
     "estructuras_zona": "Presencia policial",
     "lat": 2.05056,
-    "lng": -77.2164
+    "lng": -77.2164,
+    "departamento": "Cauca"
   },
   {
     "municipio": "BOLIVAR",
@@ -69,7 +73,8 @@
     "contexto": "Presencia de grupos armados ilegales",
     "estructuras_zona": "GAOR, Policía, FFMM",
     "lat": 3.1195,
-    "lng": -76.6817
+    "lng": -76.6817,
+    "departamento": "Cauca"
   },
   {
     "municipio": "CAJIBIO",
@@ -96,7 +101,8 @@
     "contexto": "Zona de control armado",
     "estructuras_zona": "GAO-r estructura 6",
     "lat": 3.0343,
-    "lng": -76.4043
+    "lng": -76.4043,
+    "departamento": "Cauca"
   },
   {
     "municipio": "CORINTO",
@@ -105,7 +111,8 @@
     "contexto": "Disputas territoriales entre GAO",
     "estructuras_zona": "GAO-r, Policía, Ejército",
     "lat": 3.1748,
-    "lng": -76.2615
+    "lng": -76.2615,
+    "departamento": "Cauca"
   },
   {
     "municipio": "EL TAMBO",
@@ -114,7 +121,8 @@
     "contexto": "Presión a comerciantes rurales",
     "estructuras_zona": "GAOR estructura 30",
     "lat": 2.441,
-    "lng": -77.0163
+    "lng": -77.0163,
+    "departamento": "Cauca"
   },
   {
     "municipio": "FLORENCIA",
@@ -123,7 +131,8 @@
     "contexto": "Presencia institucional activa",
     "estructuras_zona": "Estación de Policía",
     "lat": 1.6922,
-    "lng": -77.0746
+    "lng": -77.0746,
+    "departamento": "Cauca"
   },
   {
     "municipio": "GUAPI",
@@ -132,7 +141,8 @@
     "contexto": "Zona costera con baja presencia institucional",
     "estructuras_zona": "GAO-r, fuerza pública naval",
     "lat": 2.5712,
-    "lng": -77.9065
+    "lng": -77.9065,
+    "departamento": "Cauca"
   },
   {
     "municipio": "INZA",
@@ -159,7 +169,8 @@
     "contexto": "Poca o nula presencia de grupos ilegales",
     "estructuras_zona": "Autoridades locales",
     "lat": 2.1756,
-    "lng": -76.7229
+    "lng": -76.7229,
+    "departamento": "Cauca"
   },
   {
     "municipio": "LA VEGA",
@@ -168,7 +179,8 @@
     "contexto": "Zona de producción agrícola",
     "estructuras_zona": "Estación de Policía",
     "lat": 2.1833,
-    "lng": -76.776
+    "lng": -76.776,
+    "departamento": "Cauca"
   },
   {
     "municipio": "LOPEZ DE MICAY",
@@ -177,7 +189,8 @@
     "contexto": "Difícil acceso por vía terrestre",
     "estructuras_zona": "GAO-r, estructura 30",
     "lat": 2.7442,
-    "lng": -77.6385
+    "lng": -77.6385,
+    "departamento": "Cauca"
   },
   {
     "municipio": "MERCADERES",
@@ -186,7 +199,8 @@
     "contexto": "Presión armada en zonas rurales",
     "estructuras_zona": "GAO-r",
     "lat": 1.7979,
-    "lng": -77.1693
+    "lng": -77.1693,
+    "departamento": "Cauca"
   },
   {
     "municipio": "MORALES",
@@ -258,7 +272,8 @@
     "contexto": "Zona afectada por derrumbes naturales más que conflicto",
     "estructuras_zona": "Autoridades municipales",
     "lat": 1.9611,
-    "lng": -76.7439
+    "lng": -76.7439,
+    "departamento": "Cauca"
   },
   {
     "municipio": "SAN SEBASTIAN",
@@ -285,7 +300,8 @@
     "contexto": "Zona de resguardos con tensiones sociales",
     "estructuras_zona": "Guardia Indígena, Policía",
     "lat": 2.6201,
-    "lng": -76.3804
+    "lng": -76.3804,
+    "departamento": "Cauca"
   },
   {
     "municipio": "SOTARA",
@@ -321,7 +337,8 @@
     "contexto": "Conflicto con comunidades indígenas",
     "estructuras_zona": "Guardia Indígena, GAO-r",
     "lat": 2.9512,
-    "lng": -76.2606
+    "lng": -76.2606,
+    "departamento": "Cauca"
   },
   {
     "municipio": "TOTORO",
@@ -339,6 +356,2317 @@
     "contexto": "Zona industrial con riesgos colaterales",
     "estructuras_zona": "Policía, Ejército",
     "lat": 3.1723,
-    "lng": -76.4813
+    "lng": -76.4813,
+    "departamento": "Cauca"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Medellín",
+    "lat": 6.246631,
+    "lng": -75.581775,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Abejorral",
+    "lat": 5.789315,
+    "lng": -75.428739,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Abriaquí",
+    "lat": 6.632282,
+    "lng": -76.064304,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Alejandría",
+    "lat": 6.376061,
+    "lng": -75.141346,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Amagá",
+    "lat": 6.038708,
+    "lng": -75.702188,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Amalfi",
+    "lat": 6.909655,
+    "lng": -75.077501,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Andes",
+    "lat": 5.657194,
+    "lng": -75.878828,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Angelópolis",
+    "lat": 6.109719,
+    "lng": -75.711389,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Angostura",
+    "lat": 6.885175,
+    "lng": -75.335116,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Anorí",
+    "lat": 7.074703,
+    "lng": -75.148355,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Fé De Antioquia",
+    "lat": 6.556484,
+    "lng": -75.826648,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Anzá",
+    "lat": 6.302641,
+    "lng": -75.854442,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Apartadó",
+    "lat": 7.882968,
+    "lng": -76.625279,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Arboletes",
+    "lat": 8.849317,
+    "lng": -76.426708,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Argelia",
+    "lat": 5.731474,
+    "lng": -75.14107,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Armenia",
+    "lat": 6.155667,
+    "lng": -75.786647,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Barbosa",
+    "lat": 6.439195,
+    "lng": -75.331627,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Belmira",
+    "lat": 6.606319,
+    "lng": -75.667779,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Bello",
+    "lat": 6.333587,
+    "lng": -75.555245,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Betania",
+    "lat": 5.74615,
+    "lng": -75.97679,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Betulia",
+    "lat": 6.115208,
+    "lng": -75.984452,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ciudad Bolívar",
+    "lat": 5.850273,
+    "lng": -76.021509,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Briceño",
+    "lat": 7.112803,
+    "lng": -75.55036,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Buriticá",
+    "lat": 6.720759,
+    "lng": -75.907,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cáceres",
+    "lat": 7.578366,
+    "lng": -75.35205,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caicedo",
+    "lat": 6.405607,
+    "lng": -75.98293,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caldas",
+    "lat": 6.091077,
+    "lng": -75.633673,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Campamento",
+    "lat": 6.979771,
+    "lng": -75.298091,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cañasgordas",
+    "lat": 6.753859,
+    "lng": -76.028228,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caracolí",
+    "lat": 6.409829,
+    "lng": -74.757421,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caramanta",
+    "lat": 5.54853,
+    "lng": -75.643868,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Carepa",
+    "lat": 7.755148,
+    "lng": -76.652652,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Carmen De Viboral",
+    "lat": 6.082885,
+    "lng": -75.333901,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Carolina",
+    "lat": 6.725995,
+    "lng": -75.283192,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caucasia",
+    "lat": 7.977278,
+    "lng": -75.197996,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Chigorodó",
+    "lat": 7.666147,
+    "lng": -76.681531,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cisneros",
+    "lat": 6.537829,
+    "lng": -75.087047,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cocorná",
+    "lat": 6.058295,
+    "lng": -75.185483,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Concepción",
+    "lat": 6.394348,
+    "lng": -75.257587,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Concordia",
+    "lat": 6.045738,
+    "lng": -75.908448,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Copacabana",
+    "lat": 6.348557,
+    "lng": -75.509384,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Dabeiba",
+    "lat": 6.998112,
+    "lng": -76.261614,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Donmatías",
+    "lat": 6.485603,
+    "lng": -75.39263,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ebéjico",
+    "lat": 6.325615,
+    "lng": -75.766413,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Bagre",
+    "lat": 7.5975,
+    "lng": -74.799097,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Entrerríos",
+    "lat": 6.566273,
+    "lng": -75.517685,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Envigado",
+    "lat": 6.166695,
+    "lng": -75.582192,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Fredonia",
+    "lat": 5.928039,
+    "lng": -75.675072,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Frontino",
+    "lat": 6.776066,
+    "lng": -76.130765,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Giraldo",
+    "lat": 6.680808,
+    "lng": -75.952158,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Girardota",
+    "lat": 6.379472,
+    "lng": -75.444238,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Gómez Plata",
+    "lat": 6.683269,
+    "lng": -75.220018,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Granada",
+    "lat": 6.142892,
+    "lng": -75.184446,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guadalupe",
+    "lat": 6.815069,
+    "lng": -75.239862,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guarne",
+    "lat": 6.27787,
+    "lng": -75.441612,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guatapé",
+    "lat": 6.232461,
+    "lng": -75.160041,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Heliconia",
+    "lat": 6.206757,
+    "lng": -75.734322,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Hispania",
+    "lat": 5.799461,
+    "lng": -75.906587,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Itagüí",
+    "lat": 6.175079,
+    "lng": -75.612056,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ituango",
+    "lat": 7.171629,
+    "lng": -75.764673,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Jardín",
+    "lat": 5.597542,
+    "lng": -75.818982,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Jericó",
+    "lat": 5.789748,
+    "lng": -75.785499,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Ceja",
+    "lat": 6.028062,
+    "lng": -75.429433,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Estrella",
+    "lat": 6.145238,
+    "lng": -75.637708,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Pintada",
+    "lat": 5.743808,
+    "lng": -75.60781,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Unión",
+    "lat": 5.973845,
+    "lng": -75.360874,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Liborina",
+    "lat": 6.677316,
+    "lng": -75.812838,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Maceo",
+    "lat": 6.552116,
+    "lng": -74.78716,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Marinilla",
+    "lat": 6.173995,
+    "lng": -75.339345,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Montebello",
+    "lat": 5.946313,
+    "lng": -75.523455,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Murindó",
+    "lat": 6.97771,
+    "lng": -76.817485,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Mutatá",
+    "lat": 7.242875,
+    "lng": -76.435875,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Nariño",
+    "lat": 5.610777,
+    "lng": -75.176262,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Necoclí",
+    "lat": 8.434526,
+    "lng": -76.787271,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Nechí",
+    "lat": 8.094129,
+    "lng": -74.77647,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Olaya",
+    "lat": 6.626492,
+    "lng": -75.811773,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Peñol",
+    "lat": 6.219349,
+    "lng": -75.242693,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Peque",
+    "lat": 7.021029,
+    "lng": -75.910357,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Pueblorrico",
+    "lat": 5.79158,
+    "lng": -75.839903,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Berrío",
+    "lat": 6.487028,
+    "lng": -74.410016,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Nare",
+    "lat": 6.186025,
+    "lng": -74.583012,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Triunfo",
+    "lat": 5.871318,
+    "lng": -74.64119,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Remedios",
+    "lat": 7.029424,
+    "lng": -74.698135,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Retiro",
+    "lat": 6.062454,
+    "lng": -75.501301,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Rionegro",
+    "lat": 6.147148,
+    "lng": -75.377316,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sabanalarga",
+    "lat": 6.850028,
+    "lng": -75.816645,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sabaneta",
+    "lat": 6.149903,
+    "lng": -75.615479,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Salgar",
+    "lat": 5.964198,
+    "lng": -75.976807,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Andrés De Cuerquía",
+    "lat": 6.916676,
+    "lng": -75.674564,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Carlos",
+    "lat": 6.187746,
+    "lng": -74.988097,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Francisco",
+    "lat": 5.963476,
+    "lng": -75.101562,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Jerónimo",
+    "lat": 6.44809,
+    "lng": -75.726975,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San José De La Montaña",
+    "lat": 6.85009,
+    "lng": -75.683352,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Juan De Urabá",
+    "lat": 8.758964,
+    "lng": -76.52857,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Luis",
+    "lat": 6.043017,
+    "lng": -74.993619,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Pedro De Los Milagros",
+    "lat": 6.46012,
+    "lng": -75.556743,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Pedro De Urabá",
+    "lat": 8.276884,
+    "lng": -76.380567,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Rafael",
+    "lat": 6.293759,
+    "lng": -75.02849,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Roque",
+    "lat": 6.485939,
+    "lng": -75.019109,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Vicente Ferrer",
+    "lat": 6.282164,
+    "lng": -75.332616,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Bárbara",
+    "lat": 5.875527,
+    "lng": -75.567351,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Rosa De Osos",
+    "lat": 6.643366,
+    "lng": -75.460723,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santo Domingo",
+    "lat": 6.473032,
+    "lng": -75.164903,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Santuario",
+    "lat": 6.136871,
+    "lng": -75.265465,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Segovia",
+    "lat": 7.079648,
+    "lng": -74.701596,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sonsón",
+    "lat": 5.714851,
+    "lng": -75.309596,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sopetrán",
+    "lat": 6.500745,
+    "lng": -75.747378,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Támesis",
+    "lat": 5.664645,
+    "lng": -75.714429,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Tarazá",
+    "lat": 7.580127,
+    "lng": -75.401407,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Tarso",
+    "lat": 5.864542,
+    "lng": -75.822956,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Titiribí",
+    "lat": 6.062391,
+    "lng": -75.791887,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Toledo",
+    "lat": 7.010328,
+    "lng": -75.692281,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Turbo",
+    "lat": 8.089929,
+    "lng": -76.728858,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Uramita",
+    "lat": 6.898393,
+    "lng": -76.173284,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Urrao",
+    "lat": 6.317343,
+    "lng": -76.133951,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Valdivia",
+    "lat": 7.1652,
+    "lng": -75.439274,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Valparaíso",
+    "lat": 5.614555,
+    "lng": -75.624452,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Vegachí",
+    "lat": 6.773525,
+    "lng": -74.798714,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Venecia",
+    "lat": 5.964693,
+    "lng": -75.735544,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Vigía Del Fuerte",
+    "lat": 6.588164,
+    "lng": -76.896004,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yalí",
+    "lat": 6.676554,
+    "lng": -74.840059,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yarumal",
+    "lat": 6.963832,
+    "lng": -75.418828,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yolombó",
+    "lat": 6.594511,
+    "lng": -75.013385,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yondó",
+    "lat": 7.00396,
+    "lng": -73.912445,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Zaragoza",
+    "lat": 7.488583,
+    "lng": -74.867075,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Pasto",
+    "lat": 1.212352,
+    "lng": -77.278795,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Albán",
+    "lat": 1.474978,
+    "lng": -77.080712,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Aldana",
+    "lat": 0.882381,
+    "lng": -77.700564,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ancuya",
+    "lat": 1.263276,
+    "lng": -77.514512,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Arboleda",
+    "lat": 1.503418,
+    "lng": -77.135467,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Barbacoas",
+    "lat": 1.671733,
+    "lng": -78.13765,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Belén",
+    "lat": 1.595681,
+    "lng": -77.015619,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Buesaco",
+    "lat": 1.381453,
+    "lng": -77.156463,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Colón",
+    "lat": 1.643878,
+    "lng": -77.019777,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Consacá",
+    "lat": 1.207854,
+    "lng": -77.466136,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Contadero",
+    "lat": 0.910458,
+    "lng": -77.549409,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Córdoba",
+    "lat": 0.854564,
+    "lng": -77.517897,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cuaspud Carlosama",
+    "lat": 0.862978,
+    "lng": -77.728947,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cumbal",
+    "lat": 0.906367,
+    "lng": -77.792505,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cumbitara",
+    "lat": 1.647163,
+    "lng": -77.578616,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Chachagüí",
+    "lat": 1.360545,
+    "lng": -77.281869,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Charco",
+    "lat": 2.479688,
+    "lng": -78.110217,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Peñol",
+    "lat": 1.453567,
+    "lng": -77.438522,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Rosario",
+    "lat": 1.745309,
+    "lng": -77.33417,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Tablón De Gómez",
+    "lat": 1.427277,
+    "lng": -77.097101,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Tambo",
+    "lat": 1.407913,
+    "lng": -77.390772,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Funes",
+    "lat": 1.001159,
+    "lng": -77.448913,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Guachucal",
+    "lat": 0.959744,
+    "lng": -77.731589,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Guaitarilla",
+    "lat": 1.129574,
+    "lng": -77.549824,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Gualmatán",
+    "lat": 0.919652,
+    "lng": -77.568701,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Iles",
+    "lat": 0.96952,
+    "lng": -77.521227,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Imués",
+    "lat": 1.05506,
+    "lng": -77.496339,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ipiales",
+    "lat": 0.827732,
+    "lng": -77.646367,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Cruz",
+    "lat": 1.601318,
+    "lng": -76.970504,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Florida",
+    "lat": 1.29753,
+    "lng": -77.402882,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Llanada",
+    "lat": 1.472892,
+    "lng": -77.58091,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Tola",
+    "lat": 2.398999,
+    "lng": -78.189725,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Unión",
+    "lat": 1.600219,
+    "lng": -77.131316,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Leiva",
+    "lat": 1.934453,
+    "lng": -77.306135,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Linares",
+    "lat": 1.350814,
+    "lng": -77.523953,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Los Andes",
+    "lat": 1.494587,
+    "lng": -77.521303,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Magüí",
+    "lat": 1.765633,
+    "lng": -78.182924,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Mallama",
+    "lat": 1.141037,
+    "lng": -77.864549,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Mosquera",
+    "lat": 2.507139,
+    "lng": -78.452992,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Nariño",
+    "lat": 1.288979,
+    "lng": -77.357972,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Olaya Herrera",
+    "lat": 2.347457,
+    "lng": -78.325814,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ospina",
+    "lat": 1.058433,
+    "lng": -77.566082,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Francisco Pizarro",
+    "lat": 2.040629,
+    "lng": -78.658361,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Policarpa",
+    "lat": 1.627196,
+    "lng": -77.458686,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Potosí",
+    "lat": 0.806639,
+    "lng": -77.573003,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Providencia",
+    "lat": 1.237814,
+    "lng": -77.596794,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Puerres",
+    "lat": 0.885125,
+    "lng": -77.504211,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Pupiales",
+    "lat": 0.870442,
+    "lng": -77.636042,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ricaurte",
+    "lat": 1.212492,
+    "lng": -77.995153,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Roberto Payán",
+    "lat": 1.697492,
+    "lng": -78.245716,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Samaniego",
+    "lat": 1.335438,
+    "lng": -77.594341,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Sandoná",
+    "lat": 1.283438,
+    "lng": -77.47313,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Bernardo",
+    "lat": 1.513762,
+    "lng": -77.0475,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Lorenzo",
+    "lat": 1.503362,
+    "lng": -77.21542,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Pablo",
+    "lat": 1.669429,
+    "lng": -77.013984,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Pedro De Cartago",
+    "lat": 1.551572,
+    "lng": -77.11941,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Santa Bárbara",
+    "lat": 2.449653,
+    "lng": -77.979916,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Santacruz",
+    "lat": 1.222589,
+    "lng": -77.677035,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Sapuyes",
+    "lat": 1.037536,
+    "lng": -77.62028,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Taminango",
+    "lat": 1.570358,
+    "lng": -77.2808,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Tangua",
+    "lat": 1.09482,
+    "lng": -77.393735,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Andrés De Tumaco",
+    "lat": 1.807399,
+    "lng": -78.764073,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Túquerres",
+    "lat": 1.085044,
+    "lng": -77.61672,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Yacuanquer",
+    "lat": 1.115937,
+    "lng": -77.400169,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Santiago De Cali",
+    "lat": 3.413686,
+    "lng": -76.52133,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Alcalá",
+    "lat": 4.674994,
+    "lng": -75.779792,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Andalucía",
+    "lat": 4.171713,
+    "lng": -76.167925,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ansermanuevo",
+    "lat": 4.794984,
+    "lng": -75.992003,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Argelia",
+    "lat": 4.726945,
+    "lng": -76.119905,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Bolívar",
+    "lat": 4.337846,
+    "lng": -76.183583,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Buenaventura",
+    "lat": 3.875708,
+    "lng": -77.01074,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Guadalajara De Buga",
+    "lat": 3.900736,
+    "lng": -76.298979,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Bugalagrande",
+    "lat": 4.208358,
+    "lng": -76.15682,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Caicedonia",
+    "lat": 4.334808,
+    "lng": -75.830594,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Calima",
+    "lat": 3.933664,
+    "lng": -76.484132,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Candelaria",
+    "lat": 3.408354,
+    "lng": -76.346519,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Cartago",
+    "lat": 4.742192,
+    "lng": -75.924374,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Dagua",
+    "lat": 3.657318,
+    "lng": -76.68886,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Águila",
+    "lat": 4.906062,
+    "lng": -76.042779,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Cairo",
+    "lat": 4.760874,
+    "lng": -76.221611,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Cerrito",
+    "lat": 3.684229,
+    "lng": -76.311972,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Dovio",
+    "lat": 4.510452,
+    "lng": -76.237084,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Florida",
+    "lat": 3.324118,
+    "lng": -76.234199,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ginebra",
+    "lat": 3.724181,
+    "lng": -76.268068,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Guacarí",
+    "lat": 3.761815,
+    "lng": -76.330911,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Jamundí",
+    "lat": 3.258751,
+    "lng": -76.538472,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Cumbre",
+    "lat": 3.649268,
+    "lng": -76.56805,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Unión",
+    "lat": 4.533869,
+    "lng": -76.099661,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Victoria",
+    "lat": 4.523603,
+    "lng": -76.036529,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Obando",
+    "lat": 4.575712,
+    "lng": -75.974709,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Palmira",
+    "lat": 3.531544,
+    "lng": -76.298846,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Pradera",
+    "lat": 3.419793,
+    "lng": -76.241799,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Restrepo",
+    "lat": 3.821351,
+    "lng": -76.523329,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Riofrío",
+    "lat": 4.156908,
+    "lng": -76.288313,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Roldanillo",
+    "lat": 4.413601,
+    "lng": -76.152277,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "San Pedro",
+    "lat": 3.995073,
+    "lng": -76.228692,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Sevilla",
+    "lat": 4.270714,
+    "lng": -75.931629,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Toro",
+    "lat": 4.608085,
+    "lng": -76.076859,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Trujillo",
+    "lat": 4.212037,
+    "lng": -76.318818,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Tuluá",
+    "lat": 4.085399,
+    "lng": -76.197731,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ulloa",
+    "lat": 4.703623,
+    "lng": -75.737808,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Versalles",
+    "lat": 4.575019,
+    "lng": -76.199203,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Vijes",
+    "lat": 3.698686,
+    "lng": -76.441804,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Yotoco",
+    "lat": 3.861241,
+    "lng": -76.382698,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Yumbo",
+    "lat": 3.540097,
+    "lng": -76.499893,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Zarzal",
+    "lat": 4.392658,
+    "lng": -76.070795,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
   }
 ]

@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { MapContainer, TileLayer, Circle, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
-// Colores de riesgo
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'alto': return '#e74c3c'
@@ -14,29 +13,13 @@ const getColor = (nivel) => {
     }
 }
 
-// Ícono por tipo de evento
-const getIconoPorTipo = (tipo) => {
-    const tipos = {
-        'conflicto armado': 'conflicto.png',
-        'desplazamiento': 'desplazamiento.png',
-        'amenaza': 'amenaza.png',
-        'presencia armada': 'presencia.png',
-        'artefacto explosivo': 'explosivo.png'
-    }
+const iconoEvento = new L.Icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+    iconSize: [25, 25],
+})
 
-    const archivo = tipos[tipo?.toLowerCase()] || 'otro.png'
-
-    return new L.Icon({
-        iconUrl: `/icons/${archivo}`,
-        iconSize: [25, 25],
-        iconAnchor: [12, 12]
-    })
-}
-
-// Leyenda de niveles de riesgo
 const Leyenda = () => {
     const map = useMap()
-
     useEffect(() => {
         const legend = L.control({ position: 'bottomright' })
         legend.onAdd = () => {
@@ -51,13 +34,13 @@ const Leyenda = () => {
         }
         legend.addTo(map)
     }, [map])
-
     return null
 }
 
 const MapaRiesgos = ({ riesgos, filtroEvento }) => {
     const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const [eventos, setEventos] = useState([])
+    const mapRef = useRef()
 
     useEffect(() => {
         fetch('/limites_departamentos.geojson')
@@ -72,10 +55,22 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             .catch(err => console.error('❌ Error al cargar eventos:', err))
     }, [])
 
+    useEffect(() => {
+        if (mapRef.current && riesgos.length === 1) {
+            const r = riesgos[0]
+            mapRef.current.flyTo([r.lat, r.lng], 11)
+        }
+    }, [riesgos])
+
     if (!Array.isArray(riesgos)) return <p style={{ color: 'white' }}>Cargando datos de riesgos...</p>
 
     return (
-        <MapContainer center={[2.5, -76.6]} zoom={8} style={{ height: '600px', width: '100%' }}>
+        <MapContainer
+            center={[2.5, -76.6]}
+            zoom={8}
+            style={{ height: '600px', width: '100%' }}
+            whenCreated={mapInstance => { mapRef.current = mapInstance }}
+        >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
                 attribution="&copy; OpenStreetMap contributors, Tiles by HOT"
@@ -86,7 +81,7 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             {limitesDepartamentos && (
                 <GeoJSON
                     data={limitesDepartamentos}
-                    style={(feature) => ({
+                    style={feature => ({
                         color: feature.properties.departamento === "Cauca" ? "#2ecc71" : "#ffffff",
                         weight: 2,
                         fillOpacity: 0,
@@ -95,26 +90,49 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
                 />
             )}
 
-            {riesgos.map((r, i) => (
-                <Circle
-                    key={i}
-                    center={[r.lat, r.lng]}
-                    radius={10000}
-                    pathOptions={{ color: getColor(r.nivel_riesgo) }}
-                >
-                    <Popup>
-                        <div style={{ fontSize: '13px', lineHeight: '1.4em' }}>
-                            <strong style={{ fontSize: '15px' }}>{r.municipio.toUpperCase()}</strong><br />
-                            <strong style={{ color: getColor(r.nivel_riesgo) }}>
+            {riesgos.map((r, i) => {
+                const soloUno = riesgos.length === 1
+                if (soloUno) {
+                    return (
+                        <Marker
+                            key={`r-${i}`}
+                            position={[r.lat, r.lng]}
+                            icon={L.divIcon({
+                                className: 'custom-icon',
+                                html: `<div style="background:${getColor(r.nivel_riesgo)}; width:20px; height:20px; border-radius:50%; border: 2px solid white;"></div>`
+                            })}
+                        >
+                            <Popup autoOpen={true} autoPan={true}>
+                                <strong>{r.municipio}</strong><br />
+                                <span style={{ color: getColor(r.nivel_riesgo), fontWeight: 'bold' }}>
+                                    Riesgo: {r.nivel_riesgo?.toUpperCase()}
+                                </span><br />
+                                Contexto: {r.contexto}<br />
+                                Estructuras: {r.estructuras_zona}<br />
+                                Novedades: {r.novedades}
+                            </Popup>
+                        </Marker>
+                    )
+                }
+                return (
+                    <Circle
+                        key={`r-${i}`}
+                        center={[r.lat, r.lng]}
+                        radius={10000}
+                        pathOptions={{ color: getColor(r.nivel_riesgo) }}
+                    >
+                        <Popup>
+                            <strong>{r.municipio}</strong><br />
+                            <span style={{ color: getColor(r.nivel_riesgo), fontWeight: 'bold' }}>
                                 Riesgo: {r.nivel_riesgo?.toUpperCase()}
-                            </strong><br />
-                            <span><strong>Contexto:</strong> {r.contexto}</span><br />
-                            <span><strong>Estructuras:</strong> {r.estructuras_zona}</span><br />
-                            <span><strong>Novedades:</strong> {r.novedades}</span>
-                        </div>
-                    </Popup>
-                </Circle>
-            ))}
+                            </span><br />
+                            Contexto: {r.contexto}<br />
+                            Estructuras: {r.estructuras_zona}<br />
+                            Novedades: {r.novedades}
+                        </Popup>
+                    </Circle>
+                )
+            })}
 
             {eventos
                 .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)
@@ -122,7 +140,7 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
                     <Marker
                         key={`evento-${i}`}
                         position={[evento.lat, evento.lng]}
-                        icon={getIconoPorTipo(evento.tipo)}
+                        icon={iconoEvento}
                     >
                         <Popup>
                             <strong>{evento.vereda} ({evento.municipio})</strong><br />
@@ -136,3 +154,5 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
 }
 
 export default MapaRiesgos
+
+

@@ -228,3 +228,25 @@ input:focus {
     font-size: 13px;
   }
 }
+
+.leaflet-interactive.pulsante {
+  animation: pulse 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    r: 6;
+    opacity: 0.8;
+  }
+
+  50% {
+    r: 18;
+    opacity: 0.2;
+  }
+
+  100% {
+    r: 6;
+    opacity: 0.8;
+  }
+}
