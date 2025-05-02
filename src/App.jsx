@@ -68,7 +68,7 @@ function App() {
           </div>
 
           {/* Layout principal */}
-          <div className="main-layout">
+          <div className="main-container">
             {/* Panel izquierdo: filtros */}
             <div className="left-panel panel-filtros">
               <h3>Filtros</h3>
@@ -98,6 +98,7 @@ function App() {
                 <option value="desplazamiento">Desplazamiento</option>
                 <option value="presencia armada">Presencia armada</option>
               </select>
+              <EventosRecientes filtroEvento={filtroEvento} />
             </div>
 
             {/* Mapa */}
@@ -109,7 +110,6 @@ function App() {
             <div className="right-panel">
               <div className="eventos-recientes">
                 <h4>Últimos eventos reportados</h4>
-                <EventosRecientes filtroEvento={filtroEvento} />
               </div>
 
               <div className="chart-container">

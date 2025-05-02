@@ -14,11 +14,24 @@ const getColor = (nivel) => {
     }
 }
 
-// Ícono personalizado para eventos y mas care verga
-const iconoEvento = new L.Icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-    iconSize: [25, 25],
-})
+// Ícono por tipo de evento
+const getIconoPorTipo = (tipo) => {
+    const tipos = {
+        'conflicto armado': 'conflicto.png',
+        'desplazamiento': 'desplazamiento.png',
+        'amenaza': 'amenaza.png',
+        'presencia armada': 'presencia.png',
+        'artefacto explosivo': 'explosivo.png'
+    }
+
+    const archivo = tipos[tipo?.toLowerCase()] || 'otro.png'
+
+    return new L.Icon({
+        iconUrl: `/icons/${archivo}`,
+        iconSize: [25, 25],
+        iconAnchor: [12, 12]
+    })
+}
 
 // Leyenda de niveles de riesgo
 const Leyenda = () => {
@@ -46,7 +59,6 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
     const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const [eventos, setEventos] = useState([])
 
-    // Cargar límites del departamento si quieres (opcional)
     useEffect(() => {
         fetch('/limites_departamentos.geojson')
             .then(res => res.json())
@@ -54,9 +66,8 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             .catch(err => console.error('❌ Error cargando límites:', err))
     }, [])
 
-    // Cargar eventos en tiempo real
     useEffect(() => {
-        axios.get('http://localhost:3000/api/eventos')
+        axios.get(import.meta.env.VITE_API_URL + '/api/eventos')
             .then(res => setEventos(res.data))
             .catch(err => console.error('❌ Error al cargar eventos:', err))
     }, [])
@@ -72,7 +83,6 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
 
             <Leyenda />
 
-            {/* Límites departamentales opcionales */}
             {limitesDepartamentos && (
                 <GeoJSON
                     data={limitesDepartamentos}
@@ -85,7 +95,6 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
                 />
             )}
 
-            {/* Puntos de riesgos */}
             {riesgos.map((r, i) => (
                 <Circle
                     key={i}
@@ -94,25 +103,26 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
                     pathOptions={{ color: getColor(r.nivel_riesgo) }}
                 >
                     <Popup>
-                        <strong>{r.municipio}</strong><br />
-                        <span style={{ color: getColor(r.nivel_riesgo), fontWeight: 'bold' }}>
-                            Riesgo: {r.nivel_riesgo?.toUpperCase()}
-                        </span><br />
-                        Contexto: {r.contexto}<br />
-                        Estructuras: {r.estructuras_zona}<br />
-                        Novedades: {r.novedades}
+                        <div style={{ fontSize: '13px', lineHeight: '1.4em' }}>
+                            <strong style={{ fontSize: '15px' }}>{r.municipio.toUpperCase()}</strong><br />
+                            <strong style={{ color: getColor(r.nivel_riesgo) }}>
+                                Riesgo: {r.nivel_riesgo?.toUpperCase()}
+                            </strong><br />
+                            <span><strong>Contexto:</strong> {r.contexto}</span><br />
+                            <span><strong>Estructuras:</strong> {r.estructuras_zona}</span><br />
+                            <span><strong>Novedades:</strong> {r.novedades}</span>
+                        </div>
                     </Popup>
                 </Circle>
             ))}
 
-            {/* Puntos de eventos */}
             {eventos
                 .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)
                 .map((evento, i) => (
                     <Marker
                         key={`evento-${i}`}
                         position={[evento.lat, evento.lng]}
-                        icon={iconoEvento}
+                        icon={getIconoPorTipo(evento.tipo)}
                     >
                         <Popup>
                             <strong>{evento.vereda} ({evento.municipio})</strong><br />
