@@ -6,10 +6,12 @@ import 'leaflet/dist/leaflet.css'
 
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
-        case 'alto': return '#e74c3c'
-        case 'medio': return '#f39c12'
-        case 'bajo': return '#27ae60'
-        default: return '#95a5a6'
+        case 'bajo': return '#27ae60'      // Verde
+        case 'moderado':
+        case 'medio': return '#f1c40f'     // Amarillo (ambos)
+        case 'critico': return '#e67e22'   // Naranja fuerte
+        case 'alto': return '#e74c3c'      // Rojo
+        default: return '#95a5a6'          // Gris
     }
 }
 
@@ -24,8 +26,8 @@ const Leyenda = () => {
         const legend = L.control({ position: 'bottomright' })
         legend.onAdd = () => {
             const div = L.DomUtil.create('div', 'info legend')
-            const niveles = ['Alto', 'Medio', 'Bajo']
-            const colores = ['#e74c3c', '#f39c12', '#27ae60']
+            const niveles = ['Bajo', 'Moderado', 'Crítico', 'Alto']
+            const colores = ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c']
             div.innerHTML += '<h4>Nivel de Riesgo</h4>'
             niveles.forEach((nivel, i) => {
                 div.innerHTML += `<i style="background:${colores[i]}; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> ${nivel}<br>`

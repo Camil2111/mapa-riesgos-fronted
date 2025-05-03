@@ -84,9 +84,10 @@ function App() {
               <label>Filtrar por nivel:</label>
               <select value={filtro} onChange={e => setFiltro(e.target.value)}>
                 <option value="todos">Todos</option>
-                <option value="alto">Alto</option>
-                <option value="medio">Medio</option>
                 <option value="bajo">Bajo</option>
+                <option value="moderado">Moderado</option>
+                <option value="critico">Crítico</option>
+                <option value="alto">Alto</option>
               </select>
 
               <label style={{ marginTop: '15px' }}>Departamento:</label>
