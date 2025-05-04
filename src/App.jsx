@@ -8,6 +8,7 @@ import riesgosData from './datos_riesgos.json'
 import Estadisticas from './pages/Estadisticas.jsx'
 import EventosRecientes from './components/EventosRecientes.jsx'
 import Cuadrantes from './pages/Cuadrantes.jsx'
+import LineaTiempo from './components/LineaTiempo.jsx'
 import './App.css'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
@@ -54,7 +55,6 @@ function App() {
   return (
     <Router>
       <Routes>
-
         {/* Ruta principal: el mapa */}
         <Route path="/" element={
           mostrarMapa ? (
@@ -86,7 +86,6 @@ function App() {
                 {/* Panel izquierdo: filtros */}
                 <div className="left-panel panel-filtros">
                   <h3>Filtros</h3>
-
                   <label>Filtrar por nivel:</label>
                   <select value={filtro} onChange={e => setFiltro(e.target.value)}>
                     <option value="todos">Todos</option>
@@ -145,8 +144,6 @@ function App() {
                   >
                     Limpiar filtros
                   </button>
-
-                  <EventosRecientes filtroEvento={filtroEvento} />
                 </div>
 
                 {/* Mapa */}
@@ -159,41 +156,17 @@ function App() {
                   />
                 </div>
 
-                {/* Estadísticas mini */}
                 <div className="right-panel">
                   <div className="chart-container">
-                    <h3>Estadísticas de Riesgo</h3>
-                    {loading ? (
-                      <p>🔄 Cargando datos...</p>
-                    ) : (
-                      <Bar
-                        data={{
-                          labels: datosEstadisticas.map(item => item.municipio),
-                          datasets: [{
-                            label: 'Casos por municipio',
-                            data: datosEstadisticas.map(item => item.casos),
-                            backgroundColor: '#29f77a'
-                          }]
-                        }}
-                        options={{
-                          responsive: true,
-                          plugins: {
-                            legend: { labels: { color: '#e5e5e5' } },
-                            title: {
-                              display: true,
-                              text: 'Casos por Municipio',
-                              color: '#29f77a'
-                            }
-                          },
-                          scales: {
-                            x: { ticks: { color: '#ccc' }, grid: { color: '#333' } },
-                            y: { ticks: { color: '#ccc' }, grid: { color: '#333' } }
-                          }
-                        }}
-                      />
-                    )}
+                    <h3 style={{ marginBottom: '10px' }}>🕒 Actividad Reciente</h3>
+                    <EventosRecientes filtroEvento={filtroEvento} />
                   </div>
                 </div>
+
+
+                {/* Línea de tiempo */}
+                <LineaTiempo municipio={municipio} />
+
               </div>
             </div>
           ) : (

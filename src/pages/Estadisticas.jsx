@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { Bar, Pie, Line } from 'react-chartjs-2'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement } from 'chart.js'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
+
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement, Title, Tooltip, Legend)
 
@@ -45,6 +47,20 @@ const Estadisticas = () => {
             <h2 style={{ textAlign: 'center', color: '#29f77a', marginBottom: '30px' }}>
                 🧭 Centro de Monitoreo - Estadísticas Criminales
             </h2>
+
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                <Link to="/" style={{
+                    backgroundColor: '#29f77a',
+                    color: '#0f1a1a',
+                    padding: '10px 20px',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    fontWeight: 'bold'
+                }}>
+                    ⬅ Volver al mapa
+                </Link>
+            </div>
+
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
                 <select
