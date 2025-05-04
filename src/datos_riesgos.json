@@ -1,7 +1,7 @@
 [
   {
     "municipio": "POPAYAN",
-    "nivel_riesgo": "Bajo",
+    "nivel_riesgo": "Alto",
     "novedades": "Presencia de GAO-r estructura 6",
     "contexto": "Zona de conflicto territorial con presencia de actores armados ilegales",
     "estructuras_zona": "Eln GAO-r",
@@ -15,8 +15,7 @@
     "contexto": "Ruta estratégica en disputa por narcotráfico",
     "estructuras_zona": "GAO-r estructura 30",
     "lat": 3.012876,
-    "lng": -76.4845,
-    "departamento": "Cauca"
+    "lng": -76.4845
   },
   {
     "municipio": "MIRANDA",
@@ -25,8 +24,7 @@
     "contexto": "Zona de enfrentamientos recientes entre disidencias y Ejército",
     "estructuras_zona": "Ejército, GAO-r",
     "lat": 3.243218,
-    "lng": -76.225,
-    "departamento": "Cauca"
+    "lng": -76.225
   },
   {
     "municipio": "TIMBIQUI",
@@ -44,8 +42,7 @@
     "contexto": "Conflictos por rutas de narcotráfico",
     "estructuras_zona": "GAOR estructura 6",
     "lat": 2.25583,
-    "lng": -77.2492,
-    "departamento": "Cauca"
+    "lng": -77.2492
   },
   {
     "municipio": "BALBOA",
@@ -54,8 +51,7 @@
     "contexto": "Zona de paso esporádico de grupos armados",
     "estructuras_zona": "Presencia policial",
     "lat": 2.05056,
-    "lng": -77.2164,
-    "departamento": "Cauca"
+    "lng": -77.2164
   },
   {
     "municipio": "BOLIVAR",
@@ -73,8 +69,7 @@
     "contexto": "Presencia de grupos armados ilegales",
     "estructuras_zona": "GAOR, Policía, FFMM",
     "lat": 3.1195,
-    "lng": -76.6817,
-    "departamento": "Cauca"
+    "lng": -76.6817
   },
   {
     "municipio": "CAJIBIO",
@@ -101,8 +96,7 @@
     "contexto": "Zona de control armado",
     "estructuras_zona": "GAO-r estructura 6",
     "lat": 3.0343,
-    "lng": -76.4043,
-    "departamento": "Cauca"
+    "lng": -76.4043
   },
   {
     "municipio": "CORINTO",
@@ -111,8 +105,7 @@
     "contexto": "Disputas territoriales entre GAO",
     "estructuras_zona": "GAO-r, Policía, Ejército",
     "lat": 3.1748,
-    "lng": -76.2615,
-    "departamento": "Cauca"
+    "lng": -76.2615
   },
   {
     "municipio": "EL TAMBO",
@@ -121,8 +114,7 @@
     "contexto": "Presión a comerciantes rurales",
     "estructuras_zona": "GAOR estructura 30",
     "lat": 2.441,
-    "lng": -77.0163,
-    "departamento": "Cauca"
+    "lng": -77.0163
   },
   {
     "municipio": "FLORENCIA",
@@ -131,8 +123,7 @@
     "contexto": "Presencia institucional activa",
     "estructuras_zona": "Estación de Policía",
     "lat": 1.6922,
-    "lng": -77.0746,
-    "departamento": "Cauca"
+    "lng": -77.0746
   },
   {
     "municipio": "GUAPI",
@@ -141,8 +132,7 @@
     "contexto": "Zona costera con baja presencia institucional",
     "estructuras_zona": "GAO-r, fuerza pública naval",
     "lat": 2.5712,
-    "lng": -77.9065,
-    "departamento": "Cauca"
+    "lng": -77.9065
   },
   {
     "municipio": "INZA",
@@ -169,8 +159,7 @@
     "contexto": "Poca o nula presencia de grupos ilegales",
     "estructuras_zona": "Autoridades locales",
     "lat": 2.1756,
-    "lng": -76.7229,
-    "departamento": "Cauca"
+    "lng": -76.7229
   },
   {
     "municipio": "LA VEGA",
@@ -179,8 +168,7 @@
     "contexto": "Zona de producción agrícola",
     "estructuras_zona": "Estación de Policía",
     "lat": 2.1833,
-    "lng": -76.776,
-    "departamento": "Cauca"
+    "lng": -76.776
   },
   {
     "municipio": "LOPEZ DE MICAY",
@@ -189,8 +177,7 @@
     "contexto": "Difícil acceso por vía terrestre",
     "estructuras_zona": "GAO-r, estructura 30",
     "lat": 2.7442,
-    "lng": -77.6385,
-    "departamento": "Cauca"
+    "lng": -77.6385
   },
   {
     "municipio": "MERCADERES",
@@ -199,8 +186,7 @@
     "contexto": "Presión armada en zonas rurales",
     "estructuras_zona": "GAO-r",
     "lat": 1.7979,
-    "lng": -77.1693,
-    "departamento": "Cauca"
+    "lng": -77.1693
   },
   {
     "municipio": "MORALES",
@@ -272,8 +258,7 @@
     "contexto": "Zona afectada por derrumbes naturales más que conflicto",
     "estructuras_zona": "Autoridades municipales",
     "lat": 1.9611,
-    "lng": -76.7439,
-    "departamento": "Cauca"
+    "lng": -76.7439
   },
   {
     "municipio": "SAN SEBASTIAN",
@@ -300,8 +285,7 @@
     "contexto": "Zona de resguardos con tensiones sociales",
     "estructuras_zona": "Guardia Indígena, Policía",
     "lat": 2.6201,
-    "lng": -76.3804,
-    "departamento": "Cauca"
+    "lng": -76.3804
   },
   {
     "municipio": "SOTARA",
@@ -337,8 +321,7 @@
     "contexto": "Conflicto con comunidades indígenas",
     "estructuras_zona": "Guardia Indígena, GAO-r",
     "lat": 2.9512,
-    "lng": -76.2606,
-    "departamento": "Cauca"
+    "lng": -76.2606
   },
   {
     "municipio": "TOTORO",
@@ -356,8 +339,7 @@
     "contexto": "Zona industrial con riesgos colaterales",
     "estructuras_zona": "Policía, Ejército",
     "lat": 3.1723,
-    "lng": -76.4813,
-    "departamento": "Cauca"
+    "lng": -76.4813
   },
   {
     "departamento": "Antioquia",
@@ -2657,6 +2639,2316 @@
     "nivel_riesgo": "medio",
     "contexto": "Información preliminar de riesgo",
     "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Zarzal",
+    "lat": 4.392658,
+    "lng": -76.070795,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Abejorral",
+    "lat": 5.789315,
+    "lng": -75.428739,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Abriaquí",
+    "lat": 6.632282,
+    "lng": -76.064304,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Albán",
+    "lat": 1.474978,
+    "lng": -77.080712,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Alcalá",
+    "lat": 4.674994,
+    "lng": -75.779792,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Aldana",
+    "lat": 0.882381,
+    "lng": -77.700564,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Alejandría",
+    "lat": 6.376061,
+    "lng": -75.141346,
+    "nivel_riesgo": "Moderado",
+    "contexto": "21-mayo.2024 Incautado material de guerra del clan del golfo en la via concepcion - alejandria.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Amagá",
+    "lat": 6.038708,
+    "lng": -75.702188,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Amalfi",
+    "lat": 6.909655,
+    "lng": -75.077501,
+    "nivel_riesgo": "Critico",
+    "contexto": "06/10/2024                                                                      Se presento enfrentamientos entre grupos al margen de la ley que estan en disputa por el control en la region donde tienen injerencia el clan del golfo,ELN y disidencias de las Farc,generando temor en la poblacion de la vereda el jardin, del municipio de Amalfi,Nordeste de Antioquia.Segun la asociacion de campesinos del norte y nordeste antioqueño, entre 20 y 30 personas tuvieron que salir de la vereda para huir de los combates.",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ancuya",
+    "lat": 1.263276,
+    "lng": -77.514512,
+    "nivel_riesgo": "Moderado",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Andalucía",
+    "lat": 4.171713,
+    "lng": -76.167925,
+    "nivel_riesgo": "Moderado",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Andes",
+    "lat": 5.657194,
+    "lng": -75.878828,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Angelópolis",
+    "lat": 6.109719,
+    "lng": -75.711389,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Angostura",
+    "lat": 6.885175,
+    "lng": -75.335116,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Anorí",
+    "lat": 7.074703,
+    "lng": -75.148355,
+    "nivel_riesgo": "Moderado",
+    "contexto": "27/10/2024 En la vereda Quebradona del municipio de anorí,se registro un atentado contra un helicoptero Black Hawk de la policia nacional en el que iban 24 uniformados.la aeronave fue impactada,pero logro aterrizar.situacion se presenta de acuerdo con el ejercito y policia nacional en el desarrollo de operaciones contra las economias ilicitas de los grupos armados que delinquen en esa region.",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ansermanuevo",
+    "lat": 4.794984,
+    "lng": -75.992003,
+    "nivel_riesgo": "Moderado",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Anzá",
+    "lat": 6.302641,
+    "lng": -75.854442,
+    "nivel_riesgo": "Moderado",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Apartadó",
+    "lat": 7.882968,
+    "lng": -76.625279,
+    "nivel_riesgo": "Moderado",
+    "contexto": "02/08/2024 Ejercito Nacional captura a 3 integrantes del clan del golfo y desarticula central de comunicaciones en Apartado.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Arboleda",
+    "lat": 1.503418,
+    "lng": -77.135467,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Arboletes",
+    "lat": 8.849317,
+    "lng": -76.426708,
+    "nivel_riesgo": "Moderado",
+    "contexto": "29/ABRIL/24\nLa Décima Séptima Brigada del Ejército Nacional desarrolló una operación militar en la vereda El Tambo, Arboletes donde logró la ubicación de una central de comunicaciones de la subestructura Gabriel Poveda Ramos del Clan del Golfo. En el lugar se incautaron dos pistolas 9 mm, 49 cartuchos y dos proveedores para la misma, así mismo se halló material de comunicaciones y documentos de interés para la inteligencia militar.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Argelia",
+    "lat": 5.731474,
+    "lng": -75.14107,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Argelia",
+    "lat": 4.726945,
+    "lng": -76.119905,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Armenia",
+    "lat": 6.155667,
+    "lng": -75.786647,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Barbacoas",
+    "lat": 1.671733,
+    "lng": -78.13765,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Barbosa",
+    "lat": 6.439195,
+    "lng": -75.331627,
+    "nivel_riesgo": "Critico",
+    "contexto": "04/JUL/24\nEn un operativo conjunto, las Fuerzas Militares lograron desmantelar siete laboratorios clandestinos de producción de cocaína en el municipio de Barbosa, Antioquia. Los laboratorios ubicados en la vereda El Tablazo Popalito, que pertenecían a la subestructura de Carlos Mauricio García del Clan del Golfo.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Belén",
+    "lat": 1.595681,
+    "lng": -77.015619,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Bello",
+    "lat": 6.333587,
+    "lng": -75.555245,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Belmira",
+    "lat": 6.606319,
+    "lng": -75.667779,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Betania",
+    "lat": 5.74615,
+    "lng": -75.97679,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Betulia",
+    "lat": 6.115208,
+    "lng": -75.984452,
+    "nivel_riesgo": "Moderado",
+    "contexto": "20/AGOS/24\nUn hombre muerto y dos más  heridos, entre ellos, un menor de 16 años, es el producto de un enfrentamiento armado entre integrantes del Clan del Golfo y una estructura urbana denominada 20 de julio, en el municipio de Betulia, suroeste antioqueño.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Bolívar",
+    "lat": 4.337846,
+    "lng": -76.183583,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Briceño",
+    "lat": 7.112803,
+    "lng": -75.55036,
+    "nivel_riesgo": "Critico",
+    "contexto": "11/SEP/24\nDos subversivos muertos dejan combates entre el Clan del Golfo y las disidencias de las FARC en la zona rural de Briceño",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Buenaventura",
+    "lat": 3.875708,
+    "lng": -77.01074,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Buesaco",
+    "lat": 1.381453,
+    "lng": -77.156463,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Bugalagrande",
+    "lat": 4.208358,
+    "lng": -76.15682,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Buriticá",
+    "lat": 6.720759,
+    "lng": -75.907,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cáceres",
+    "lat": 7.578366,
+    "lng": -75.35205,
+    "nivel_riesgo": "Critico",
+    "contexto": "17/MAY/24\nSigue generando preocupación el panorama de seguridad y orden público en el Bajo CaucaBajo Cauca antioqueño, pues recientes confrontaciones entre grupos armados por la disputa del territorio produjeron la muerte de tres personas en Cáceres.",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caicedo",
+    "lat": 6.405607,
+    "lng": -75.98293,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Caicedonia",
+    "lat": 4.334808,
+    "lng": -75.830594,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caldas",
+    "lat": 6.091077,
+    "lng": -75.633673,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Calima",
+    "lat": 3.933664,
+    "lng": -76.484132,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Campamento",
+    "lat": 6.979771,
+    "lng": -75.298091,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Candelaria",
+    "lat": 3.408354,
+    "lng": -76.346519,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cañasgordas",
+    "lat": 6.753859,
+    "lng": -76.028228,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caracolí",
+    "lat": 6.409829,
+    "lng": -74.757421,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caramanta",
+    "lat": 5.54853,
+    "lng": -75.643868,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Carepa",
+    "lat": 7.755148,
+    "lng": -76.652652,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Carolina",
+    "lat": 6.725995,
+    "lng": -75.283192,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Cartago",
+    "lat": 4.742192,
+    "lng": -75.924374,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Caucasia",
+    "lat": 7.977278,
+    "lng": -75.197996,
+    "nivel_riesgo": "Critico",
+    "contexto": "16/SEP/24\nUniformados realizó la captura en flagrancia de dos presuntos integrantes del grupo delincuencial organizado Los Caparros o Los del Bajo, por el delito de fabricación, tráfico y porte de armas y municiones.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Chachagüí",
+    "lat": 1.360545,
+    "lng": -77.281869,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Chigorodó",
+    "lat": 7.666147,
+    "lng": -76.681531,
+    "nivel_riesgo": "Critico",
+    "contexto": "17/JUN/24\nHasta la vereda Remigio del municipio de Chigorodó llegaron tropas del Ejército Nacional que destruyeron de manera controlada un laboratorio para el procesamiento de pasta base de coca, perteneciente a la Subestructura Carlos Vásquez del Clan del Golfo.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cisneros",
+    "lat": 6.537829,
+    "lng": -75.087047,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ciudad Bolívar",
+    "lat": 5.850273,
+    "lng": -76.021509,
+    "nivel_riesgo": "Moderado",
+    "contexto": "20/SEP/24\nEjército junto a la Policía llegó a la vereda Punta Brava, Ciudad Bolívar, donde cayeron alias Ranger y alias Bart Simpson, dos miembros de la Subestructura del Clan del Golfo en el Suroeste antioqueño.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Cocorná",
+    "lat": 6.058295,
+    "lng": -75.185483,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Colón",
+    "lat": 1.643878,
+    "lng": -77.019777,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Concepción",
+    "lat": 6.394348,
+    "lng": -75.257587,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Concordia",
+    "lat": 6.045738,
+    "lng": -75.908448,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Consacá",
+    "lat": 1.207854,
+    "lng": -77.466136,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Contadero",
+    "lat": 0.910458,
+    "lng": -77.549409,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Copacabana",
+    "lat": 6.348557,
+    "lng": -75.509384,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Córdoba",
+    "lat": 0.854564,
+    "lng": -77.517897,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cuaspud Carlosama",
+    "lat": 0.862978,
+    "lng": -77.728947,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cumbal",
+    "lat": 0.906367,
+    "lng": -77.792505,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Cumbitara",
+    "lat": 1.647163,
+    "lng": -77.578616,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Dabeiba",
+    "lat": 6.998112,
+    "lng": -76.261614,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Dagua",
+    "lat": 3.657318,
+    "lng": -76.68886,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Donmatías",
+    "lat": 6.485603,
+    "lng": -75.39263,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ebéjico",
+    "lat": 6.325615,
+    "lng": -75.766413,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Águila",
+    "lat": 4.906062,
+    "lng": -76.042779,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Bagre",
+    "lat": 7.5975,
+    "lng": -74.799097,
+    "nivel_riesgo": "Critico",
+    "contexto": "11/SEP/24\nEn la vereda Las Dantas, jurisdicción del municipio de El Bagre; Antioquia, las autoridades lograron la captura en flagrancia de alias Monasterio o Simanca; presunto cabecilla urbano de la subestructura Uldar Cardona Rueda, perteneciente al grupo armado organizado Clan del Golfo.\n\n03/SEP/24\nCon una alta intensidad grupos ilegales siguen disputando a sangre y fuego el control de la serranía de San Lucas, una zona estratégica donde convergen cinco municipios de Antioquia y 15 del departamento de Bolívar.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Cairo",
+    "lat": 4.760874,
+    "lng": -76.221611,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Carmen De Viboral",
+    "lat": 6.082885,
+    "lng": -75.333901,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Cerrito",
+    "lat": 3.684229,
+    "lng": -76.311972,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Charco",
+    "lat": 2.479688,
+    "lng": -78.110217,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "El Dovio",
+    "lat": 4.510452,
+    "lng": -76.237084,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Peñol",
+    "lat": 1.453567,
+    "lng": -77.438522,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Rosario",
+    "lat": 1.745309,
+    "lng": -77.33417,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "El Santuario",
+    "lat": 6.136871,
+    "lng": -75.265465,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Tablón De Gómez",
+    "lat": 1.427277,
+    "lng": -77.097101,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "El Tambo",
+    "lat": 1.407913,
+    "lng": -77.390772,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Entrerríos",
+    "lat": 6.566273,
+    "lng": -75.517685,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Envigado",
+    "lat": 6.166695,
+    "lng": -75.582192,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Florida",
+    "lat": 3.324118,
+    "lng": -76.234199,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Francisco Pizarro",
+    "lat": 2.040629,
+    "lng": -78.658361,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Fredonia",
+    "lat": 5.928039,
+    "lng": -75.675072,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Frontino",
+    "lat": 6.776066,
+    "lng": -76.130765,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Funes",
+    "lat": 1.001159,
+    "lng": -77.448913,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ginebra",
+    "lat": 3.724181,
+    "lng": -76.268068,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Giraldo",
+    "lat": 6.680808,
+    "lng": -75.952158,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Girardota",
+    "lat": 6.379472,
+    "lng": -75.444238,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Gómez Plata",
+    "lat": 6.683269,
+    "lng": -75.220018,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Granada",
+    "lat": 6.142892,
+    "lng": -75.184446,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Guacarí",
+    "lat": 3.761815,
+    "lng": -76.330911,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Guachucal",
+    "lat": 0.959744,
+    "lng": -77.731589,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Guadalajara De Buga",
+    "lat": 3.900736,
+    "lng": -76.298979,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guadalupe",
+    "lat": 6.815069,
+    "lng": -75.239862,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Guaitarilla",
+    "lat": 1.129574,
+    "lng": -77.549824,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Gualmatán",
+    "lat": 0.919652,
+    "lng": -77.568701,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guarne",
+    "lat": 6.27787,
+    "lng": -75.441612,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Guatapé",
+    "lat": 6.232461,
+    "lng": -75.160041,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Heliconia",
+    "lat": 6.206757,
+    "lng": -75.734322,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Hispania",
+    "lat": 5.799461,
+    "lng": -75.906587,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Iles",
+    "lat": 0.96952,
+    "lng": -77.521227,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Imués",
+    "lat": 1.05506,
+    "lng": -77.496339,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ipiales",
+    "lat": 0.827732,
+    "lng": -77.646367,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Itagüí",
+    "lat": 6.175079,
+    "lng": -75.612056,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Ituango",
+    "lat": 7.171629,
+    "lng": -75.764673,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Jamundí",
+    "lat": 3.258751,
+    "lng": -76.538472,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Jardín",
+    "lat": 5.597542,
+    "lng": -75.818982,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Jericó",
+    "lat": 5.789748,
+    "lng": -75.785499,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Ceja",
+    "lat": 6.028062,
+    "lng": -75.429433,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Cruz",
+    "lat": 1.601318,
+    "lng": -76.970504,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Cumbre",
+    "lat": 3.649268,
+    "lng": -76.56805,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Estrella",
+    "lat": 6.145238,
+    "lng": -75.637708,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Florida",
+    "lat": 1.29753,
+    "lng": -77.402882,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Llanada",
+    "lat": 1.472892,
+    "lng": -77.58091,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Pintada",
+    "lat": 5.743808,
+    "lng": -75.60781,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Tola",
+    "lat": 2.398999,
+    "lng": -78.189725,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "La Unión",
+    "lat": 5.973845,
+    "lng": -75.360874,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "La Unión",
+    "lat": 1.600219,
+    "lng": -77.131316,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Unión",
+    "lat": 4.533869,
+    "lng": -76.099661,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "La Victoria",
+    "lat": 4.523603,
+    "lng": -76.036529,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Leiva",
+    "lat": 1.934453,
+    "lng": -77.306135,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Liborina",
+    "lat": 6.677316,
+    "lng": -75.812838,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Linares",
+    "lat": 1.350814,
+    "lng": -77.523953,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Los Andes",
+    "lat": 1.494587,
+    "lng": -77.521303,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Maceo",
+    "lat": 6.552116,
+    "lng": -74.78716,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Magüí",
+    "lat": 1.765633,
+    "lng": -78.182924,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Mallama",
+    "lat": 1.141037,
+    "lng": -77.864549,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Marinilla",
+    "lat": 6.173995,
+    "lng": -75.339345,
+    "nivel_riesgo": "Bajo",
+    "contexto": "05/AGOS/24\nEn una operación coordinada por el Grupo de Caballería No. 4 Juan del Corral y la Seccional de Inteligencia Policial, se desmanteló un laboratorio de producción de clorhidrato de cocaína en la vereda Salto Abajo del municipio de Marinilla.",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Medellín",
+    "lat": 6.246631,
+    "lng": -75.581775,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Montebello",
+    "lat": 5.946313,
+    "lng": -75.523455,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Mosquera",
+    "lat": 2.507139,
+    "lng": -78.452992,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Murindó",
+    "lat": 6.97771,
+    "lng": -76.817485,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Mutatá",
+    "lat": 7.242875,
+    "lng": -76.435875,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Nariño",
+    "lat": 5.610777,
+    "lng": -75.176262,
+    "nivel_riesgo": "Critico",
+    "contexto": "08/SEP/24\nEn el municipio de Nariño, incursión armada por parte de presuntos miembros del Clan del Golfo contra la fuerza pública. Los hechos ocurrieron en la noche de este viernes cuando un grupo de hombres fuertemente armados hostigaron desde un cerro ubicado en jurisdicción del departamento de Caldas las instalaciones de la Policía en la zona.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Nariño",
+    "lat": 1.288979,
+    "lng": -77.357972,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Nechí",
+    "lat": 8.094129,
+    "lng": -74.77647,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Necoclí",
+    "lat": 8.434526,
+    "lng": -76.787271,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Obando",
+    "lat": 4.575712,
+    "lng": -75.974709,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Olaya",
+    "lat": 6.626492,
+    "lng": -75.811773,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Olaya Herrera",
+    "lat": 2.347457,
+    "lng": -78.325814,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ospina",
+    "lat": 1.058433,
+    "lng": -77.566082,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Palmira",
+    "lat": 3.531544,
+    "lng": -76.298846,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Pasto",
+    "lat": 1.212352,
+    "lng": -77.278795,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Peñol",
+    "lat": 6.219349,
+    "lng": -75.242693,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Peque",
+    "lat": 7.021029,
+    "lng": -75.910357,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Policarpa",
+    "lat": 1.627196,
+    "lng": -77.458686,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Potosí",
+    "lat": 0.806639,
+    "lng": -77.573003,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Pradera",
+    "lat": 3.419793,
+    "lng": -76.241799,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Providencia",
+    "lat": 1.237814,
+    "lng": -77.596794,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Pueblorrico",
+    "lat": 5.79158,
+    "lng": -75.839903,
+    "nivel_riesgo": "Moderado",
+    "contexto": "25/JUL/24\nEl Ejército Nacional reportó la muerte del cabo primero Jhony Ederzon Vidal León, quien fue asesinado en zona rural del municipio de Pueblorrico, suroeste antioqueño, en medio de un combate entre hombres del Batallón de Infantería N.° 11  y facciones del Clan del Golfo. Según la Institución, los hechos se presentaron pasadas las 3:15  p.m. en la vereda Corinto de dicho municipio en donde los criminales además le robaron el armamento al uniformado.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Puerres",
+    "lat": 0.885125,
+    "lng": -77.504211,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Berrío",
+    "lat": 6.487028,
+    "lng": -74.410016,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Nare",
+    "lat": 6.186025,
+    "lng": -74.583012,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Puerto Triunfo",
+    "lat": 5.871318,
+    "lng": -74.64119,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Pupiales",
+    "lat": 0.870442,
+    "lng": -77.636042,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Remedios",
+    "lat": 7.029424,
+    "lng": -74.698135,
+    "nivel_riesgo": "Critico",
+    "contexto": "25/MAY/24\nEn la vereda Plaza Nueva del municipio de Remedios, un total de 13 cuerpos hallados producto de combates entre el Clan del Golfo y una alianza que tendrían las disidencias de las Farc y el ELN por el control del territorio y las rentas ilícitas de la región",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Restrepo",
+    "lat": 3.821351,
+    "lng": -76.523329,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Retiro",
+    "lat": 6.062454,
+    "lng": -75.501301,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Ricaurte",
+    "lat": 1.212492,
+    "lng": -77.995153,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Riofrío",
+    "lat": 4.156908,
+    "lng": -76.288313,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Rionegro",
+    "lat": 6.147148,
+    "lng": -75.377316,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Roberto Payán",
+    "lat": 1.697492,
+    "lng": -78.245716,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Roldanillo",
+    "lat": 4.413601,
+    "lng": -76.152277,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sabanalarga",
+    "lat": 6.850028,
+    "lng": -75.816645,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sabaneta",
+    "lat": 6.149903,
+    "lng": -75.615479,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Salgar",
+    "lat": 5.964198,
+    "lng": -75.976807,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Samaniego",
+    "lat": 1.335438,
+    "lng": -77.594341,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Andrés De Cuerquía",
+    "lat": 6.916676,
+    "lng": -75.674564,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Andrés De Tumaco",
+    "lat": 1.807399,
+    "lng": -78.764073,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Bernardo",
+    "lat": 1.513762,
+    "lng": -77.0475,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Carlos",
+    "lat": 6.187746,
+    "lng": -74.988097,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Francisco",
+    "lat": 5.963476,
+    "lng": -75.101562,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Jerónimo",
+    "lat": 6.44809,
+    "lng": -75.726975,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San José De La Montaña",
+    "lat": 6.85009,
+    "lng": -75.683352,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Juan De Urabá",
+    "lat": 8.758964,
+    "lng": -76.52857,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Lorenzo",
+    "lat": 1.503362,
+    "lng": -77.21542,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Luis",
+    "lat": 6.043017,
+    "lng": -74.993619,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Pablo",
+    "lat": 1.669429,
+    "lng": -77.013984,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "San Pedro",
+    "lat": 3.995073,
+    "lng": -76.228692,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "San Pedro De Cartago",
+    "lat": 1.551572,
+    "lng": -77.11941,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Pedro De Los Milagros",
+    "lat": 6.46012,
+    "lng": -75.556743,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Pedro De Urabá",
+    "lat": 8.276884,
+    "lng": -76.380567,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Rafael",
+    "lat": 6.293759,
+    "lng": -75.02849,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Roque",
+    "lat": 6.485939,
+    "lng": -75.019109,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "San Vicente Ferrer",
+    "lat": 6.282164,
+    "lng": -75.332616,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Sandoná",
+    "lat": 1.283438,
+    "lng": -77.47313,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Bárbara",
+    "lat": 5.875527,
+    "lng": -75.567351,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Santa Bárbara",
+    "lat": 2.449653,
+    "lng": -77.979916,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Fé De Antioquia",
+    "lat": 6.556484,
+    "lng": -75.826648,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santa Rosa De Osos",
+    "lat": 6.643366,
+    "lng": -75.460723,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Santacruz",
+    "lat": 1.222589,
+    "lng": -77.677035,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Santiago De Cali",
+    "lat": 3.413686,
+    "lng": -76.52133,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Santo Domingo",
+    "lat": 6.473032,
+    "lng": -75.164903,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Sapuyes",
+    "lat": 1.037536,
+    "lng": -77.62028,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Segovia",
+    "lat": 7.079648,
+    "lng": -74.701596,
+    "nivel_riesgo": "Critico",
+    "contexto": "20/SEP/24\nEjército Nacional confirmó que uniformados ubicaron dos minas antipersonales que fueron instaladas en la vereda Cancha Manila de Segovia por un grupo ilegal aún por determinar. \n\n23/AGOS/24\nEn desarrollo de operaciones militares, enmarcadas en el Plan de Campaña Estratégico Ayacucho, soldados de la Décima Cuarta Brigada, en coordinación con la Policía Nacional, en el municipio de Segovia, Antioquia, lograron la captura de tres sujetos, quienes presuntamente pertenecerían a la Subestructura Jorge Iván Arboleda Garcés, del grupo armado organizado Clan del Golfo.\n\n04/AGOS/24\nTropas de la Brigada 14 de la Séptima Brigada del Ejército sostienen combates con el Clan del Golfoen zona rural del municipio de Segovia, Nordeste de Antioquia, donde las comunidades denuncian temor por el accionar delictivo de esta estructura en el sector y reclaman presencia constante de las autoridades.",
+    "estructuras_zona": "Clan del Golfo, ELN y disidencias de las FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Sevilla",
+    "lat": 4.270714,
+    "lng": -75.931629,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sonsón",
+    "lat": 5.714851,
+    "lng": -75.309596,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Sopetrán",
+    "lat": 6.500745,
+    "lng": -75.747378,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Támesis",
+    "lat": 5.664645,
+    "lng": -75.714429,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Taminango",
+    "lat": 1.570358,
+    "lng": -77.2808,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Tangua",
+    "lat": 1.09482,
+    "lng": -77.393735,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Tarazá",
+    "lat": 7.580127,
+    "lng": -75.401407,
+    "nivel_riesgo": "Critico",
+    "contexto": "26/AGOS/24\nTras caer en un campo minado que pertenecía al ELN, habrían muerto cuatro presuntos integrantes del 'Clan del Golfo', en zona rural del municipio de Tarazá (Antioquia).",
+    "estructuras_zona": "Compañía Heroes de Taraza (ELN)",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Tarso",
+    "lat": 5.864542,
+    "lng": -75.822956,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Titiribí",
+    "lat": 6.062391,
+    "lng": -75.791887,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Toledo",
+    "lat": 7.010328,
+    "lng": -75.692281,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Toro",
+    "lat": 4.608085,
+    "lng": -76.076859,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Trujillo",
+    "lat": 4.212037,
+    "lng": -76.318818,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Tuluá",
+    "lat": 4.085399,
+    "lng": -76.197731,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Túquerres",
+    "lat": 1.085044,
+    "lng": -77.61672,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Turbo",
+    "lat": 8.089929,
+    "lng": -76.728858,
+    "nivel_riesgo": "Critico",
+    "contexto": "26/AGOS/24\nLa Armada de Colombia, a través del Grupo de Guardacostas del Caribe, incautó más de 600 kilogramos de clorhidrato de cocaína destinados al mercado internacional.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Ulloa",
+    "lat": 4.703623,
+    "lng": -75.737808,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Uramita",
+    "lat": 6.898393,
+    "lng": -76.173284,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Urrao",
+    "lat": 6.317343,
+    "lng": -76.133951,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Valdivia",
+    "lat": 7.1652,
+    "lng": -75.439274,
+    "nivel_riesgo": "Critico",
+    "contexto": "14-09-2024\nEn un enfrentamiento reciente entre tropas de la Brigada 11 del Ejército Nacional y el ELN, las fuerzas militares lograron neutralizar a alias Andrés, conocido como Loco Barrera. Este individuo era el cabecilla financiero de la Compañía Héroes de Tarazá del grupo guerrillero.\n\n29-08-2024\nIncendio de un bus de servicio público por parte de un grupo ilegal en el tramo vial que conecta a Medellín con la Costa Atlántica, entre Tarazá y Valdivia tiene alterada la movilidad en la zona.\n\n06/08/2024\nPor combates entre el ELN y disidencias contra el Clan del Golfo en veredas La Llana y La Coposa en Valdivia, Antioquia, 15 menores y 15 adultos están confinados en la escuela de La Llana por la intensidad de los combates.\n\n04-07-2024\nEn la tarde de este jueves 04 de julio de 2024, seis integrantes del Ejército Nacional murieron tras caer en un campo minado en la vereda Coposa, sector La Llana en Valdivia, Antioquia. En ese mismo hecho, cuatro uniformados más se encuentran gravemente heridos. Entre las víctimas mortales, se encuentra un sargento que era el comandante del grupo que fue atacado con explosivos.",
+    "estructuras_zona": "Clan del Golfo",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Valparaíso",
+    "lat": 5.614555,
+    "lng": -75.624452,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Vegachí",
+    "lat": 6.773525,
+    "lng": -74.798714,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Venecia",
+    "lat": 5.964693,
+    "lng": -75.735544,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Versalles",
+    "lat": 4.575019,
+    "lng": -76.199203,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Vigía Del Fuerte",
+    "lat": 6.588164,
+    "lng": -76.896004,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Vijes",
+    "lat": 3.698686,
+    "lng": -76.441804,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Nariño",
+    "municipio": "Yacuanquer",
+    "lat": 1.115937,
+    "lng": -77.400169,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yalí",
+    "lat": 6.676554,
+    "lng": -74.840059,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yarumal",
+    "lat": 6.963832,
+    "lng": -75.418828,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yolombó",
+    "lat": 6.594511,
+    "lng": -75.013385,
+    "nivel_riesgo": "Bajo",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Yondó",
+    "lat": 7.00396,
+    "lng": -73.912445,
+    "nivel_riesgo": "Critico",
+    "contexto": "02/10/2024  Masacre de 5 personas en la via entre Yondo y canta gallo consecuencia de la Guerra territorial en el magdalena medio entre Clan del golfo, ELN y Disidencias.",
+    "estructuras_zona": "ELN - CLAN DEL GOLFO DISIDENCIAS FARC",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Yotoco",
+    "lat": 3.861241,
+    "lng": -76.382698,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Valle Del Cauca",
+    "municipio": "Yumbo",
+    "lat": 3.540097,
+    "lng": -76.499893,
+    "nivel_riesgo": "medio",
+    "contexto": "Información preliminar de riesgo",
+    "estructuras_zona": "Sin datos",
+    "novedades": "Novedades no especificadas"
+  },
+  {
+    "departamento": "Antioquia",
+    "municipio": "Zaragoza",
+    "lat": 7.488583,
+    "lng": -74.867075,
+    "nivel_riesgo": "Critico",
+    "contexto": "15/AGOS/24\nDesmantelan trece laboratorios de coca del Clan del Golfo en los departamentos de Antioquia y Córdoba. Estas instalaciones dejaban rentas criminales de más de 5 mil millones de pesos mensuales a la organización criminal. Fueron soldados del Ejército Nacional los que ubicaron las trece instalaciones criminales en los diferentes municipios de ambos departamentos. Los laboratorios estaban distribuidos en los municipios de Zaragoza y Valdivia para el caso de Antioquia, y Puerto Libertador y Montelíbano en Córdoba.",
+    "estructuras_zona": "Clan del Golfo",
     "novedades": "Novedades no especificadas"
   },
   {

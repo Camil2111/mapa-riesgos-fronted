@@ -1,17 +1,17 @@
 import { useEffect, useState, useRef } from 'react'
-import { MapContainer, TileLayer, Circle, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
-        case 'bajo': return '#27ae60'      // Verde
+        case 'bajo': return '#27ae60'
         case 'moderado':
-        case 'medio': return '#f1c40f'     // Amarillo (ambos)
-        case 'critico': return '#e67e22'   // Naranja fuerte
-        case 'alto': return '#e74c3c'      // Rojo
-        default: return '#95a5a6'          // Gris
+        case 'medio': return '#f1c40f'
+        case 'critico': return '#e67e22'
+        case 'alto': return '#e74c3c'
+        default: return '#95a5a6'
     }
 }
 
@@ -39,7 +39,7 @@ const Leyenda = () => {
     return null
 }
 
-const MapaRiesgos = ({ riesgos, filtroEvento }) => {
+const MapaRiesgos = ({ riesgos, filtroEvento, municipioFiltro, departamentoFiltro }) => {
     const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const [eventos, setEventos] = useState([])
     const mapRef = useRef()
@@ -68,10 +68,12 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
 
     return (
         <MapContainer
-            center={[2.5, -76.6]}
-            zoom={8}
-            style={{ height: '600px', width: '100%' }}
-            whenCreated={mapInstance => { mapRef.current = mapInstance }}
+            center={[3.5, -75.7]}
+            zoom={6.5}
+            style={{ height: '700px', width: '100%' }}
+            whenCreated={(mapInstance) => {
+                mapRef.current = mapInstance
+            }}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
@@ -83,8 +85,8 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             {limitesDepartamentos && (
                 <GeoJSON
                     data={limitesDepartamentos}
-                    style={feature => ({
-                        color: feature.properties.departamento === "Cauca" ? "#2ecc71" : "#ffffff",
+                    style={(feature) => ({
+                        color: feature.properties.departamento === 'Cauca' ? '#2ecc71' : '#ffffff',
                         weight: 2,
                         fillOpacity: 0,
                         dashArray: '3',
@@ -93,9 +95,8 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             )}
 
             {riesgos.map((r, i) => {
-                const soloUno = riesgos.length === 1;
-                const color = getColor(r.nivel_riesgo);
-
+                const color = getColor(r.nivel_riesgo)
+                const soloUno = riesgos.length === 1
                 const icono = L.divIcon({
                     className: '',
                     html: `<div style="
@@ -105,18 +106,18 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             border-radius: 50%;
             border: 2px solid white;
             box-shadow: 0 0 2px black;
-        "></div>`,
+          "></div>`,
                     iconSize: [soloUno ? 20 : 12, soloUno ? 20 : 12],
-                    iconAnchor: [soloUno ? 10 : 6, soloUno ? 10 : 6]
-                });
+                    iconAnchor: [soloUno ? 10 : 6, soloUno ? 10 : 6],
+                })
 
                 return (
                     <Marker
-                        key={`r-${i}`}
+                        key={`riesgo-${i}`}
                         position={[r.lat, r.lng]}
                         icon={icono}
                     >
-                        <Popup autoOpen={soloUno} autoPan={soloUno}>
+                        <Popup>
                             <strong>{r.municipio}</strong><br />
                             <span style={{ color: color, fontWeight: 'bold' }}>
                                 Riesgo: {r.nivel_riesgo?.toUpperCase()}
@@ -130,7 +131,7 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
             })}
 
             {eventos
-                .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)
+                .filter((e) => filtroEvento === 'todos' || e.tipo === filtroEvento)
                 .map((evento, i) => (
                     <Marker
                         key={`evento-${i}`}
@@ -149,5 +150,6 @@ const MapaRiesgos = ({ riesgos, filtroEvento }) => {
 }
 
 export default MapaRiesgos
+
 
 
