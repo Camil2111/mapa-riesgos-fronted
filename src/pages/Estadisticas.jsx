@@ -5,12 +5,13 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
-
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement, Title, Tooltip, Legend)
 
 const Estadisticas = () => {
     const [datos, setDatos] = useState([])
     const [filtroMunicipio, setFiltroMunicipio] = useState('todos')
+    const [filtroDelito, setFiltroDelito] = useState('todos')
+    const [verTodosDeptos, setVerTodosDeptos] = useState(false)
 
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/estadisticas`)
@@ -19,21 +20,27 @@ const Estadisticas = () => {
     }, [])
 
     const municipiosUnicos = [...new Set(datos.map(d => d.municipio))]
-    const datosFiltrados = filtroMunicipio === 'todos' ? datos : datos.filter(d => d.municipio === filtroMunicipio)
+    const tiposDelitoUnicos = [...new Set(datos.map(d => d.tipo))]
+
+    const datosFiltrados = datos.filter(d => {
+        const municipioMatch = filtroMunicipio === 'todos' || d.municipio === filtroMunicipio
+        const delitoMatch = filtroDelito === 'todos' || d.tipo === filtroDelito
+        return municipioMatch && delitoMatch
+    })
 
     const agrupadosPorTipo = datosFiltrados.reduce((acc, curr) => {
         acc[curr.tipo] = (acc[curr.tipo] || 0) + curr.cantidad
         return acc
     }, {})
 
-    const agrupadosPorMes = datos
+    const agrupadosPorMes = datosFiltrados
         .filter(d => d.mes && d.mes !== '')
         .reduce((acc, d) => {
             acc[d.mes] = (acc[d.mes] || 0) + d.cantidad
             return acc
         }, {})
 
-    const ranking = datos.reduce((acc, curr) => {
+    const ranking = datosFiltrados.reduce((acc, curr) => {
         acc[curr.municipio] = (acc[curr.municipio] || 0) + curr.cantidad
         return acc
     }, {})
@@ -41,6 +48,19 @@ const Estadisticas = () => {
     const rankingOrdenado = Object.entries(ranking)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
+
+    const rankingDeptos = datosFiltrados.reduce((acc, curr) => {
+        acc[curr.departamento || 'SIN DATO'] = (acc[curr.departamento || 'SIN DATO'] || 0) + curr.cantidad
+        return acc
+    }, {})
+
+    const rankingDeptosOrdenado = Object.entries(rankingDeptos)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+
+    const departamentosParaMostrar = verTodosDeptos
+        ? Object.entries(rankingDeptos).sort((a, b) => b[1] - a[1])
+        : rankingDeptosOrdenado
 
     return (
         <div style={{ backgroundColor: '#0f1a1a', color: '#e5e5e5', padding: '20px' }}>
@@ -61,8 +81,7 @@ const Estadisticas = () => {
                 </Link>
             </div>
 
-
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
                 <select
                     value={filtroMunicipio}
                     onChange={e => setFiltroMunicipio(e.target.value)}
@@ -72,12 +91,30 @@ const Estadisticas = () => {
                         color: '#e5e5e5',
                         border: 'none',
                         borderRadius: '5px',
-                        width: '300px'
+                        width: '250px'
                     }}
                 >
                     <option value="todos">Todos los municipios</option>
                     {municipiosUnicos.map((m, i) => (
                         <option key={i} value={m}>{m}</option>
+                    ))}
+                </select>
+
+                <select
+                    value={filtroDelito}
+                    onChange={e => setFiltroDelito(e.target.value)}
+                    style={{
+                        padding: '10px',
+                        backgroundColor: '#1d2d2d',
+                        color: '#e5e5e5',
+                        border: 'none',
+                        borderRadius: '5px',
+                        width: '250px'
+                    }}
+                >
+                    <option value="todos">Todos los delitos</option>
+                    {tiposDelitoUnicos.map((t, i) => (
+                        <option key={i} value={t}>{t}</option>
                     ))}
                 </select>
             </div>
@@ -169,8 +206,42 @@ const Estadisticas = () => {
                     ))}
                 </ul>
             </div>
+
+            <div style={{
+                backgroundColor: '#141f1f',
+                padding: '20px',
+                borderRadius: '10px',
+                maxWidth: '600px',
+                margin: '40px auto',
+                boxShadow: '0 0 10px #29f77a'
+            }}>
+                <h3 style={{ color: '#29f77a', marginBottom: '15px' }}>📍 Departamentos con más casos</h3>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {departamentosParaMostrar.map(([depto, total], i) => (
+                        <li key={i} style={{ padding: '6px 0', borderBottom: '1px solid #2c2c2c' }}>
+                            <strong>{i + 1}. {depto}</strong>: {total} casos
+                        </li>
+                    ))}
+                </ul>
+                <button
+                    onClick={() => setVerTodosDeptos(!verTodosDeptos)}
+                    style={{
+                        marginTop: '15px',
+                        padding: '8px 16px',
+                        backgroundColor: '#29f77a',
+                        color: '#0f1a1a',
+                        border: 'none',
+                        borderRadius: '6px',
+                        fontWeight: 'bold',
+                        cursor: 'pointer'
+                    }}
+                >
+                    {verTodosDeptos ? '🔙 Ver Top 10' : '📋 Ver Todos'}
+                </button>
+            </div>
         </div>
     )
 }
 
 export default Estadisticas
+
