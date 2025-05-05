@@ -1,4 +1,3 @@
-// src/MapaRiesgos.jsx
 import { useEffect, useState, useRef } from 'react'
 import { MapContainer, TileLayer, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
 import axios from 'axios'
@@ -8,7 +7,8 @@ import 'leaflet/dist/leaflet.css'
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado': case 'medio': return '#f1c40f'
+        case 'moderado':
+        case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -72,10 +72,13 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
     }, [riesgos])
 
     const filtrar = (r) => {
-        const depMatch = departamentoFiltro === 'todos' || r.departamento === departamentoFiltro
-        const munMatch = municipioFiltro === 'todos' || r.municipio === municipioFiltro
-        return depMatch && munMatch
+        const depMatch = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase()
+        const munMatch = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase()
+        return depMatch && munMatch && r.lat && r.lng
     }
+
+    const riesgosFiltrados = riesgos.filter(filtrar)
+    console.table(riesgosFiltrados)
 
     return (
         <MapContainer
@@ -103,14 +106,11 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
                 />
             )}
 
-            {riesgos
-                .filter(filtrar)
-                .filter(r => r.lat && r.lng)
-                .map((r, i) => {
-                    const color = getColor(r.nivel_riesgo)
-                    const icono = L.divIcon({
-                        className: '',
-                        html: `<div style="
+            {riesgosFiltrados.map((r, i) => {
+                const color = getColor(r.nivel_riesgo)
+                const icono = L.divIcon({
+                    className: '',
+                    html: `<div style="
               background:${color};
               width: 12px;
               height: 12px;
@@ -118,24 +118,24 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
               border: 2px solid white;
               box-shadow: 0 0 2px black;
             "></div>`,
-                        iconSize: [12, 12],
-                        iconAnchor: [6, 6],
-                    })
+                    iconSize: [12, 12],
+                    iconAnchor: [6, 6],
+                })
 
-                    return (
-                        <Marker key={`riesgo-${i}`} position={[r.lat, r.lng]} icon={icono}>
-                            <Popup>
-                                <strong>{r.municipio}</strong><br />
-                                <span style={{ color: color, fontWeight: 'bold' }}>
-                                    Riesgo: {r.nivel_riesgo?.toUpperCase()}
-                                </span><br />
-                                {r.contexto && <>🧠 Contexto: {r.contexto}<br /></>}
-                                {r.novedades && <>📌 Novedades: {r.novedades}<br /></>}
-                                {r.estructuras_zona && <>🚩 Estructuras: {r.estructuras_zona}</>}
-                            </Popup>
-                        </Marker>
-                    )
-                })}
+                return (
+                    <Marker key={`riesgo-${i}`} position={[r.lat, r.lng]} icon={icono}>
+                        <Popup>
+                            <strong>{r.municipio}</strong><br />
+                            <span style={{ color: color, fontWeight: 'bold' }}>
+                                Riesgo: {r.nivel_riesgo?.toUpperCase()}
+                            </span><br />
+                            {r.contexto && <>🧠 Contexto: {r.contexto}<br /></>}
+                            {r.novedades && <>📌 Novedades: {r.novedades}<br /></>}
+                            {r.estructuras_zona && <>🚩 Estructuras: {r.estructuras_zona}</>}
+                        </Popup>
+                    </Marker>
+                )
+            })}
 
             {eventos
                 .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)
