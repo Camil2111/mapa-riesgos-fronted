@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import { Bar } from 'react-chartjs-2'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
+import { Bar } from 'react-chartjs-2'
+
 import MapaRiesgos from './MapaRiesgos.jsx'
 import Splash from './Splash.jsx'
 import riesgosData from './datos_riesgos.json'
@@ -9,6 +10,13 @@ import Estadisticas from './pages/Estadisticas.jsx'
 import EventosRecientes from './components/EventosRecientes.jsx'
 import Cuadrantes from './pages/Cuadrantes.jsx'
 import LineaTiempo from './components/LineaTiempo.jsx'
+
+// NUEVOS IMPORTS PARA ADMIN
+import Login from './pages/Login.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import EditRiesgos from './pages/EditRiesgos.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
+
 import './App.css'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
@@ -83,7 +91,6 @@ function App() {
               </header>
 
               <div className="main-container">
-                {/* Panel izquierdo: filtros */}
                 <div className="left-panel panel-filtros">
                   <h3>Filtros</h3>
                   <label>Filtrar por nivel:</label>
@@ -146,7 +153,6 @@ function App() {
                   </button>
                 </div>
 
-                {/* Mapa */}
                 <div className="map-container">
                   <MapaRiesgos
                     riesgos={filtrarRiesgos()}
@@ -163,10 +169,7 @@ function App() {
                   </div>
                 </div>
 
-
-                {/* Línea de tiempo */}
                 <LineaTiempo municipio={municipio} />
-
               </div>
             </div>
           ) : (
@@ -174,9 +177,14 @@ function App() {
           )
         } />
 
-        {/* Otras rutas */}
+        {/* Rutas públicas adicionales */}
         <Route path="/cuadrantes" element={<Cuadrantes />} />
         <Route path="/estadisticas" element={<Estadisticas />} />
+
+        {/* Rutas del panel de administración */}
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/admin/editar-riesgos" element={<ProtectedRoute><EditRiesgos /></ProtectedRoute>} />
       </Routes>
     </Router>
   )
