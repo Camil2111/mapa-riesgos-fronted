@@ -6,6 +6,7 @@ export default function EditRiesgos() {
     const [riesgos, setRiesgos] = useState([]);
     const [error, setError] = useState('');
     const [mensaje, setMensaje] = useState('');
+    const [filtroDepto, setFiltroDepto] = useState('todos');
 
     const token = localStorage.getItem('authToken');
 
@@ -20,9 +21,9 @@ export default function EditRiesgos() {
             });
     }, []);
 
-    const actualizarNivel = (index, nuevoNivel) => {
+    const actualizarCampo = (index, campo, valor) => {
         const actualizados = [...riesgos];
-        actualizados[index].nivel_riesgo = nuevoNivel;
+        actualizados[index][campo] = valor;
         setRiesgos(actualizados);
     };
 
@@ -75,6 +76,11 @@ export default function EditRiesgos() {
         reader.readAsText(file);
     };
 
+    const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))];
+    const riesgosFiltrados = filtroDepto === 'todos'
+        ? riesgos
+        : riesgos.filter(r => r.departamento === filtroDepto);
+
     return (
         <div style={{ padding: '20px' }}>
             <h2>Editor de datos_riesgos.json</h2>
@@ -82,10 +88,16 @@ export default function EditRiesgos() {
 
             <input type="file" accept=".json" onChange={handleFileUpload} style={{ marginBottom: '15px' }} />
 
+            <label>Filtrar por departamento: </label>
+            <select value={filtroDepto} onChange={(e) => setFiltroDepto(e.target.value)} style={{ marginBottom: '15px', marginLeft: '10px' }}>
+                <option value="todos">Todos</option>
+                {departamentos.map((d, i) => <option key={i} value={d}>{d}</option>)}
+            </select>
+
             {mensaje && <p style={{ color: 'green' }}>{mensaje}</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            {riesgos.length > 0 ? (
+            {riesgosFiltrados.length > 0 ? (
                 <>
                     <table border="1" cellPadding="8" style={{ marginTop: '20px', borderCollapse: 'collapse', width: '100%' }}>
                         <thead>
@@ -93,20 +105,38 @@ export default function EditRiesgos() {
                                 <th>Departamento</th>
                                 <th>Municipio</th>
                                 <th>Nivel de Riesgo</th>
+                                <th>Contexto</th>
+                                <th>Novedades</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {riesgos.map((r, i) => (
+                            {riesgosFiltrados.map((r, i) => (
                                 <tr key={i}>
                                     <td>{r.departamento}</td>
                                     <td>{r.municipio}</td>
                                     <td>
-                                        <select value={r.nivel_riesgo} onChange={(e) => actualizarNivel(i, e.target.value)}>
+                                        <select value={r.nivel_riesgo} onChange={(e) => actualizarCampo(i, 'nivel_riesgo', e.target.value)}>
                                             <option value="bajo">Bajo</option>
                                             <option value="moderado">Moderado</option>
                                             <option value="alto">Alto</option>
                                             <option value="critico">Crítico</option>
                                         </select>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={r.contexto || ''}
+                                            onChange={(e) => actualizarCampo(i, 'contexto', e.target.value)}
+                                            style={{ width: '100%' }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={r.novedades || ''}
+                                            onChange={(e) => actualizarCampo(i, 'novedades', e.target.value)}
+                                            style={{ width: '100%' }}
+                                        />
                                     </td>
                                 </tr>
                             ))}
