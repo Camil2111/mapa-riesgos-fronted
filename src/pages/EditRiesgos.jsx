@@ -7,6 +7,7 @@ export default function EditRiesgos() {
     const [error, setError] = useState('')
     const [mensaje, setMensaje] = useState('')
     const [filtroDepto, setFiltroDepto] = useState('todos')
+    const [filtroMunicipio, setFiltroMunicipio] = useState('todos')
 
     const token = localStorage.getItem('authToken')
 
@@ -14,23 +15,30 @@ export default function EditRiesgos() {
         axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, {
             headers: { Authorization: `Bearer ${token}` }
         })
-            .then(res => setRiesgos(res.data))
+            .then(res => {
+                const conIds = res.data.map((r, i) => ({ ...r, _idx: i }))
+                setRiesgos(conIds)
+            })
             .catch(err => {
                 console.error('❌ Error al cargar los datos:', err)
                 setError('No se pudieron cargar los datos.')
             })
     }, [])
 
-    const actualizarCampo = (indexReal, campo, valor) => {
+    const actualizarCampo = (_idx, campo, valor) => {
         const actualizados = [...riesgos]
-        actualizados[indexReal][campo] = valor
-        setRiesgos(actualizados)
+        const index = actualizados.findIndex(r => r._idx === _idx)
+        if (index !== -1) {
+            actualizados[index][campo] = valor
+            setRiesgos(actualizados)
+        }
     }
 
     const guardarCambios = () => {
         setMensaje('')
         setError('')
-        axios.post(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, riesgos, {
+        const datosLimpiados = riesgos.map(({ _idx, ...r }) => r)
+        axios.post(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, datosLimpiados, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -44,9 +52,19 @@ export default function EditRiesgos() {
     }
 
     const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))]
-    const riesgosFiltrados = filtroDepto === 'todos'
-        ? riesgos
-        : riesgos.filter(r => r.departamento === filtroDepto)
+    const municipios = [
+        ...new Set(
+            riesgos
+                .filter(r => filtroDepto === 'todos' || r.departamento === filtroDepto)
+                .map(r => r.municipio)
+        )
+    ]
+
+    const riesgosFiltrados = riesgos.filter(r => {
+        const deptoMatch = filtroDepto === 'todos' || r.departamento === filtroDepto
+        const muniMatch = filtroMunicipio === 'todos' || r.municipio === filtroMunicipio
+        return deptoMatch && muniMatch
+    })
 
     return (
         <div style={{ padding: '20px' }}>
@@ -56,17 +74,34 @@ export default function EditRiesgos() {
             {mensaje && <p style={{ color: 'green' }}>{mensaje}</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            <label>Filtrar por departamento:</label>
-            <select value={filtroDepto} onChange={e => setFiltroDepto(e.target.value)}>
-                <option value="todos">Todos</option>
-                {departamentos.map((d, i) => (
-                    <option key={i} value={d}>{d}</option>
-                ))}
-            </select>
+            <div style={{ display: 'flex', gap: '20px', marginBottom: '10px' }}>
+                <div>
+                    <label>Filtrar por departamento:</label><br />
+                    <select value={filtroDepto} onChange={e => {
+                        setFiltroDepto(e.target.value)
+                        setFiltroMunicipio('todos') // reset municipio al cambiar depto
+                    }}>
+                        <option value="todos">Todos</option>
+                        {departamentos.map((d, i) => (
+                            <option key={i} value={d}>{d}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div>
+                    <label>Filtrar por municipio:</label><br />
+                    <select value={filtroMunicipio} onChange={e => setFiltroMunicipio(e.target.value)}>
+                        <option value="todos">Todos</option>
+                        {municipios.map((m, i) => (
+                            <option key={i} value={m}>{m}</option>
+                        ))}
+                    </select>
+                </div>
+            </div>
 
             {riesgosFiltrados.length > 0 ? (
                 <>
-                    <table border="1" cellPadding="8" style={{ marginTop: '20px', borderCollapse: 'collapse', width: '100%' }}>
+                    <table border="1" cellPadding="8" style={{ marginTop: '10px', borderCollapse: 'collapse', width: '100%' }}>
                         <thead>
                             <tr>
                                 <th>Departamento</th>
@@ -78,44 +113,41 @@ export default function EditRiesgos() {
                             </tr>
                         </thead>
                         <tbody>
-                            {riesgosFiltrados.map((r, i) => {
-                                const indexReal = riesgos.findIndex(orig => orig.municipio === r.municipio && orig.departamento === r.departamento)
-                                return (
-                                    <tr key={i}>
-                                        <td>{r.departamento}</td>
-                                        <td>{r.municipio}</td>
-                                        <td>
-                                            <select value={r.nivel_riesgo} onChange={(e) => actualizarCampo(indexReal, 'nivel_riesgo', e.target.value)}>
-                                                <option value="bajo">Bajo</option>
-                                                <option value="moderado">Moderado</option>
-                                                <option value="alto">Alto</option>
-                                                <option value="critico">Crítico</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                value={r.contexto || ''}
-                                                onChange={(e) => actualizarCampo(indexReal, 'contexto', e.target.value)}
-                                            />
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                value={r.novedades || ''}
-                                                onChange={(e) => actualizarCampo(indexReal, 'novedades', e.target.value)}
-                                            />
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                value={r.estructuras_zona || ''}
-                                                onChange={(e) => actualizarCampo(indexReal, 'estructuras_zona', e.target.value)}
-                                            />
-                                        </td>
-                                    </tr>
-                                )
-                            })}
+                            {riesgosFiltrados.map((r) => (
+                                <tr key={r._idx}>
+                                    <td>{r.departamento}</td>
+                                    <td>{r.municipio}</td>
+                                    <td>
+                                        <select value={r.nivel_riesgo} onChange={(e) => actualizarCampo(r._idx, 'nivel_riesgo', e.target.value)}>
+                                            <option value="bajo">Bajo</option>
+                                            <option value="moderado">Moderado</option>
+                                            <option value="alto">Alto</option>
+                                            <option value="critico">Crítico</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={r.contexto || ''}
+                                            onChange={(e) => actualizarCampo(r._idx, 'contexto', e.target.value)}
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={r.novedades || ''}
+                                            onChange={(e) => actualizarCampo(r._idx, 'novedades', e.target.value)}
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={r.estructuras_zona || ''}
+                                            onChange={(e) => actualizarCampo(r._idx, 'estructuras_zona', e.target.value)}
+                                        />
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
 
@@ -135,7 +167,7 @@ export default function EditRiesgos() {
                     </button>
                 </>
             ) : (
-                <p style={{ marginTop: '20px' }}>No hay datos para mostrar.</p>
+                <p style={{ marginTop: '20px' }}>No hay datos para mostrar con ese filtro.</p>
             )}
         </div>
     )
