@@ -1,3 +1,4 @@
+// src/MapaRiesgos.jsx
 import { useEffect, useState, useRef } from 'react'
 import { MapContainer, TileLayer, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
 import axios from 'axios'
@@ -7,8 +8,7 @@ import 'leaflet/dist/leaflet.css'
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado':
-        case 'medio': return '#f1c40f'
+        case 'moderado': case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -39,30 +39,29 @@ const Leyenda = () => {
     return null
 }
 
-const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
+export default function MapaRiesgos({ filtroEvento, municipioFiltro, departamentoFiltro }) {
     const [riesgos, setRiesgos] = useState([])
-    const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const [eventos, setEventos] = useState([])
+    const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const mapRef = useRef()
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`)
+            .then(res => setRiesgos(res.data))
+            .catch(err => console.error('❌ Error cargando riesgos:', err))
+    }, [])
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_API_URL}/api/eventos`)
+            .then(res => setEventos(res.data))
+            .catch(err => console.error('❌ Error al cargar eventos:', err))
+    }, [])
 
     useEffect(() => {
         fetch('/limites_departamentos.geojson')
             .then(res => res.json())
             .then(data => setLimitesDepartamentos(data))
             .catch(err => console.error('❌ Error cargando límites:', err))
-    }, [])
-
-    useEffect(() => {
-        axios.get(import.meta.env.VITE_API_URL + '/api/eventos')
-            .then(res => setEventos(res.data))
-            .catch(err => console.error('❌ Error al cargar eventos:', err))
-    }, [])
-
-    useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`)
-            .then(res => res.json())
-            .then(data => setRiesgos(data))
-            .catch(err => console.error('❌ Error cargando riesgos desde backend:', err))
     }, [])
 
     useEffect(() => {
@@ -78,16 +77,12 @@ const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
         return depMatch && munMatch
     }
 
-    if (!Array.isArray(riesgos)) return <p style={{ color: 'white' }}>Cargando datos de riesgos...</p>
-
     return (
         <MapContainer
             center={[3.5, -75.7]}
             zoom={6.5}
             style={{ height: '700px', width: '100%' }}
-            whenCreated={(mapInstance) => {
-                mapRef.current = mapInstance
-            }}
+            whenCreated={(mapInstance) => { mapRef.current = mapInstance }}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
@@ -99,8 +94,8 @@ const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
             {limitesDepartamentos && (
                 <GeoJSON
                     data={limitesDepartamentos}
-                    style={(feature) => ({
-                        color: feature.properties.departamento === 'Cauca' ? '#2ecc71' : '#ffffff',
+                    style={() => ({
+                        color: '#ffffff',
                         weight: 2,
                         fillOpacity: 0,
                         dashArray: '3',
@@ -108,50 +103,44 @@ const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
                 />
             )}
 
-            {riesgos.filter(filtrar).map((r, i) => {
-                const color = getColor(r.nivel_riesgo)
-                const soloUno = riesgos.length === 1
-                const icono = L.divIcon({
-                    className: '',
-                    html: `<div style="
-                        background:${color};
-                        width: ${soloUno ? '20px' : '12px'};
-                        height: ${soloUno ? '20px' : '12px'};
-                        border-radius: 50%;
-                        border: 2px solid white;
-                        box-shadow: 0 0 2px black;
-                      "></div>`,
-                    iconSize: [soloUno ? 20 : 12, soloUno ? 20 : 12],
-                    iconAnchor: [soloUno ? 10 : 6, soloUno ? 10 : 6],
-                })
+            {riesgos
+                .filter(filtrar)
+                .filter(r => r.lat && r.lng)
+                .map((r, i) => {
+                    const color = getColor(r.nivel_riesgo)
+                    const icono = L.divIcon({
+                        className: '',
+                        html: `<div style="
+              background:${color};
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              border: 2px solid white;
+              box-shadow: 0 0 2px black;
+            "></div>`,
+                        iconSize: [12, 12],
+                        iconAnchor: [6, 6],
+                    })
 
-                return (
-                    <Marker
-                        key={`riesgo-${i}`}
-                        position={[r.lat, r.lng]}
-                        icon={icono}
-                    >
-                        <Popup>
-                            <strong>{r.municipio}</strong><br />
-                            <span style={{ color: color, fontWeight: 'bold' }}>
-                                Riesgo: {r.nivel_riesgo?.toUpperCase()}
-                            </span><br />
-                            Contexto: {r.contexto}<br />
-                            Estructuras: {r.estructuras_zona}<br />
-                            Novedades: {r.novedades}
-                        </Popup>
-                    </Marker>
-                )
-            })}
+                    return (
+                        <Marker key={`riesgo-${i}`} position={[r.lat, r.lng]} icon={icono}>
+                            <Popup>
+                                <strong>{r.municipio}</strong><br />
+                                <span style={{ color: color, fontWeight: 'bold' }}>
+                                    Riesgo: {r.nivel_riesgo?.toUpperCase()}
+                                </span><br />
+                                {r.contexto && <>🧠 Contexto: {r.contexto}<br /></>}
+                                {r.novedades && <>📌 Novedades: {r.novedades}<br /></>}
+                                {r.estructuras_zona && <>🚩 Estructuras: {r.estructuras_zona}</>}
+                            </Popup>
+                        </Marker>
+                    )
+                })}
 
             {eventos
-                .filter((e) => filtroEvento === 'todos' || e.tipo === filtroEvento)
+                .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)
                 .map((evento, i) => (
-                    <Marker
-                        key={`evento-${i}`}
-                        position={[evento.lat, evento.lng]}
-                        icon={iconoEvento}
-                    >
+                    <Marker key={`evento-${i}`} position={[evento.lat, evento.lng]} icon={iconoEvento}>
                         <Popup>
                             <strong>{evento.vereda} ({evento.municipio})</strong><br />
                             <em>{evento.fecha}</em><br />
@@ -163,4 +152,3 @@ const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
     )
 }
 
-export default MapaRiesgos
