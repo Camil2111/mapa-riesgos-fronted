@@ -39,7 +39,8 @@ const Leyenda = () => {
     return null
 }
 
-const MapaRiesgos = ({ riesgos, filtroEvento, municipioFiltro, departamentoFiltro }) => {
+const MapaRiesgos = ({ filtroEvento, municipioFiltro, departamentoFiltro }) => {
+    const [riesgos, setRiesgos] = useState([])
     const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const [eventos, setEventos] = useState([])
     const mapRef = useRef()
@@ -58,11 +59,24 @@ const MapaRiesgos = ({ riesgos, filtroEvento, municipioFiltro, departamentoFiltr
     }, [])
 
     useEffect(() => {
+        fetch(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`)
+            .then(res => res.json())
+            .then(data => setRiesgos(data))
+            .catch(err => console.error('❌ Error cargando riesgos desde backend:', err))
+    }, [])
+
+    useEffect(() => {
         if (mapRef.current && riesgos.length === 1) {
             const r = riesgos[0]
             mapRef.current.flyTo([r.lat, r.lng], 11)
         }
     }, [riesgos])
+
+    const filtrar = (r) => {
+        const depMatch = departamentoFiltro === 'todos' || r.departamento === departamentoFiltro
+        const munMatch = municipioFiltro === 'todos' || r.municipio === municipioFiltro
+        return depMatch && munMatch
+    }
 
     if (!Array.isArray(riesgos)) return <p style={{ color: 'white' }}>Cargando datos de riesgos...</p>
 
@@ -94,19 +108,19 @@ const MapaRiesgos = ({ riesgos, filtroEvento, municipioFiltro, departamentoFiltr
                 />
             )}
 
-            {riesgos.map((r, i) => {
+            {riesgos.filter(filtrar).map((r, i) => {
                 const color = getColor(r.nivel_riesgo)
                 const soloUno = riesgos.length === 1
                 const icono = L.divIcon({
                     className: '',
                     html: `<div style="
-            background:${color};
-            width: ${soloUno ? '20px' : '12px'};
-            height: ${soloUno ? '20px' : '12px'};
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 2px black;
-          "></div>`,
+                        background:${color};
+                        width: ${soloUno ? '20px' : '12px'};
+                        height: ${soloUno ? '20px' : '12px'};
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        box-shadow: 0 0 2px black;
+                      "></div>`,
                     iconSize: [soloUno ? 20 : 12, soloUno ? 20 : 12],
                     iconAnchor: [soloUno ? 10 : 6, soloUno ? 10 : 6],
                 })
@@ -150,6 +164,3 @@ const MapaRiesgos = ({ riesgos, filtroEvento, municipioFiltro, departamentoFiltr
 }
 
 export default MapaRiesgos
-
-
-
