@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { MapContainer, TileLayer, Popup, Marker, GeoJSON, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Popup, Marker, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -42,12 +42,17 @@ const Leyenda = () => {
 export default function MapaRiesgos({ filtroEvento, municipioFiltro, departamentoFiltro }) {
     const [riesgos, setRiesgos] = useState([])
     const [eventos, setEventos] = useState([])
-    const [limitesDepartamentos, setLimitesDepartamentos] = useState(null)
     const mapRef = useRef()
 
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`)
-            .then(res => setRiesgos(res.data))
+        const token = localStorage.getItem('authToken');
+        axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, {
+            headers: { Authorization: `Bearer ${token}` }
+        })
+            .then(res => {
+                console.log('✅ Datos cargados:', res.data)
+                setRiesgos(res.data)
+            })
             .catch(err => console.error('❌ Error cargando riesgos:', err))
     }, [])
 
@@ -55,13 +60,6 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
         axios.get(`${import.meta.env.VITE_API_URL}/api/eventos`)
             .then(res => setEventos(res.data))
             .catch(err => console.error('❌ Error al cargar eventos:', err))
-    }, [])
-
-    useEffect(() => {
-        fetch('/limites_departamentos.geojson')
-            .then(res => res.json())
-            .then(data => setLimitesDepartamentos(data))
-            .catch(err => console.error('❌ Error cargando límites:', err))
     }, [])
 
     useEffect(() => {
@@ -78,7 +76,6 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
     }
 
     const riesgosFiltrados = riesgos.filter(filtrar)
-    console.table(riesgosFiltrados)
 
     return (
         <MapContainer
@@ -93,18 +90,6 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
             />
 
             <Leyenda />
-
-            {limitesDepartamentos && (
-                <GeoJSON
-                    data={limitesDepartamentos}
-                    style={() => ({
-                        color: '#ffffff',
-                        weight: 2,
-                        fillOpacity: 0,
-                        dashArray: '3',
-                    })}
-                />
-            )}
 
             {riesgosFiltrados.map((r, i) => {
                 const color = getColor(r.nivel_riesgo)
@@ -151,4 +136,3 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
         </MapContainer>
     )
 }
-
