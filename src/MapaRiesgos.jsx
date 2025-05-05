@@ -3,12 +3,12 @@ import { MapContainer, TileLayer, Popup, Marker, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import './App.css' // Asegurate de tener aquí los estilos
 
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado':
-        case 'medio': return '#f1c40f'
+        case 'moderado': case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -49,10 +49,7 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
         axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, {
             headers: { Authorization: `Bearer ${token}` }
         })
-            .then(res => {
-                console.log('✅ Datos cargados:', res.data)
-                setRiesgos(res.data)
-            })
+            .then(res => setRiesgos(res.data))
             .catch(err => console.error('❌ Error cargando riesgos:', err))
     }, [])
 
@@ -93,16 +90,18 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
 
             {riesgosFiltrados.map((r, i) => {
                 const color = getColor(r.nivel_riesgo)
+                const isCritico = r.nivel_riesgo?.toLowerCase() === 'critico'
                 const icono = L.divIcon({
-                    className: '',
+                    className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
-              background:${color};
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: 2px solid white;
-              box-shadow: 0 0 2px black;
-            "></div>`,
+            background:${color};
+            opacity: 0.8;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 2px black;
+          "></div>`,
                     iconSize: [12, 12],
                     iconAnchor: [6, 6],
                 })
