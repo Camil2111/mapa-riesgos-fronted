@@ -1,0 +1,24 @@
+{
+    "rewrites": [
+        {
+            "source": "/admin/login",
+            "destination": "/"
+        },
+        {
+            "source": "/admin",
+            "destination": "/"
+        },
+        {
+            "source": "/admin/editar-riesgos",
+            "destination": "/"
+        },
+        {
+            "source": "/cuadrantes",
+            "destination": "/"
+        },
+        {
+            "source": "/estadisticas",
+            "destination": "/"
+        }
+    ]
+}
