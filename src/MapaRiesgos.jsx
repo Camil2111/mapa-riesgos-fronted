@@ -3,12 +3,13 @@ import { MapContainer, TileLayer, Popup, Marker, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import './App.css' // Asegurate de tener aquí los estilos
+import './App.css' // Para los estilos, incluyendo parpadeo
 
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado': case 'medio': return '#f1c40f'
+        case 'moderado':
+        case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -44,19 +45,25 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
     const [eventos, setEventos] = useState([])
     const mapRef = useRef()
 
+    // 🟢 Cargar riesgos públicamente
     useEffect(() => {
-        const token = localStorage.getItem('authToken');
-        axios.get(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, {
-            headers: { Authorization: `Bearer ${token}` }
-        })
-            .then(res => setRiesgos(res.data))
-            .catch(err => console.error('❌ Error cargando riesgos:', err))
+        axios.get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
+            .then(res => {
+                console.log('✅ Datos públicos de riesgos recibidos:', res.data)
+                setRiesgos(res.data)
+            })
+            .catch(err => {
+                console.error('❌ Error cargando riesgos públicos:', err.message)
+            })
     }, [])
 
+    // 🟢 Cargar eventos (estos siguen siendo públicos)
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/eventos`)
             .then(res => setEventos(res.data))
-            .catch(err => console.error('❌ Error al cargar eventos:', err))
+            .catch(err => {
+                console.error('❌ Error cargando eventos:', err.message)
+            })
     }, [])
 
     useEffect(() => {
