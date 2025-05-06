@@ -3,13 +3,12 @@ import { MapContainer, TileLayer, Popup, Marker, useMap } from 'react-leaflet'
 import axios from 'axios'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import './App.css' // Para los estilos, incluyendo parpadeo
+import './App.css'
 
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado':
-        case 'medio': return '#f1c40f'
+        case 'moderado': case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -40,46 +39,36 @@ const Leyenda = () => {
     return null
 }
 
-export default function MapaRiesgos({ filtroEvento, municipioFiltro, departamentoFiltro }) {
+export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 'todos', departamentoFiltro = 'todos', filtroNivel = 'todos' }) {
     const [riesgos, setRiesgos] = useState([])
     const [eventos, setEventos] = useState([])
     const mapRef = useRef()
 
-    // 🟢 Cargar riesgos públicamente
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
-            .then(res => {
-                console.log('✅ Datos públicos de riesgos recibidos:', res.data)
-                setRiesgos(res.data)
-            })
-            .catch(err => {
-                console.error('❌ Error cargando riesgos públicos:', err.message)
-            })
+            .then(res => setRiesgos(res.data))
+            .catch(err => console.error('❌ Error cargando riesgos públicos:', err.message))
     }, [])
 
-    // 🟢 Cargar eventos (estos siguen siendo públicos)
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/eventos`)
             .then(res => setEventos(res.data))
-            .catch(err => {
-                console.error('❌ Error cargando eventos:', err.message)
-            })
+            .catch(err => console.error('❌ Error cargando eventos:', err.message))
     }, [])
 
+    const riesgosFiltrados = riesgos.filter(r => {
+        const dep = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase()
+        const mun = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase()
+        const nivel = filtroNivel === 'todos' || r.nivel_riesgo?.toLowerCase() === filtroNivel.toLowerCase()
+        return dep && mun && nivel && r.lat && r.lng
+    })
+
     useEffect(() => {
-        if (mapRef.current && riesgos.length === 1) {
-            const r = riesgos[0]
+        if (mapRef.current && riesgosFiltrados.length === 1) {
+            const r = riesgosFiltrados[0]
             mapRef.current.flyTo([r.lat, r.lng], 11)
         }
-    }, [riesgos])
-
-    const filtrar = (r) => {
-        const depMatch = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase()
-        const munMatch = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase()
-        return depMatch && munMatch && r.lat && r.lng
-    }
-
-    const riesgosFiltrados = riesgos.filter(filtrar)
+    }, [riesgosFiltrados])
 
     return (
         <MapContainer
@@ -101,16 +90,16 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
                 const icono = L.divIcon({
                     className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
-            background:${color};
-            opacity: 0.8;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 2px black;
-          "></div>`,
-                    iconSize: [12, 12],
-                    iconAnchor: [6, 6],
+      background:${color};
+      opacity: 0.8;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 2px black;
+    "></div>`,
+                    iconSize: [8, 8],
+                    iconAnchor: [4, 4],
                 })
 
                 return (
@@ -127,6 +116,7 @@ export default function MapaRiesgos({ filtroEvento, municipioFiltro, departament
                     </Marker>
                 )
             })}
+
 
             {eventos
                 .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)

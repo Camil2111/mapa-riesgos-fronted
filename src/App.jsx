@@ -155,6 +155,7 @@ function App() {
 
                 <div className="map-container">
                   <MapaRiesgos
+                    filtroNivel={filtro}
                     filtroEvento={filtroEvento}
                     municipioFiltro={municipio}
                     departamentoFiltro={departamento}

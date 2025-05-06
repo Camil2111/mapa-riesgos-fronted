@@ -230,7 +230,7 @@ input:focus {
 }
 
 .leaflet-interactive.pulsante {
-  animation: pulse 2s infinite;
+  animation: pulse 3s infinite;
   transform-origin: center;
 }
 
