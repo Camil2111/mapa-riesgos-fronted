@@ -16,7 +16,6 @@ import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import EditRiesgos from './pages/EditRiesgos.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
-
 import './App.css'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
@@ -44,16 +43,21 @@ function App() {
       })
   }, [])
 
-  const departamentos = [...new Set(riesgosData.map(r => r.departamento).filter(Boolean))]
+  const departamentos = Array.from(new Set(
+    riesgosData
+      .map(r => (r.departamento || '').trim().toUpperCase())
+      .filter(dep => dep.length > 0)
+  )).sort()
+
   const municipiosFiltrados = riesgosData
-    .filter(r => departamento === 'todos' || r.departamento === departamento)
-    .map(r => r.municipio)
+    .filter(r => departamento === 'todos' || (r.departamento || '').trim().toUpperCase() === departamento)
+    .map(r => (r.municipio || '').trim())
   const municipiosUnicos = [...new Set(municipiosFiltrados)]
 
   const filtrarRiesgos = () => {
     return riesgosData.filter(r => {
       const nivelMatch = filtro === 'todos' || r.nivel_riesgo?.toLowerCase() === filtro
-      const deptoMatch = departamento === 'todos' || r.departamento === departamento
+      const deptoMatch = departamento === 'todos' || (r.departamento || '').trim().toUpperCase() === departamento
       const muniMatch = municipio === 'todos' || r.municipio === municipio
       const busquedaMatch = busqueda.trim() === '' || r.municipio?.toLowerCase().includes(busqueda.toLowerCase())
       return nivelMatch && deptoMatch && muniMatch && busquedaMatch

@@ -91,7 +91,7 @@ export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 
                     className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
       background:${color};
-      opacity: 0.8;
+      opacity: 0.5;
       width: 8px;
       height: 8px;
       border-radius: 50%;
