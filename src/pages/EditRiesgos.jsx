@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import './App.css'
+import '../App.css'
 
 export default function EditRiesgos() {
     const [riesgos, setRiesgos] = useState([])
