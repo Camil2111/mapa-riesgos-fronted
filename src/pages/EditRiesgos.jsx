@@ -101,12 +101,14 @@ export default function EditRiesgos() {
                             <td>{item.municipio}</td>
                             <td>{item.departamento}</td>
                             <td>
-                                <select value={item.nivel_riesgo || ''} onChange={e => handleEdit(itemIndex(item), 'nivel_riesgo', e.target.value)}>
-                                    <option value="">--</option>
-                                    <option value="Bajo">Bajo</option>
-                                    <option value="Moderado">Moderado</option>
-                                    <option value="Alto">Alto</option>
-                                    <option value="Crítico">Crítico</option>
+                                <select
+                                    value={item.nivel_riesgo}
+                                    onChange={(e) => handleChange(index, 'nivel_riesgo', e.target.value.toLowerCase())}
+                                >
+                                    <option value="bajo">Bajo</option>
+                                    <option value="moderado">Moderado</option>
+                                    <option value="critico">Crítico</option>
+                                    <option value="alto">Alto</option>
                                 </select>
                             </td>
                             <td>

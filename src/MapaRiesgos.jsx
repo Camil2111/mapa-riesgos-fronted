@@ -8,7 +8,8 @@ import './App.css'
 const getColor = (nivel) => {
     switch (nivel?.toLowerCase()) {
         case 'bajo': return '#27ae60'
-        case 'moderado': case 'medio': return '#f1c40f'
+        case 'moderado':
+        case 'medio': return '#f1c40f'
         case 'critico': return '#e67e22'
         case 'alto': return '#e74c3c'
         default: return '#95a5a6'
@@ -39,7 +40,7 @@ const Leyenda = () => {
     return null
 }
 
-export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 'todos', departamentoFiltro = 'todos', filtroNivel = 'todos' }) {
+export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro, departamentoFiltro }) {
     const [riesgos, setRiesgos] = useState([])
     const [eventos, setEventos] = useState([])
     const mapRef = useRef()
@@ -56,19 +57,21 @@ export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 
             .catch(err => console.error('❌ Error cargando eventos:', err.message))
     }, [])
 
-    const riesgosFiltrados = riesgos.filter(r => {
-        const dep = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase()
-        const mun = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase()
-        const nivel = filtroNivel === 'todos' || r.nivel_riesgo?.toLowerCase() === filtroNivel.toLowerCase()
-        return dep && mun && nivel && r.lat && r.lng
-    })
-
     useEffect(() => {
-        if (mapRef.current && riesgosFiltrados.length === 1) {
-            const r = riesgosFiltrados[0]
+        if (mapRef.current && riesgos.length === 1) {
+            const r = riesgos[0]
             mapRef.current.flyTo([r.lat, r.lng], 11)
         }
-    }, [riesgosFiltrados])
+    }, [riesgos])
+
+    const filtrar = (r) => {
+        const nivelMatch = filtroNivel === 'todos' || r.nivel_riesgo?.toLowerCase() === filtroNivel.toLowerCase()
+        const depMatch = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase()
+        const munMatch = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase()
+        return nivelMatch && depMatch && munMatch && r.lat && r.lng
+    }
+
+    const riesgosFiltrados = riesgos.filter(filtrar)
 
     return (
         <MapContainer
@@ -90,16 +93,16 @@ export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 
                 const icono = L.divIcon({
                     className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
-      background:${color};
-      opacity: 0.5;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 0 2px black;
-    "></div>`,
-                    iconSize: [8, 8],
-                    iconAnchor: [4, 4],
+            background:${color};
+            opacity: 0.8;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 2px black;
+          "></div>`,
+                    iconSize: [12, 12],
+                    iconAnchor: [6, 6],
                 })
 
                 return (
@@ -116,7 +119,6 @@ export default function MapaRiesgos({ filtroEvento = 'todos', municipioFiltro = 
                     </Marker>
                 )
             })}
-
 
             {eventos
                 .filter(e => filtroEvento === 'todos' || e.tipo === filtroEvento)

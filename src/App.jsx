@@ -45,7 +45,10 @@ function App() {
 
   const departamentos = Array.from(new Set(
     riesgosData
-      .map(r => (r.departamento || '').trim().toUpperCase())
+      .map(r => {
+        const dep = (r.departamento || '').trim().toLowerCase()
+        return dep.charAt(0).toUpperCase() + dep.slice(1)
+      })
       .filter(dep => dep.length > 0)
   )).sort()
 
