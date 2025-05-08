@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import '../App.css'
 
 export default function EditRiesgos() {
     const [riesgos, setRiesgos] = useState([])
@@ -110,12 +109,7 @@ export default function EditRiesgos() {
                 </tbody>
             </table>
 
-            <button
-                style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#29f77a', color: '#0f1a1a', border: 'none', borderRadius: '5px' }}
-                onClick={guardarCambios}
-            >
-                Guardar Cambios
-            </button>
+
         </div>
     )
 }
