@@ -1,23 +1,36 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState, useMemo } from 'react';
+import axios from 'axios';
 
 const LineaTiempo = ({ municipio }) => {
-    const [eventos, setEventos] = useState([])
+    const [eventos, setEventos] = useState([]);
 
     useEffect(() => {
-        if (!municipio || municipio === 'todos') return
+        if (!municipio || municipio === 'todos') return;
         axios
             .get(`${import.meta.env.VITE_API_URL}/api/eventos?municipio=${municipio}`)
             .then(res => {
-                const ordenados = res.data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
-                setEventos(ordenados)
+                const hoy = new Date();
+                const hace30dias = new Date(hoy.setDate(hoy.getDate() - 30));
+                const recientes = res.data
+                    .filter(e => new Date(e.fecha) >= hace30dias)
+                    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+                setEventos(recientes);
             })
             .catch(err => {
-                console.error('❌ Error al cargar línea de tiempo:', err)
-            })
-    }, [municipio])
+                console.error('❌ Error al cargar línea de tiempo:', err);
+            });
+    }, [municipio]);
 
-    if (!municipio || municipio === 'todos') return null
+    const eventosRender = useMemo(() => (
+        eventos.map((e, i) => (
+            <li key={i} style={{ marginBottom: '15px', borderBottom: '1px solid #333', paddingBottom: '10px' }}>
+                <strong>{new Date(e.fecha).toLocaleDateString()}</strong> - <em>{e.tipo}</em><br />
+                {e.descripcion}
+            </li>
+        ))
+    ), [eventos]);
+
+    if (!municipio || municipio === 'todos') return null;
 
     return (
         <div style={{
@@ -34,19 +47,14 @@ const LineaTiempo = ({ municipio }) => {
                 🕒 Línea de tiempo - {municipio}
             </h3>
             {eventos.length === 0 ? (
-                <p>No hay eventos registrados.</p>
+                <p>No hay eventos recientes (últimos 30 días).</p>
             ) : (
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {eventos.map((e, i) => (
-                        <li key={i} style={{ marginBottom: '15px', borderBottom: '1px solid #333', paddingBottom: '10px' }}>
-                            <strong>{new Date(e.fecha).toLocaleDateString()}</strong> - <em>{e.tipo}</em><br />
-                            {e.descripcion}
-                        </li>
-                    ))}
+                    {eventosRender}
                 </ul>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default LineaTiempo
+export default LineaTiempo;

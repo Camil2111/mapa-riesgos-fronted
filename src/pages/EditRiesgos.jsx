@@ -1,40 +1,41 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function EditRiesgos() {
-    const [riesgos, setRiesgos] = useState([])
-    const [filtroDepto, setFiltroDepto] = useState('todos')
-    const [filtroMuni, setFiltroMuni] = useState('todos')
+    const [riesgos, setRiesgos] = useState([]);
+    const [filtroDepto, setFiltroDepto] = useState('todos');
+    const [filtroMuni, setFiltroMuni] = useState('todos');
 
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
             .then(res => setRiesgos(res.data))
-            .catch(err => console.error('❌ Error cargando riesgos:', err))
-    }, [])
+            .catch(err => console.error('❌ Error cargando riesgos:', err));
+    }, []);
 
     const handleChange = (realIndex, campo, valor) => {
-        const copia = [...riesgos]
-        copia[realIndex][campo] = campo === 'nivel_riesgo' ? valor.toLowerCase() : valor
-        setRiesgos(copia)
-    }
+        setRiesgos(prev => prev.map((r, i) => i === realIndex ? { ...r, [campo]: campo === 'nivel_riesgo' ? valor.toLowerCase() : valor } : r));
+    };
 
     const guardarCambios = () => {
-        const token = localStorage.getItem('authToken')
-        axios.post(`${import.meta.env.VITE_API_URL}/api/datos-riesgos`, riesgos, {
+        const token = localStorage.getItem('authToken');
+        axios.post(`${import.meta.env.VITE_API_URL}/api/datos-riesgos/guardar-edicion`, { data: riesgos }, {
             headers: { Authorization: `Bearer ${token}` }
         })
             .then(() => alert('✅ Datos guardados'))
-            .catch(() => alert('❌ Error al guardar datos'))
-    }
+            .catch(err => {
+                console.error('❌ Error al guardar datos:', err);
+                alert('❌ Error al guardar datos');
+            });
+    };
 
-    const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))]
-    const municipios = [...new Set(riesgos.filter(r => filtroDepto === 'todos' || r.departamento === filtroDepto).map(r => r.municipio))]
+    const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))];
+    const municipios = [...new Set(riesgos.filter(r => filtroDepto === 'todos' || r.departamento === filtroDepto).map(r => r.municipio))];
 
     const filtrados = riesgos.filter(r => {
-        const d = filtroDepto === 'todos' || r.departamento === filtroDepto
-        const m = filtroMuni === 'todos' || r.municipio === filtroMuni
-        return d && m
-    })
+        const d = filtroDepto === 'todos' || r.departamento === filtroDepto;
+        const m = filtroMuni === 'todos' || r.municipio === filtroMuni;
+        return d && m;
+    });
 
     return (
         <div style={{ padding: '20px', backgroundColor: '#1a1a1a', color: '#e5e5e5', minHeight: '100vh' }}>
@@ -51,8 +52,8 @@ export default function EditRiesgos() {
             <div style={{ marginBottom: '15px' }}>
                 <label>Filtrar por departamento:</label>
                 <select value={filtroDepto} onChange={(e) => {
-                    setFiltroDepto(e.target.value)
-                    setFiltroMuni('todos')
+                    setFiltroDepto(e.target.value);
+                    setFiltroMuni('todos');
                 }}>
                     <option value="todos">Todos</option>
                     {departamentos.map((d, i) => <option key={i} value={d}>{d}</option>)}
@@ -77,7 +78,7 @@ export default function EditRiesgos() {
                 </thead>
                 <tbody>
                     {filtrados.map((item, i) => {
-                        const realIndex = riesgos.findIndex(r => r.municipio === item.municipio && r.departamento === item.departamento)
+                        const realIndex = riesgos.findIndex(r => r.municipio === item.municipio && r.departamento === item.departamento);
                         return (
                             <tr key={i}>
                                 <td style={{ borderBottom: '1px solid #444' }}>{item.municipio}</td>
@@ -114,10 +115,10 @@ export default function EditRiesgos() {
                                     />
                                 </td>
                             </tr>
-                        )
+                        );
                     })}
                 </tbody>
             </table>
         </div>
-    )
+    );
 }
