@@ -1,37 +1,72 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const capitalizar = (txt) => {
+    if (!txt) return '';
+    const lower = txt.toLowerCase();
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
+};
+
 export default function EditRiesgos() {
     const [riesgos, setRiesgos] = useState([]);
     const [filtroDepto, setFiltroDepto] = useState('todos');
     const [filtroMuni, setFiltroMuni] = useState('todos');
 
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
-            .then(res => setRiesgos(res.data))
-            .catch(err => console.error('❌ Error cargando riesgos:', err));
+        axios
+            .get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
+            .then((res) => setRiesgos(res.data))
+            .catch((err) => console.error('❌ Error cargando riesgos:', err));
     }, []);
 
     const handleChange = (realIndex, campo, valor) => {
-        setRiesgos(prev => prev.map((r, i) => i === realIndex ? { ...r, [campo]: campo === 'nivel_riesgo' ? valor.toLowerCase() : valor } : r));
+        setRiesgos((prev) =>
+            prev.map((r, i) =>
+                i === realIndex
+                    ? {
+                        ...r,
+                        [campo]:
+                            campo === 'nivel_riesgo' ? valor.toLowerCase() : valor,
+                    }
+                    : r
+            )
+        );
     };
 
-    const guardarCambios = () => {
+    const guardarCambios = async () => {
         const token = localStorage.getItem('authToken');
-        axios.post(`${import.meta.env.VITE_API_URL}/api/datos-riesgos/guardar-edicion`, { data: riesgos }, {
-            headers: { Authorization: `Bearer ${token}` }
-        })
-            .then(() => alert('✅ Datos guardados'))
-            .catch(err => {
-                console.error('❌ Error al guardar datos:', err);
-                alert('❌ Error al guardar datos');
-            });
+        try {
+            const payload = riesgos.map((r) => ({
+                ...r,
+                nivel_riesgo: capitalizar(r.nivel_riesgo),
+            }));
+
+            const { data } = await axios.post(
+                `${import.meta.env.VITE_API_URL}/api/datos-riesgos/guardar-edicion`,
+                { data: payload },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+
+            if (data.ok) {
+                alert('✅ Datos guardados correctamente');
+            } else {
+                throw new Error(data.error || 'Error desconocido al guardar');
+            }
+        } catch (err) {
+            console.error('❌ Error al guardar datos:', err);
+            alert('❌ Error al guardar datos. Revisa consola.');
+        }
     };
 
-    const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))];
-    const municipios = [...new Set(riesgos.filter(r => filtroDepto === 'todos' || r.departamento === filtroDepto).map(r => r.municipio))];
+    const departamentos = [...new Set(riesgos.map((r) => r.departamento).filter(Boolean))];
+    const municipios = [...new Set(riesgos.filter((r) => filtroDepto === 'todos' || r.departamento === filtroDepto).map((r) => r.municipio))];
 
-    const filtrados = riesgos.filter(r => {
+    const filtrados = riesgos.filter((r) => {
         const d = filtroDepto === 'todos' || r.departamento === filtroDepto;
         const m = filtroMuni === 'todos' || r.municipio === filtroMuni;
         return d && m;
@@ -78,7 +113,9 @@ export default function EditRiesgos() {
                 </thead>
                 <tbody>
                     {filtrados.map((item, i) => {
-                        const realIndex = riesgos.findIndex(r => r.municipio === item.municipio && r.departamento === item.departamento);
+                        const realIndex = riesgos.findIndex(
+                            (r) => r.municipio === item.municipio && r.departamento === item.departamento
+                        );
                         return (
                             <tr key={i}>
                                 <td style={{ borderBottom: '1px solid #444' }}>{item.municipio}</td>
