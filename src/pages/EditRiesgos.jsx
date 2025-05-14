@@ -20,7 +20,9 @@ export default function EditRiesgos() {
 
     const guardarCambios = () => {
         const token = localStorage.getItem('authToken')
-        axios.post(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`, { data: riesgos }, {
+        const validados = riesgos.filter(r => r.municipio && r.departamento)
+
+        axios.post(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`, { data: validados }, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -44,7 +46,7 @@ export default function EditRiesgos() {
 
     return (
         <div style={{ padding: '20px', backgroundColor: '#1a1a1a', color: '#e5e5e5', minHeight: '100vh' }}>
-            <h2>Editor de Riesgos desde MongoDB</h2>
+            <h2>Editor de Riesgos (MongoDB)</h2>
 
             <button
                 style={{ marginBottom: '20px', padding: '10px 20px', backgroundColor: '#29f77a', color: '#0f1a1a', border: 'none', borderRadius: '5px' }}
@@ -70,6 +72,7 @@ export default function EditRiesgos() {
             <table style={{ width: '100%', backgroundColor: '#141f1f', borderCollapse: 'collapse', color: '#e5e5e5' }}>
                 <thead>
                     <tr>
+                        <th>Departamento</th>
                         <th>Municipio</th>
                         <th>Nivel</th>
                         <th>Contexto</th>
@@ -80,6 +83,7 @@ export default function EditRiesgos() {
                 <tbody>
                     {filtrados.map((item, i) => (
                         <tr key={i}>
+                            <td>{item.departamento}</td>
                             <td>{item.municipio}</td>
                             <td>
                                 <select value={item.nivel_riesgo || ''} onChange={e => handleChange(i, 'nivel_riesgo', e.target.value)}>
