@@ -97,11 +97,16 @@ export default function EditRiesgos() {
                     </thead>
                     <tbody>
                         {filtrados.map((item, i) => {
-                            const realIndex = riesgos.findIndex(r => r._id && r._id === item._id);
-                            if (realIndex === -1) return null;
+                            const realIndex = riesgos.findIndex(r => r._id === item._id);
 
+                            // Validación segura: si no existe, no renderiza nada
+                            if (realIndex === -1 || !item._id) return (
+                                <tr key={`missing-${i}`}>
+                                    <td colSpan="6" style={{ color: 'gray' }}>❌ Registro sin ID. No editable.</td>
+                                </tr>
+                            );
                             return (
-                                <tr key={item._id || `${item.municipio}-${item.departamento}-${i}`}>
+                                <tr key={item._id}>
                                     <td>{item.departamento}</td>
                                     <td>{item.municipio}</td>
                                     <td>
