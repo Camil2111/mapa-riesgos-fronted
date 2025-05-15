@@ -8,8 +8,14 @@ export default function EditRiesgos() {
 
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`)
-            .then(res => setRiesgos(res.data))
-            .catch(err => console.error('❌ Error cargando riesgos:', err))
+            .then(res => {
+                console.log('📦 Datos recibidos:', res.data)
+                setRiesgos(res.data)
+            })
+            .catch(err => {
+                console.error('❌ Error cargando riesgos:', err)
+                alert('No se pudieron cargar los riesgos desde el servidor.')
+            })
     }, [])
 
     const handleChange = (index, campo, valor) => {
@@ -35,12 +41,18 @@ export default function EditRiesgos() {
             })
     }
 
-    const departamentos = [...new Set(riesgos.map(r => r.departamento).filter(Boolean))]
-    const municipios = [...new Set(riesgos.filter(r => filtroDepto === 'todos' || r.departamento === filtroDepto).map(r => r.municipio))]
+    // Protege valores vacíos
+    const departamentos = [...new Set(riesgos.map(r => r?.departamento).filter(Boolean))]
+    const municipios = [...new Set(
+        riesgos
+            .filter(r => filtroDepto === 'todos' || r?.departamento === filtroDepto)
+            .map(r => r?.municipio)
+            .filter(Boolean)
+    )]
 
     const filtrados = riesgos.filter(r => {
-        const matchD = filtroDepto === 'todos' || r.departamento === filtroDepto
-        const matchM = filtroMuni === 'todos' || r.municipio === filtroMuni
+        const matchD = filtroDepto === 'todos' || r?.departamento === filtroDepto
+        const matchM = filtroMuni === 'todos' || r?.municipio === filtroMuni
         return matchD && matchM
     })
 
@@ -69,43 +81,47 @@ export default function EditRiesgos() {
                 </select>
             </div>
 
-            <table style={{ width: '100%', backgroundColor: '#141f1f', borderCollapse: 'collapse', color: '#e5e5e5' }}>
-                <thead>
-                    <tr>
-                        <th>Departamento</th>
-                        <th>Municipio</th>
-                        <th>Nivel</th>
-                        <th>Contexto</th>
-                        <th>Novedades</th>
-                        <th>Estructuras</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filtrados.map((item, i) => (
-                        <tr key={i}>
-                            <td>{item.departamento}</td>
-                            <td>{item.municipio}</td>
-                            <td>
-                                <select value={item.nivel_riesgo || ''} onChange={e => handleChange(i, 'nivel_riesgo', e.target.value)}>
-                                    <option value="Bajo">Bajo</option>
-                                    <option value="Moderado">Moderado</option>
-                                    <option value="Alto">Alto</option>
-                                    <option value="Crítico">Crítico</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="text" value={item.contexto || ''} onChange={e => handleChange(i, 'contexto', e.target.value)} />
-                            </td>
-                            <td>
-                                <input type="text" value={item.novedades || ''} onChange={e => handleChange(i, 'novedades', e.target.value)} />
-                            </td>
-                            <td>
-                                <input type="text" value={item.estructuras_zona || ''} onChange={e => handleChange(i, 'estructuras_zona', e.target.value)} />
-                            </td>
+            {filtrados.length === 0 ? (
+                <p>⚠️ No hay datos para mostrar. Verificá los filtros o la conexión.</p>
+            ) : (
+                <table style={{ width: '100%', backgroundColor: '#141f1f', borderCollapse: 'collapse', color: '#e5e5e5' }}>
+                    <thead>
+                        <tr>
+                            <th>Departamento</th>
+                            <th>Municipio</th>
+                            <th>Nivel</th>
+                            <th>Contexto</th>
+                            <th>Novedades</th>
+                            <th>Estructuras</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {filtrados.map((item, i) => (
+                            <tr key={i}>
+                                <td>{item.departamento}</td>
+                                <td>{item.municipio}</td>
+                                <td>
+                                    <select value={item.nivel_riesgo || ''} onChange={e => handleChange(i, 'nivel_riesgo', e.target.value)}>
+                                        <option value="Bajo">Bajo</option>
+                                        <option value="Moderado">Moderado</option>
+                                        <option value="Alto">Alto</option>
+                                        <option value="Crítico">Crítico</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" value={item.contexto || ''} onChange={e => handleChange(i, 'contexto', e.target.value)} />
+                                </td>
+                                <td>
+                                    <input type="text" value={item.novedades || ''} onChange={e => handleChange(i, 'novedades', e.target.value)} />
+                                </td>
+                                <td>
+                                    <input type="text" value={item.estructuras_zona || ''} onChange={e => handleChange(i, 'estructuras_zona', e.target.value)} />
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
         </div>
     )
 }
