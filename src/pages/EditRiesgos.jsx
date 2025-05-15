@@ -96,29 +96,48 @@ export default function EditRiesgos() {
                         </tr>
                     </thead>
                     <tbody>
-                        {filtrados.map((item, i) => (
-                            <tr key={i}>
-                                <td>{item.departamento}</td>
-                                <td>{item.municipio}</td>
-                                <td>
-                                    <select value={item.nivel_riesgo || ''} onChange={e => handleChange(i, 'nivel_riesgo', e.target.value)}>
-                                        <option value="Bajo">Bajo</option>
-                                        <option value="Moderado">Moderado</option>
-                                        <option value="Alto">Alto</option>
-                                        <option value="Crítico">Crítico</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <input type="text" value={item.contexto || ''} onChange={e => handleChange(i, 'contexto', e.target.value)} />
-                                </td>
-                                <td>
-                                    <input type="text" value={item.novedades || ''} onChange={e => handleChange(i, 'novedades', e.target.value)} />
-                                </td>
-                                <td>
-                                    <input type="text" value={item.estructuras_zona || ''} onChange={e => handleChange(i, 'estructuras_zona', e.target.value)} />
-                                </td>
-                            </tr>
-                        ))}
+                        {filtrados.map((item, i) => {
+                            const realIndex = riesgos.findIndex(r => r._id === item._id)
+                            return (
+                                <tr key={item._id || i}>
+                                    <td>{item.departamento}</td>
+                                    <td>{item.municipio}</td>
+                                    <td>
+                                        <select
+                                            value={item.nivel_riesgo || ''}
+                                            onChange={e => handleChange(realIndex, 'nivel_riesgo', e.target.value)}
+                                        >
+                                            <option value="Bajo">Bajo</option>
+                                            <option value="Moderado">Moderado</option>
+                                            <option value="Alto">Alto</option>
+                                            <option value="Crítico">Crítico</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={item.contexto || ''}
+                                            onChange={e => handleChange(realIndex, 'contexto', e.target.value)}
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={item.novedades || ''}
+                                            onChange={e => handleChange(realIndex, 'novedades', e.target.value)}
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value={item.estructuras_zona || ''}
+                                            onChange={e => handleChange(realIndex, 'estructuras_zona', e.target.value)}
+                                        />
+                                    </td>
+                                </tr>
+                            )
+                        })}
+
                     </tbody>
                 </table>
             )}
