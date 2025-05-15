@@ -46,7 +46,7 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
     const mapRef = useRef();
 
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_API_URL}/api/public/datos-riesgos`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`)
             .then(res => setRiesgos(res.data))
             .catch(err => console.error('❌ Error cargando riesgos públicos:', err.message));
 
