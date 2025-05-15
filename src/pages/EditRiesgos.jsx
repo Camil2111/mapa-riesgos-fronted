@@ -28,7 +28,7 @@ export default function EditRiesgos() {
         const token = localStorage.getItem('authToken')
         const validados = riesgos.filter(r => r.municipio && r.departamento)
 
-        axios.post(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`, { data: validados }, {
+        axios.post(`${import.meta.env.VITE_API_URL}/api/riesgos-adicionales`, validados, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json'
