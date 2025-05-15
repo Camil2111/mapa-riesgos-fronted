@@ -97,9 +97,11 @@ export default function EditRiesgos() {
                     </thead>
                     <tbody>
                         {filtrados.map((item, i) => {
-                            const realIndex = riesgos.findIndex(r => r._id === item._id)
+                            const realIndex = riesgos.findIndex(r => r._id && r._id === item._id);
+                            if (realIndex === -1) return null;
+
                             return (
-                                <tr key={item._id || i}>
+                                <tr key={item._id || `${item.municipio}-${item.departamento}-${i}`}>
                                     <td>{item.departamento}</td>
                                     <td>{item.municipio}</td>
                                     <td>
@@ -135,9 +137,8 @@ export default function EditRiesgos() {
                                         />
                                     </td>
                                 </tr>
-                            )
+                            );
                         })}
-
                     </tbody>
                 </table>
             )}
