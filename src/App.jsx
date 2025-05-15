@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
@@ -43,24 +43,31 @@ function App() {
       })
   }, [])
 
-  const departamentos = Array.from(new Set(
-    riesgosData
-      .map(r => {
-        const dep = (r.departamento || '').trim().toLowerCase()
-        return dep.charAt(0).toUpperCase() + dep.slice(1)
-      })
-      .filter(dep => dep.length > 0)
-  )).sort()
+  const normalizar = (str) =>
+    str?.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
+
+  const departamentos = useMemo(() => {
+    const mapa = new Map()
+    riesgosData.forEach(r => {
+      const raw = r.departamento
+      const key = normalizar(raw)
+      if (key && !mapa.has(key)) {
+        const nombre = key.charAt(0).toUpperCase() + key.slice(1)
+        mapa.set(key, nombre)
+      }
+    })
+    return Array.from(mapa.entries()).map(([key, label]) => ({ key, label })).sort((a, b) => a.label.localeCompare(b.label))
+  }, [])
 
   const municipiosFiltrados = riesgosData
-    .filter(r => departamento === 'todos' || (r.departamento || '').trim().toUpperCase() === departamento)
+    .filter(r => departamento === 'todos' || normalizar(r.departamento) === normalizar(departamento))
     .map(r => (r.municipio || '').trim())
   const municipiosUnicos = [...new Set(municipiosFiltrados)]
 
   const filtrarRiesgos = () => {
     return riesgosData.filter(r => {
       const nivelMatch = filtro === 'todos' || r.nivel_riesgo?.toLowerCase() === filtro
-      const deptoMatch = departamento === 'todos' || (r.departamento || '').trim().toUpperCase() === departamento
+      const deptoMatch = departamento === 'todos' || normalizar(r.departamento) === normalizar(departamento)
       const muniMatch = municipio === 'todos' || r.municipio === municipio
       const busquedaMatch = busqueda.trim() === '' || r.municipio?.toLowerCase().includes(busqueda.toLowerCase())
       return nivelMatch && deptoMatch && muniMatch && busquedaMatch
@@ -70,7 +77,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Ruta principal: el mapa */}
         <Route path="/" element={
           mostrarMapa ? (
             <div style={{ backgroundColor: '#0f1a1a', color: '#e5e5e5', minHeight: '100vh' }}>
@@ -116,7 +122,7 @@ function App() {
                   }}>
                     <option value="todos">Todos</option>
                     {departamentos.map((d, i) => (
-                      <option key={i} value={d}>{d}</option>
+                      <option key={i} value={d.key}>{d.label}</option>
                     ))}
                   </select>
 
@@ -184,11 +190,8 @@ function App() {
           )
         } />
 
-        {/* Rutas públicas adicionales */}
         <Route path="/cuadrantes" element={<Cuadrantes />} />
         <Route path="/estadisticas" element={<Estadisticas />} />
-
-        {/* Rutas del panel de administración */}
         <Route path="/admin/login" element={<Login />} />
         <Route path="/admin" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/admin/editar-riesgos" element={<ProtectedRoute><EditRiesgos /></ProtectedRoute>} />

@@ -6,7 +6,8 @@ import 'leaflet/dist/leaflet.css';
 import './App.css';
 
 const getColor = (nivel) => {
-    switch (nivel?.toLowerCase()) {
+    const normalizado = nivel?.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    switch (normalizado) {
         case 'bajo': return '#27ae60';
         case 'moderado':
         case 'medio': return '#f1c40f';
@@ -55,12 +56,40 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
             .catch(err => console.error('❌ Error cargando eventos:', err.message));
     }, []);
 
+    const normalizar = (str) =>
+        str?.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+
+    const mapNivel = nivel => {
+        const n = normalizar(nivel);
+        if (n === 'medio') return 'moderado';
+        return n;
+    };
+
     const riesgosFiltrados = useMemo(() => riesgos.filter(r => {
-        const nivelMatch = filtroNivel === 'todos' || r.nivel_riesgo?.toLowerCase() === filtroNivel.toLowerCase();
-        const depMatch = departamentoFiltro === 'todos' || r.departamento?.toLowerCase() === departamentoFiltro.toLowerCase();
-        const munMatch = municipioFiltro === 'todos' || r.municipio?.toLowerCase() === municipioFiltro.toLowerCase();
+        const nivelMatch = filtroNivel === 'todos' || mapNivel(r.nivel_riesgo) === mapNivel(filtroNivel);
+        const depMatch = departamentoFiltro === 'todos' || normalizar(r.departamento) === normalizar(departamentoFiltro);
+        const munMatch = municipioFiltro === 'todos' || normalizar(r.municipio) === normalizar(municipioFiltro);
         return nivelMatch && depMatch && munMatch && r.lat && r.lng;
     }), [riesgos, filtroNivel, municipioFiltro, departamentoFiltro]);
+
+    const departamentos = useMemo(() => {
+        const mapaNormalizado = new Map();
+
+        riesgos.forEach(r => {
+            const raw = r.departamento;
+            const key = normalizar(raw);
+            if (key && !mapaNormalizado.has(key)) {
+                const display = key.charAt(0).toUpperCase() + key.slice(1); // ejemplo: \"cauca\" => \"Cauca\"
+                mapaNormalizado.set(key, display);
+            }
+        });
+
+        return Array.from(mapaNormalizado.entries()).map(([key, value]) => ({
+            key,
+            label: value
+        })).sort((a, b) => a.label.localeCompare(b.label));
+    }, [riesgos]);
+
 
     useEffect(() => {
         if (mapRef.current && riesgosFiltrados.length === 1) {
@@ -85,7 +114,7 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
 
             {riesgosFiltrados.map((r, i) => {
                 const color = getColor(r.nivel_riesgo);
-                const isCritico = r.nivel_riesgo?.toLowerCase() === 'critico';
+                const isCritico = normalizar(r.nivel_riesgo) === 'critico';
                 const icono = L.divIcon({
                     className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
