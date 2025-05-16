@@ -34,7 +34,7 @@ export default function EditRiesgos() {
                 'Content-Type': 'application/json'
             }
         })
-            .then(() => alert('✅ Cambios guardados en MongoDB'))
+            .then(() => alert('✅ Cambios guardados correctamente'))
             .catch(err => {
                 console.error('❌ Error al guardar:', err)
                 alert('❌ Error al guardar los datos')
