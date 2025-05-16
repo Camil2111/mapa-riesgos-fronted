@@ -5,7 +5,6 @@ import { Bar } from 'react-chartjs-2'
 
 import MapaRiesgos from './MapaRiesgos.jsx'
 import Splash from './Splash.jsx'
-import riesgosData from './datos_riesgos.json'
 import Estadisticas from './pages/Estadisticas.jsx'
 import EventosRecientes from './components/EventosRecientes.jsx'
 import Cuadrantes from './pages/Cuadrantes.jsx'
@@ -29,6 +28,7 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [departamento, setDepartamento] = useState('todos')
   const [municipio, setMunicipio] = useState('todos')
+  const [riesgosData, setRiesgosData] = useState([])
 
   useEffect(() => {
     fetch(import.meta.env.VITE_API_URL + '/api/estadisticas')
@@ -43,6 +43,13 @@ function App() {
       })
   }, [])
 
+  useEffect(() => {
+    fetch(import.meta.env.VITE_API_URL + '/api/riesgos-adicionales')
+      .then(res => res.json())
+      .then(data => setRiesgosData(data))
+      .catch(err => console.error('❌ Error al cargar riesgos:', err))
+  }, [])
+
   const normalizar = (str) =>
     str?.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
 
@@ -50,29 +57,17 @@ function App() {
     const mapa = new Map()
     riesgosData.forEach(r => {
       const raw = r.departamento
-      const key = normalizar(raw)
-      if (key && !mapa.has(key)) {
-        const nombre = key.charAt(0).toUpperCase() + key.slice(1)
-        mapa.set(key, nombre)
+      if (raw && !mapa.has(raw)) {
+        mapa.set(raw, raw)
       }
     })
     return Array.from(mapa.entries()).map(([key, label]) => ({ key, label })).sort((a, b) => a.label.localeCompare(b.label))
-  }, [])
+  }, [riesgosData])
 
   const municipiosFiltrados = riesgosData
     .filter(r => departamento === 'todos' || normalizar(r.departamento) === normalizar(departamento))
     .map(r => (r.municipio || '').trim())
   const municipiosUnicos = [...new Set(municipiosFiltrados)]
-
-  const filtrarRiesgos = () => {
-    return riesgosData.filter(r => {
-      const nivelMatch = filtro === 'todos' || r.nivel_riesgo?.toLowerCase() === filtro
-      const deptoMatch = departamento === 'todos' || normalizar(r.departamento) === normalizar(departamento)
-      const muniMatch = municipio === 'todos' || r.municipio === municipio
-      const busquedaMatch = busqueda.trim() === '' || r.municipio?.toLowerCase().includes(busqueda.toLowerCase())
-      return nivelMatch && deptoMatch && muniMatch && busquedaMatch
-    })
-  }
 
   return (
     <Router>
@@ -201,3 +196,4 @@ function App() {
 }
 
 export default App
+

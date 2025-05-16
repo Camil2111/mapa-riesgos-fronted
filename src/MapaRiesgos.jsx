@@ -73,22 +73,21 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
     }), [riesgos, filtroNivel, municipioFiltro, departamentoFiltro]);
 
     const departamentos = useMemo(() => {
-        const mapaNormalizado = new Map();
+        const mapa = new Map();
 
         riesgos.forEach(r => {
-            const raw = r.departamento;
-            const key = normalizar(raw);
-            if (key && !mapaNormalizado.has(key)) {
-                const display = key.charAt(0).toUpperCase() + key.slice(1); // ejemplo: \"cauca\" => \"Cauca\"
-                mapaNormalizado.set(key, display);
+            const raw = r.departamento?.trim();
+            if (raw && !mapa.has(raw)) {
+                mapa.set(raw, raw);
             }
         });
 
-        return Array.from(mapaNormalizado.entries()).map(([key, value]) => ({
+        return Array.from(mapa.entries()).map(([key, label]) => ({
             key,
-            label: value
+            label
         })).sort((a, b) => a.label.localeCompare(b.label));
     }, [riesgos]);
+
 
 
     useEffect(() => {
