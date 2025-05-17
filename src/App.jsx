@@ -76,32 +76,65 @@ function App() {
           mostrarMapa ? (
             <div style={{ backgroundColor: '#0f1a1a', color: '#e5e5e5', minHeight: '100vh' }}>
               <header style={{
-                backgroundColor: '#141f1f',
-                padding: '15px 20px',
-                textAlign: 'center',
-                borderBottom: '2px solid #29f77a',
-                boxShadow: '0 0 15px #29f77a'
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '15px 25px',
+                background: 'linear-gradient(to right, #0f1a1a, #141f1f)',
+                boxShadow: '0 2px 8px rgba(0, 255, 128, 0.2)',
+                borderBottom: '1px solid #29f77a'
               }}>
-                <h2 style={{
-                  margin: 0,
-                  color: '#29f77a',
-                  fontWeight: 'bold',
-                  letterSpacing: '1.5px',
-                  textTransform: 'uppercase',
-                  fontSize: '22px'
-                }}>
-                  Sistema de Monitoreo de Riesgo Territorial
-                </h2>
-                <div style={{ marginTop: '10px' }}>
-                  <Link to="/cuadrantes" style={{ color: '#29f77a', marginRight: '15px' }}>📍 Cuadrantes</Link>
-                  <Link to="/estadisticas" style={{ color: '#29f77a' }}>📊 Estadísticas</Link>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{
+                    width: '35px',
+                    height: '35px',
+                    backgroundColor: '#29f77a',
+                    borderRadius: '50%',
+                    marginRight: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#0f1a1a',
+                    fontWeight: 'bold'
+                  }}>
+                    PR
+                  </div>
+                  <h2 style={{
+                    margin: 0,
+                    color: '#29f77a',
+                    fontWeight: 'bold',
+                    fontSize: '20px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px'
+                  }}>
+                    Riesgo Territorial
+                  </h2>
+                </div>
+                <div style={{ display: 'flex', gap: '20px' }}>
+                  <Link to="/cuadrantes" style={{ color: '#29f77a', fontWeight: '500' }}> 👮 Cuadrantes</Link>
+                  <Link to="/estadisticas" style={{ color: '#29f77a', fontWeight: '500' }}>📊 Estadísticas</Link>
                 </div>
               </header>
 
+
               <div className="main-container">
-                <div className="left-panel panel-filtros">
-                  <h3>Filtros</h3>
-                  <label>Filtrar por nivel:</label>
+                <div style={{
+                  backgroundColor: 'rgba(20, 31, 31, 0.85)',
+                  padding: '20px',
+                  borderRadius: '10px',
+                  color: '#e5e5e5',
+                  fontSize: '14px',
+                  width: '270px',
+                  minHeight: '100%',
+                  boxShadow: '0 0 8px #29f77a',
+                  backdropFilter: 'blur(2px)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px'
+                }}>
+                  <h3 style={{ color: '#29f77a', marginBottom: '10px' }}>🎛️ Filtros</h3>
+
+                  <label>📊 Nivel de Riesgo:</label>
                   <select value={filtro} onChange={e => setFiltro(e.target.value)}>
                     <option value="todos">Todos</option>
                     <option value="bajo">Bajo</option>
@@ -110,7 +143,7 @@ function App() {
                     <option value="alto">Alto</option>
                   </select>
 
-                  <label style={{ marginTop: '15px' }}>Departamento:</label>
+                  <label>🧭 Departamento:</label>
                   <select value={departamento} onChange={e => {
                     setDepartamento(e.target.value)
                     setMunicipio('todos')
@@ -121,7 +154,7 @@ function App() {
                     ))}
                   </select>
 
-                  <label style={{ marginTop: '15px' }}>Municipio:</label>
+                  <label>🏘️ Municipio:</label>
                   <select value={municipio} onChange={e => setMunicipio(e.target.value)}>
                     <option value="todos">Todos</option>
                     {municipiosUnicos.map((m, i) => (
@@ -129,7 +162,7 @@ function App() {
                     ))}
                   </select>
 
-                  <label style={{ marginTop: '15px' }}>Filtrar eventos recientes:</label>
+                  <label>📰 Tipo de Evento:</label>
                   <select value={filtroEvento} onChange={e => setFiltroEvento(e.target.value)}>
                     <option value="todos">Todos</option>
                     <option value="conflicto armado">Conflicto armado</option>
@@ -137,6 +170,7 @@ function App() {
                     <option value="amenaza">Amenaza</option>
                     <option value="desplazamiento">Desplazamiento</option>
                     <option value="presencia armada">Presencia armada</option>
+                    <option value="Noticia Google News">Noticia Google News</option>
                   </select>
 
                   <button
@@ -148,18 +182,21 @@ function App() {
                       setFiltroEvento('todos')
                     }}
                     style={{
-                      marginTop: '15px',
-                      padding: '10px',
-                      width: '100%',
                       backgroundColor: '#29f77a',
                       color: '#0f1a1a',
                       border: 'none',
-                      borderRadius: '6px'
+                      borderRadius: '6px',
+                      padding: '10px',
+                      marginTop: '15px',
+                      width: '100%',
+                      fontWeight: 'bold',
+                      cursor: 'pointer'
                     }}
                   >
-                    Limpiar filtros
+                    🧹 Limpiar filtros
                   </button>
                 </div>
+
 
                 <div className="map-container">
                   <MapaRiesgos

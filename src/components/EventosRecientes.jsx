@@ -1,63 +1,65 @@
 import { useEffect, useState } from 'react';
-import './EventosRecientes.css';
+import axios from 'axios';
 
-const tipoColores = {
-    'conflicto armado': '#e74c3c',
-    'artefacto explosivo': '#f1c40f',
-    'amenaza': '#e67e22',
-    'desplazamiento': '#3498db',
-    'presencia armada': '#9b59b6',
-    'otro': '#95a5a6'
-};
-
-const EventosRecientes = ({ filtroEvento }) => {
+export default function EventosRecientes({ filtroEvento }) {
     const [eventos, setEventos] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(import.meta.env.VITE_API_URL + '/api/eventos')
-            .then(res => res.json())
-            .then(data => {
-                setEventos(data);
-                setLoading(false);
+        axios.get(`${import.meta.env.VITE_API_URL}/api/eventos`)
+            .then(res => {
+                const ultimos = res.data
+                    .filter(e => !filtroEvento || filtroEvento === 'todos' || e.tipo === filtroEvento)
+                    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
+                    .slice(0, 10);
+                setEventos(ultimos);
             })
-            .catch(err => {
-                console.error('❌ Error al obtener eventos:', err);
-                setLoading(false);
-            });
-    }, []);
-
-    const eventosFiltrados = filtroEvento === 'todos'
-        ? eventos
-        : eventos.filter(e => e.tipo?.toLowerCase() === filtroEvento.toLowerCase());
+            .catch(err => console.error('❌ Error cargando eventos recientes:', err));
+    }, [filtroEvento]);
 
     return (
-        <div className="eventos-recientes">
-            {loading ? (
-                <p>Cargando eventos...</p>
+        <div style={{
+            backgroundColor: '#1d2d2d',
+            padding: '15px',
+            borderRadius: '10px',
+            boxShadow: '0 0 10px #29f77a',
+            color: '#e5e5e5',
+            maxHeight: '420px',  // 👈 limite visual
+            overflowY: 'auto',
+            scrollbarWidth: 'thin'  // opcional Firefox
+        }}>
+
+            <h3 style={{ color: '#29f77a', marginBottom: '10px' }}>🧠 Actividad Reciente</h3>
+            {eventos.length === 0 ? (
+                <p>No hay eventos recientes.</p>
             ) : (
-                <ul className="lista-eventos">
-                    {eventosFiltrados.length === 0 ? (
-                        <li className="sin-eventos">No hay eventos recientes.</li>
-                    ) : (
-                        eventosFiltrados.map(evento => {
-                            const color = tipoColores[evento.tipo?.toLowerCase()] || tipoColores['otro'];
-                            return (
-                                <li key={evento._id} className="evento-item" style={{ borderLeft: `6px solid ${color}` }}>
-                                    <div className="evento-header">
-                                        <span className="municipio">{evento.municipio}</span>
-                                        <span className="vereda">{evento.vereda || 'Zona urbana'}</span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {eventos.map((e, i) => (
+                        <li key={i} style={{
+                            borderBottom: '1px solid #333',
+                            marginBottom: '10px',
+                            paddingBottom: '10px',
+                            paddingLeft: '5px'
+                        }}>
+                            <strong style={{ color: '#29f77a' }}>{e.municipio || 'No especificado'}</strong>
+                            <span style={{ float: 'right', fontSize: '12px', color: '#999' }}>
+                                {new Date(e.fecha).toLocaleDateString()}
+                            </span>
+                            <div style={{ fontSize: '13px', marginTop: '5px' }}>
+                                <strong>{e.tipo}</strong><br />
+                                {e.descripcion}
+                                {e.link && (
+                                    <div style={{ marginTop: '5px' }}>
+                                        <a href={e.link} target="_blank" rel="noopener noreferrer" style={{ color: '#29f77a' }}>
+                                            🔗 Ver noticia
+                                        </a>
                                     </div>
-                                    <div className="evento-tipo" style={{ color }}>{evento.tipo}</div>
-                                    <p className="evento-descripcion">{evento.descripcion}</p>
-                                </li>
-                            );
-                        })
-                    )}
+                                )}
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             )}
         </div>
     );
-};
+}
 
-export default EventosRecientes;

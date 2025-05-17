@@ -30,10 +30,15 @@ const Leyenda = () => {
             const div = L.DomUtil.create('div', 'info legend');
             const niveles = ['Bajo', 'Moderado', 'Crítico', 'Alto'];
             const colores = ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c'];
-            div.innerHTML += '<h4>Nivel de Riesgo</h4>';
+            div.innerHTML += '<h4 style="margin-bottom:5px; color:#29f77a">Nivel de Riesgo</h4>';
             niveles.forEach((nivel, i) => {
                 div.innerHTML += `<i style="background:${colores[i]}; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> ${nivel}<br>`;
             });
+            div.style.background = '#1c2b2b';
+            div.style.padding = '10px';
+            div.style.borderRadius = '8px';
+            div.style.color = '#e5e5e5';
+            div.style.fontSize = '14px';
             return div;
         };
         legend.addTo(map);
@@ -73,22 +78,22 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
     }), [riesgos, filtroNivel, municipioFiltro, departamentoFiltro]);
 
     const departamentos = useMemo(() => {
-        const mapa = new Map();
+        const mapaNormalizado = new Map();
 
         riesgos.forEach(r => {
-            const raw = r.departamento?.trim();
-            if (raw && !mapa.has(raw)) {
-                mapa.set(raw, raw);
+            const raw = r.departamento;
+            const key = normalizar(raw);
+            if (key && !mapaNormalizado.has(key)) {
+                const display = key.charAt(0).toUpperCase() + key.slice(1);
+                mapaNormalizado.set(key, display);
             }
         });
 
-        return Array.from(mapa.entries()).map(([key, label]) => ({
+        return Array.from(mapaNormalizado.entries()).map(([key, value]) => ({
             key,
-            label
+            label: value
         })).sort((a, b) => a.label.localeCompare(b.label));
     }, [riesgos]);
-
-
 
     useEffect(() => {
         if (mapRef.current && riesgosFiltrados.length === 1) {
@@ -99,15 +104,16 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
 
     return (
         <MapContainer
-            center={[3.5, -75.7]}
-            zoom={6.5}
-            style={{ height: '700px', width: '100%' }}
+            center={[4.6, -74]}
+            zoom={6.3}
+            style={{ height: '85vh', width: '100%' }}
             whenCreated={(mapInstance) => { mapRef.current = mapInstance; }}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
                 attribution="&copy; OpenStreetMap contributors, Tiles by HOT"
             />
+
 
             <Leyenda />
 
@@ -118,12 +124,12 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
                     className: isCritico ? 'parpadeo' : '',
                     html: `<div style="
                         background:${color};
-                        opacity: 0.8;
-                        width: 10px;
-                        height: 10px;
+                        opacity: 0.85;
+                        width: ${isCritico ? 14 : 8}px;
+                        height: ${isCritico ? 14 : 8}px;
                         border-radius: 50%;
-                        border: 2px solid white;
-                        box-shadow: 0 0 2px black;
+                        border: 1px solid white;
+                        box-shadow: 0 0 3px black;
                       "></div>`,
                     iconSize: [12, 12],
                     iconAnchor: [6, 6],
@@ -151,7 +157,12 @@ export default function MapaRiesgos({ filtroNivel, filtroEvento, municipioFiltro
                         <Popup>
                             <strong>{evento.vereda} ({evento.municipio})</strong><br />
                             <em>{evento.fecha}</em><br />
-                            {evento.descripcion}
+                            {evento.descripcion}<br />
+                            {evento.link && (
+                                <a href={evento.link} target="_blank" rel="noopener noreferrer" style={{ color: '#29f77a' }}>
+                                    🔗 Ver noticia completa
+                                </a>
+                            )}
                         </Popup>
                     </Marker>
                 )), [eventos, filtroEvento])}
